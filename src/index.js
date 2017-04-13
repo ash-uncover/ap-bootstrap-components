@@ -1,6 +1,13 @@
 // app
 import AppRouterBase from './app/AppRouter'
 export const AppRouter = AppRouterBase
+//
+import ButtonBase from './button/Button'
+export const Button = ButtonBase
+import ModalConfirmBase from './modal/ModalConfirm'
+export const ModalConfirm = ModalConfirmBase
+
+/*
 import AppMainDefaultBase from './app/AppMainDefault'
 export const AppMainDefault = AppMainDefaultBase
 import AppFooterBase from './app/AppFooter'
@@ -18,8 +25,6 @@ export const BasicRegistration = BasicRegistrationBase
 import BusyIndicatorBase from './busy/BusyIndicator'
 export const BusyIndicator = BusyIndicatorBase
 // button
-import ButtonBase from './button/Button'
-export const Button = ButtonBase
 import ButtonGroupBase from './button/ButtonGroup'
 export const ButtonGroup = ButtonGroupBase
 import ButtonInputBase from './button/ButtonInput'
@@ -81,8 +86,6 @@ export const LinkedListGroupItem = LinkedListGroupItemBase
 // modal
 import ModalBase from './modal/Modal'
 export const Modal = ModalBase
-import ModalConfirmBase from './modal/ModalConfirm'
-export const ModalConfirm = ModalConfirmBase
 // navbar
 import APNavbarBase from './navbar/APNavbar'
 export const APNavbar = APNavbarBase
@@ -114,3 +117,4 @@ import TileBase from './tile/Tile'
 export const Tile = TileBase
 import TileContainerBase from './tile/TileContainer'
 export const TileContainer = TileContainerBase
+*/

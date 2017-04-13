@@ -1,4 +1,6 @@
 // app
+import AppRouterBase from './app/AppRouter'
+export const AppRouter = AppRouterBase
 import AppMainDefaultBase from './app/AppMainDefault'
 export const AppMainDefault = AppMainDefaultBase
 import AppFooterBase from './app/AppFooter'

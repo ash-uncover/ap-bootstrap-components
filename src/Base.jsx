@@ -1,6 +1,4 @@
 import React from 'react'
-// Lib modules
-import ArraySet from 'utils/javascript/set/ArraySet'
 
 class Base extends React.Component {
 

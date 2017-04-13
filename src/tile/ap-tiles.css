@@ -1,0 +1,32 @@
+
+.ap-tile-container {
+	
+}
+
+.ap-tile {
+
+}
+
+.ap-tile .ap-tile-header {
+	padding-left: 15px;
+	padding-right: 10px;
+}
+
+
+.ap-tile .ap-tile-header .ap-tile-title {
+	padding: 0;
+	height: 100%;
+} 
+
+.ap-tile .ap-tile-header .ap-tile-actions {
+	padding: 0;
+	height: 100%;
+	text-align: right;
+	padding-right: 5px;
+} 
+
+
+.ap-tile .ap-tile-header .ap-tile-actions .ap-button {
+	margin-right: 2px;
+	margin-left: 2px;
+}

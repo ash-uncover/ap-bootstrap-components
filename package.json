@@ -1,0 +1,37 @@
+{
+  "name": "ap-react-bootstrap",
+  "version": "0.0.1",
+  "description": "React component librairy using bootstrap",
+  "repository": {
+    "type": "git",
+    "url": "ash-uncover/ap-react-bootstrap"
+  },
+  "scripts": {},
+  "main": "src/index.js",
+  "keywords": [
+    "ecosystem-react",
+    "bootstrap"
+  ],
+  "author": "aSH <ash.uncover@gmail.com>",
+  "peerDependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.0",
+    "eslint": "^3.19.0",
+    "file-loader": "^0.11.1",
+    "node-sass": "^4.5.2",
+    "sass-loader": "^6.0.3",
+    "style-loader": "^0.16.1",
+    "url-loader": "^0.5.8",
+    "webpack": "^2.3.3",
+    "webpack-dev-server": "^2.4.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "react": "^15.5.4",
+    "react-router-bootstrap": "^0.23.1"
+  }
+}

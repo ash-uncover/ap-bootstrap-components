@@ -1,0 +1,17 @@
+.ap-async-image {
+	display: flex;
+	justify-content: center;
+}
+
+.ap-async-image .ap-async-image-img {
+	height: 100%;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center; 
+}
+
+.ap-file-uploader {
+	.ap-error {
+		color: red;
+	}
+}

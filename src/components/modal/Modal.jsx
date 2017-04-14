@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap'
 import { Button } from 'index'
-import Base from 'Base'
+import Base from 'components/Base'
 
 class APModal extends Base {
 

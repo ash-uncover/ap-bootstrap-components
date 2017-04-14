@@ -1,11 +1,28 @@
+/* COMPONENTS */
+
 // app
-import AppRouterBase from './app/AppRouter'
+import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase
-//
-import ButtonBase from './button/Button'
+
+// buttons
+import ButtonBase from './components/button/Button'
 export const Button = ButtonBase
-import ModalConfirmBase from './modal/ModalConfirm'
+
+// 
+import ModalConfirmBase from './components/modal/ModalConfirm'
 export const ModalConfirm = ModalConfirmBase
+
+
+/* SERVICES */
+
+// google
+import GoogleMapServiceBase from './services/google/GoogleMapService'
+export const GoogleMapService = GoogleMapServiceBase
+
+// rest
+import RestServiceBase from './services/rest/RestService'
+export const RestService = RestServiceBase
+
 
 /*
 import AppMainDefaultBase from './app/AppMainDefault'

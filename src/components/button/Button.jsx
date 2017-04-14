@@ -2,7 +2,7 @@ import React from 'react'
 import { Tooltip, OverlayTrigger } from 'react-bootstrap'
 // Custom components
 import { ModalConfirm } from 'index'
-import Base from 'Base'
+import Base from 'components/Base'
 
 import './ap-buttons.scss'
 

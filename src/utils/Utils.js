@@ -1,4 +1,4 @@
-export default class Utils {
+class Utils {
 
 	/**
 	 * 
@@ -126,3 +126,4 @@ export default class Utils {
 		}
 	}
 }
+export default Utils

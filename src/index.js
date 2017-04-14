@@ -17,7 +17,7 @@ export const Col = ColBase
 import ContainerBase from './components/grid/Container'
 export const Container = ContainerBase
 
-import RowBase from './components/row/Row'
+import RowBase from './components/grid/Row'
 export const Row = RowBase
 
 // 

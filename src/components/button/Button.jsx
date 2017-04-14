@@ -52,7 +52,6 @@ class BSButton extends Base {
 
 	render() {
 		this.buildProps('Button')
-		let button = this._buildButton()
 		return (
             <button className={this.className} {...this.buttonProps}>
                 {this.props.children}

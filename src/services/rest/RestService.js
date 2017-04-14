@@ -26,7 +26,9 @@ export default class RestService {
 		return new Promise(function (resolve, reject) {
 			var xhr = new XMLHttpRequest()
 			xhr.open(reqParam.method, reqParam.url, true)
-			xhr.setRequestHeader(_CONFIG.HEADER_TOKEN, reqParam.token)
+            if (reqParam.token) {
+                xhr.setRequestHeader(_CONFIG.HEADER_TOKEN, reqParam.token)
+            }
 			if (!reqParam.type) {
 				xhr.setRequestHeader('Content-type', 'application/json')
 			} else {

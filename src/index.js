@@ -24,6 +24,13 @@ import RestServiceBase from './services/rest/RestService'
 export const RestService = RestServiceBase
 
 
+/* UTILS */
+
+// rest
+import UtilsBase from './utils/Utils'
+export const Utils = UtilsBase
+
+
 /*
 import AppMainDefaultBase from './app/AppMainDefault'
 export const AppMainDefault = AppMainDefaultBase

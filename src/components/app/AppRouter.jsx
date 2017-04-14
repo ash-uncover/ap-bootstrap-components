@@ -30,8 +30,6 @@ class AppRouter extends Base {
     }
     
     render() {
-        console.log("ROUTER RENDER")
-        console.log(this.props.routes)
         this.buildProps('AppRouter')
         return (
             <Router history={browserHistory}>

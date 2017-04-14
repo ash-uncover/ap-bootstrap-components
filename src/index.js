@@ -16,8 +16,8 @@ export const ModalConfirm = ModalConfirmBase
 /* SERVICES */
 
 // google
-import GoogleMapServiceBase from './services/google/GoogleMapService'
-export const GoogleMapService = GoogleMapServiceBase
+// import GoogleMapServiceBase from './services/google/GoogleMapService'
+// export const GoogleMapService = GoogleMapServiceBase
 
 // rest
 import RestServiceBase from './services/rest/RestService'

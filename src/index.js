@@ -4,9 +4,21 @@
 import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase
 
-// buttons
+/* Bootstrap CSS */
+
+// Buttons
 import ButtonBase from './components/button/Button'
 export const Button = ButtonBase
+
+// Grid
+import ColBase from './components/grid/Col'
+export const Col = ColBase
+
+import ContainerBase from './components/grid/Container'
+export const Container = ContainerBase
+
+import RowBase from './components/row/Row'
+export const Row = RowBase
 
 // 
 import ModalConfirmBase from './components/modal/ModalConfirm'

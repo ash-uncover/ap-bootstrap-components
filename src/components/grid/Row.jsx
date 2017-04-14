@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from 'Base'
+import Base from 'components/Base'
 
 class Row extends Base {
 

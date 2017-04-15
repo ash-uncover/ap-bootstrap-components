@@ -1,6 +1,6 @@
 import AppHelper from 'helpers/AppHelper'
 
-class ButtonsData {
+class Data {
 
 	register(callback) {
 		this.callback = callback
@@ -19,5 +19,5 @@ class ButtonsData {
 	}
 
 }
-var ButtonsObj = new AppData()
-export default ButtonsObj
+var Obj = new Data()
+export default Obj

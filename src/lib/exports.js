@@ -20,6 +20,23 @@ export const Container = ContainerBase
 import RowBase from './components/bootstrap/grid/Row'
 export const Row = RowBase
 
+// Navbar
+
+import NavbarBase from './components/bootstrap/navbar/Navbar'
+export const Navbar = NavbarBase
+
+import NavbarHeaderBase from './components/bootstrap/navbar/NavbarHeader'
+export const NavbarHeader = NavbarHeaderBase
+
+import NavbarBrandBase from './components/bootstrap/navbar/NavbarBrand'
+export const NavbarBrand = NavbarBrandBase
+
+import NavbarGroupBase from './components/bootstrap/navbar/NavbarGroup'
+export const NavbarGroup = NavbarGroupBase
+
+import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
+export const NavbarLink = NavbarLinkBase
+
 // Panels
 
 import PanelBase from './components/bootstrap/panel/Panel'

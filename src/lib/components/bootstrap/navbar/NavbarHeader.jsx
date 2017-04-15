@@ -3,14 +3,14 @@ import Base from 'lib/components/Base'
 
 import { NavbarBrand } from 'lib/exports'
 
-import './Navbar.scss'
+import './ap-navbar.scss'
 
 class BSNavbarHeader extends Base {
 	
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'navbar-header' ]
+		this.baseClasses = [ 'navbar-header', 'ap-navbar-header' ]
 		// Sub component properties
 		this.brandProps = {}
 		// Component properties

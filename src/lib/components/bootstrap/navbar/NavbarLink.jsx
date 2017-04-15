@@ -1,13 +1,13 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import './Navbar.scss'
+import './ap-navbar.scss'
 
 export default class BSNavbarLink extends Base {
 	
 	constructor(props) {
 		super(props)
-		this.baseClasses = []
+		this.baseClasses = [ 'ap-navbar-link' ]
 		this.propsInfos = {
 			required : {
 				link: {},

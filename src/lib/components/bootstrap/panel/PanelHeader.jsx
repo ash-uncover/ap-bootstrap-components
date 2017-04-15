@@ -8,7 +8,7 @@ class BSPanelHeader extends Base {
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'panel-header' ]
+		this.baseClasses = [ 'panel-header', 'ap-panel-header' ]
 		// Component properties
 		this.propsInfos = {
 			required : {

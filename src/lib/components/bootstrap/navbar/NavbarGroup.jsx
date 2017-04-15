@@ -1,18 +1,19 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import './Navbar.scss'
+import './ap-navbar.scss'
 
 class BSNavbarGroup extends Base {
 	
 	constructor(props) {
 		super(props)
-		this.baseClasses = [ 'nav', 'navbar-nav' ]
+		this.baseClasses = [ 'nav', 'navbar-nav', 'ap-navbar-group' ]
 		// Component properties
 		this.propsInfos = {
 			required : {
 			},
 			optionnal : {
+				children: {},
 				left: { defaultValue: false },
 				right: { defaultValue: false },
 			}

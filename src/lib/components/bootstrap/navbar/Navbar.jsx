@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from 'lib/components/Base'
 
-import './Navbar.scss'
+import './ap-navbar.scss'
 
 class BSNavbar extends Base {
 	

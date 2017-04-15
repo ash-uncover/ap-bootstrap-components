@@ -1,14 +1,14 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import './Navbar.scss'
+import './ap-navbar.scss'
 
 class BSNavbarBrand extends Base {
 	
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'navbar-brand' ]
+		this.baseClasses = [ 'navbar-brand', 'ap-navbar-brand' ]
 		// Component properties
 		this.propsInfos = {
 			required : {

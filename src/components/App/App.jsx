@@ -30,11 +30,11 @@ class App extends React.Component {
 				<Navbar fixedTop>
 					<NavbarHeader brandText='ap-react-bootstrap' />
 					<NavbarGroup>
+						<NavbarLink text='Link' />
 						<NavbarLink text='Active link' active/>
-						<NavbarLink text='link' />
-					</NavbarGroup>
-					<NavbarGroup right>
 						<NavbarLink text='Disabled link' disabled/>
+					</NavbarGroup>
+					<NavbarGroup right>						
 						<NavbarLink text='Bootstrap' />
 					</NavbarGroup>
 				</Navbar>

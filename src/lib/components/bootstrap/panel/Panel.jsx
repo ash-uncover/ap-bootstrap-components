@@ -1,8 +1,6 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import { PanelHeader, PanelBody, PanelFooter } from 'lib/exports'
-
 import './ap-panels.scss'
 
 class BSPanel extends Base {

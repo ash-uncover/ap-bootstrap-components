@@ -1,12 +1,14 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
+import './ap-grid.scss'
+
 class Container extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base class
-		this.baseClasses = []
+		this.baseClasses = [ 'ap-container' ]
 		// Component properties
 		this.propsInfos = {
 			required : {},

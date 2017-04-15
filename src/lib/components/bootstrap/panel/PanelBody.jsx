@@ -8,7 +8,7 @@ class BSPanelBody extends Base {
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'panel-body' ]
+		this.baseClasses = [ 'panel-body', 'ap-panel-body' ]
 		// Component properties
 		this.propsInfos = {
 			required : {

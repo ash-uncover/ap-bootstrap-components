@@ -8,7 +8,7 @@ class BSPanelFooter extends Base {
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'panel-footer' ]
+		this.baseClasses = [ 'panel-footer', 'ap-panel-footer' ]
 		// Component properties
 		this.propsInfos = {
 			required : {

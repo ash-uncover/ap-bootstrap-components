@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router, Route, browserHistory, IndexRoute } from 'react-router'
 
-import Base from 'components/Base'
+import Base from 'lib/components/Base'
 
 class AppRouter extends Base {
 

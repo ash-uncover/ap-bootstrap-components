@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from 'components/Base'
+import Base from 'lib/components/Base'
 
 class Container extends Base {
 

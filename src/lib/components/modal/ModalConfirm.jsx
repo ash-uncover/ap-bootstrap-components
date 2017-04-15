@@ -1,7 +1,7 @@
 import React from 'react'
 import { Modal } from 'react-bootstrap'
-import { Button } from 'index'
-import Base from 'components/Base'
+import { Button } from 'exports'
+import Base from 'lib/components/Base'
 
 class ModalConfirm extends Base {
 

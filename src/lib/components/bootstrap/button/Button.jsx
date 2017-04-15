@@ -1,6 +1,6 @@
 import React from 'react'
 // Custom components
-import Base from 'components/Base'
+import Base from 'lib/components/Base'
 
 import './ap-buttons.scss'
 
@@ -32,8 +32,8 @@ class BSButton extends Base {
 	// View callbacks //
 	// --------------------------------------------------------------------------------
 
-	onClick(e) {
-		e.preventDefault()
+	onClick(event) {
+		event.preventDefault()
 		if (this.props.onClick) {
             this.props.onClick()
         }

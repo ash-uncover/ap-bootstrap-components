@@ -7,29 +7,28 @@ export const AppRouter = AppRouterBase
 /* Bootstrap CSS */
 
 // Buttons
-import ButtonBase from './components/button/Button'
+import ButtonBase from './components/bootstrap/button/Button'
 export const Button = ButtonBase
 
 // Grid
-import ColBase from './components/grid/Col'
+import ColBase from './components/bootstrap/grid/Col'
 export const Col = ColBase
 
-import ContainerBase from './components/grid/Container'
+import ContainerBase from './components/bootstrap/grid/Container'
 export const Container = ContainerBase
 
-import RowBase from './components/grid/Row'
+import RowBase from './components/bootstrap/grid/Row'
 export const Row = RowBase
 
-// 
-import ModalConfirmBase from './components/modal/ModalConfirm'
-export const ModalConfirm = ModalConfirmBase
+// Panels
+
+import PanelBase from './components/bootstrap/panel/Panel'
+export const Panel = PanelBase
+import PanelFooterBase from './components/bootstrap/panel/PanelFooter'
+export const PanelFooter = PanelFooterBase
 
 
 /* SERVICES */
-
-// google
-// import GoogleMapServiceBase from './services/google/GoogleMapService'
-// export const GoogleMapService = GoogleMapServiceBase
 
 // rest
 import RestServiceBase from './services/rest/RestService'

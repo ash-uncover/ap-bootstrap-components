@@ -41,6 +41,13 @@ export const NavbarLink = NavbarLinkBase
 
 import PanelBase from './components/bootstrap/panel/Panel'
 export const Panel = PanelBase
+
+import PanelHeaderBase from './components/bootstrap/panel/PanelHeader'
+export const PanelHeader = PanelHeaderBase
+
+import PanelBodyBase from './components/bootstrap/panel/PanelBody'
+export const PanelBody = PanelBodyBase
+
 import PanelFooterBase from './components/bootstrap/panel/PanelFooter'
 export const PanelFooter = PanelFooterBase
 

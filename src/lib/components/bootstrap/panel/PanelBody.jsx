@@ -3,12 +3,12 @@ import Base from 'lib/components/Base'
 
 import './ap-panels.scss'
 
-class BSPanelHeader extends Base {
+class BSPanelBody extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'panel-header' ]
+		this.baseClasses = [ 'panel-body' ]
 		// Component properties
 		this.propsInfos = {
 			required : {
@@ -20,7 +20,7 @@ class BSPanelHeader extends Base {
 	}
 
 	render() {
-		this.buildProps('PanelHeader')
+		this.buildProps('PanelBody')
 		return(
 			<div className={this.className}>
 				{this.props.children}
@@ -29,4 +29,4 @@ class BSPanelHeader extends Base {
 	}
 }
 
-export default BSPanelHeader
+export default BSPanelBody

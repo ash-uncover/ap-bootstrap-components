@@ -20,7 +20,6 @@ class BSNavbarGroup extends Base {
 		}
 	}
 
-
 	_buildClasses() {
 		let classes = this.baseClasses.slice()
 		if (this.props.left) classes.push('navbar-left')

@@ -12,18 +12,21 @@
     }
 }
 
-.navbar {
-    .navbar-nav {
-        li {
-            user-select: none;
-            cursor: pointer;
+.ap-navbar {
+    user-select: none;
+    cursor: default;
 
-            &:hover {
-                background: #EAEAEA;
-            }
-            &.disabled:hover {
-                background: initial;
-            }
+    .ap-navbar-header {
+    }
+
+    .ap-navbar-link {
+        cursor: pointer;
+
+        &:hover {
+            background: #EAEAEA;
+        }
+        &.disabled:hover {
+            background: initial;
         }
     }
 }

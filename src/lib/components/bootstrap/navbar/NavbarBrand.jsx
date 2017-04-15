@@ -34,7 +34,7 @@ class BSNavbarBrand extends Base {
 		return (
 			<a className={this.className} onClick={this.onNavigate.bind(this)}>
 			{this.props.image ?
-				<img alt={this.props.text} src={this.props.image}/>
+				<img style={{ height: '36px', marginTop: '-8px' }} alt={this.props.text} src={this.props.image}/>
 			:
 				this.props.text
 			}

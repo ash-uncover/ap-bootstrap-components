@@ -1,4 +1,4 @@
-import App from 'components/App/App'
+import App from 'components/App'
 
 let routes = [
  { path: '/', component: App, routes: [] },

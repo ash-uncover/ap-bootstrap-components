@@ -10,6 +10,11 @@ export const AppRouter = AppRouterBase
 import ButtonBase from './components/bootstrap/button/Button'
 export const Button = ButtonBase
 
+// Glyphicons
+import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'
+export const Glyphicon = GlyphiconBase
+
+
 // Grid
 import ColBase from './components/bootstrap/grid/Col'
 export const Col = ColBase

@@ -22,7 +22,11 @@ class BSPanel extends Base {
 
 	_buildClasses() {
 		let classes = this.baseClasses.slice()
-		if (this.props.bsStyle) classes.push('panel-' + this.props.bsStyle)
+		if (this.props.bsStyle) {
+			classes.push('panel-' + this.props.bsStyle)
+		} else {
+			classes.push('panel-default')
+		}
 		return classes
 	}
 	

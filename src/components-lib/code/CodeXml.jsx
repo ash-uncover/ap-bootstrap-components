@@ -29,11 +29,19 @@ class CodeHtml extends React.Component {
 	render() {
 		return (
 			<code className='ap-code-xml'>
+			{this.props.markup ?
 				<span className='ap-code-xml-markup'>{'<' + this.props.markup}</span>
-				{this.buildAttributes()}
+			: '' }
+			{this.props.markup ?
+				this.buildAttributes()
+			: '' }
+			{this.props.markup ?
 				<span className='ap-code-xml-markup'>{'>'}</span>
+			: '' }
 				<span className='ap-code-xml-content'>{this.props.children}</span>
+			{this.props.markup ?
 				<span className='ap-code-xml-markup'>{'</' + this.props.markup + '>'}</span>
+			: '' }
 			</code>
 		)
 	}

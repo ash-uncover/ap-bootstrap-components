@@ -50,6 +50,9 @@ export const Panel = PanelBase
 import PanelHeaderBase from './components/bootstrap/panel/PanelHeader'
 export const PanelHeader = PanelHeaderBase
 
+import PanelTitleBase from './components/bootstrap/panel/PanelTitle'
+export const PanelTitle = PanelTitleBase
+
 import PanelBodyBase from './components/bootstrap/panel/PanelBody'
 export const PanelBody = PanelBodyBase
 

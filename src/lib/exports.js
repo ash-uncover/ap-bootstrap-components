@@ -13,6 +13,10 @@ export const CodeXml = CodeXmlBase
 import CodeXmlCommentBase from './components/custom/code/CodeXmlComment'
 export const CodeXmlComment = CodeXmlCommentBase
 
+import CodeXmlGroupBase from './components/custom/code/CodeXmlGroup'
+export const CodeXmlGroup = CodeXmlGroupBase
+
+
 /* BOOTSTRAP CSS */
 
 // Buttons
@@ -55,7 +59,6 @@ import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
 
 // Panels
-
 import PanelBase from './components/bootstrap/panel/Panel'
 export const Panel = PanelBase
 
@@ -70,6 +73,28 @@ export const PanelBody = PanelBodyBase
 
 import PanelFooterBase from './components/bootstrap/panel/PanelFooter'
 export const PanelFooter = PanelFooterBase
+
+// Tables
+import TableBase from './components/bootstrap/table/Table'
+export const Table = TableBase
+
+import TableBodyBase from './components/bootstrap/table/TableBody'
+export const TBody = TableBodyBase
+
+import TableCellBase from './components/bootstrap/table/TableCell'
+export const TD = TableCellBase
+
+import TableFootBase from './components/bootstrap/table/TableFoot'
+export const TFoot = TableFootBase
+
+import TableHeadBase from './components/bootstrap/table/TableHead'
+export const THead = TableHeadBase
+
+import TableHeaderCellBase from './components/bootstrap/table/TableHeaderCell'
+export const TH = TableHeaderCellBase
+
+import TableRowBase from './components/bootstrap/table/TableRow'
+export const TR = TableRowBase
 
 
 /* SERVICES */

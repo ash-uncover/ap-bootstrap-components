@@ -33,7 +33,7 @@ class BSPanel extends Base {
 	render() {
 		this.buildProps('Panel')
 		return(
-			<div className={this.className} {...this.containerProps} >
+			<div className={this.className}>
 				{this.props.children}
 			</div>
 		)

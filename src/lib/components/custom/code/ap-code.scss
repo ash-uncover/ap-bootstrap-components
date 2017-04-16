@@ -27,3 +27,13 @@
 .ap-code-xml-comment {
 	color: grey;	
 }
+
+.ap-code-xml-group {
+	display: block;
+
+	>.ap-code-xml,
+	>.ap-code-xml-comment {
+		padding: 0;
+		font-size: 100%;
+	}
+}

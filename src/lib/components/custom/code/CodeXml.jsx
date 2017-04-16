@@ -3,7 +3,7 @@ import Base from 'lib/components/Base'
 
 import './ap-code.scss'
 
-class CodeHtml extends Base {
+class CodeXml extends Base {
 
 	constructor(props) {
 		super(props)
@@ -70,4 +70,4 @@ class CodeHtml extends Base {
 		)
 	}
 }
-export default CodeHtml
+export default CodeXml

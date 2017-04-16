@@ -6,6 +6,7 @@ import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col } fr
 import Buttons from 'components/bootstrap/buttons/Buttons'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Panels from 'components/bootstrap/panels/Panels'
+import Tables from 'components/bootstrap/tables/Tables'
 
 import './App.scss'
 
@@ -44,6 +45,7 @@ class App extends React.Component {
 				<Container className='ap-rb-app'>
 					<Row>
 						<Col md={9}>
+							<Tables />
 							<Glyphicons />
 							<Buttons />
 							<Panels />

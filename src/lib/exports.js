@@ -4,11 +4,23 @@
 import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase
 
-/* Bootstrap CSS */
+/* CUSTOM */
+
+// Code
+import CodeXmlBase from './components/custom/code/CodeXml'
+export const CodeXml = CodeXmlBase
+
+import CodeXmlCommentBase from './components/custom/code/CodeXmlComment'
+export const CodeXmlComment = CodeXmlCommentBase
+
+/* BOOTSTRAP CSS */
 
 // Buttons
 import ButtonBase from './components/bootstrap/button/Button'
 export const Button = ButtonBase
+
+import ButtonGroupBase from './components/bootstrap/button/ButtonGroup'
+export const ButtonGroup = ButtonGroupBase
 
 // Glyphicons
 import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'

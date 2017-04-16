@@ -1,10 +1,7 @@
 import React from 'react'
 import ButtonsData from 'components/bootstrap/buttons/ButtonsData'
 
-import { Button, Panel, PanelHeader, PanelBody, PanelFooter } from 'lib/exports'
-
-import CodeXml from 'components-lib/code/CodeXml'
-import CodeXmlComment from 'components-lib/code/CodeXmlComment'
+import { Button, Panel, PanelHeader, PanelBody, PanelFooter, CodeXml, CodeXmlComment } from 'lib/exports'
 
 import './Buttons.scss'
 

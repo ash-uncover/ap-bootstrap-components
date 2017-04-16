@@ -1,7 +1,7 @@
 import React from 'react'
 import GlyphiconsData from 'components/bootstrap/glyphicons/GlyphiconsData'
 
-import { Glyphicon } from 'lib/exports'
+import { Panel, PanelBody, PanelFooter, Glyphicon, Button, ButtonGroup, CodeXml, CodeXmlComment } from 'lib/exports'
 
 import './Glyphicons.scss'
 
@@ -42,6 +42,58 @@ class Glyphicons extends React.Component {
 				</div>
 				<br/>
 				<p>Find more glyphicons on bootstrap documentation.</p>
+
+				<h2>Examples</h2>
+				<p>Use them in <code>{'<Button>'}</code>, <code>{'<ButtonGroup>'}</code> for a toolbar, navigation, or prepended form inputs.</p>
+
+				<Panel className='ap-rb-glyphicons-examples'>
+				<PanelBody>
+					<h4>Example</h4>
+					<div>
+						<ButtonGroup>
+							<Button bsStyle='default'><Glyphicon glyph='align-left'/></Button>
+							<Button bsStyle='default'><Glyphicon glyph='align-center'/></Button>
+							<Button bsStyle='default'><Glyphicon glyph='align-right'/></Button>
+							<Button bsStyle='default'><Glyphicon glyph='align-justify'/></Button>
+						</ButtonGroup>
+					</div>
+					<br/>
+					<div>
+						<ButtonGroup role='toolbar'>
+							<Button bsStyle='default' bsSize='lg'>
+								<Glyphicon glyph='star'/> Star
+							</Button>
+							<Button bsStyle='default'>
+								<Glyphicon glyph='star'/> Star
+							</Button>
+							<Button bsStyle='default' bsSize='sm'>
+								<Glyphicon glyph='star'/> Star
+							</Button>
+							<Button bsStyle='default' bsSize='xs'>
+								<Glyphicon glyph='star'/> Star
+							</Button>
+						</ButtonGroup>
+					</div>
+				</PanelBody>
+				<PanelFooter>
+					<h5>React code</h5>
+					<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'}]}>
+						<CodeXml markup='Glyphicon' att={[{name:'glyph', value:'align-left'}]} />
+					</CodeXml>
+					<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'},{name:'bsSize',value:'lg'}]}>
+						<CodeXml markup='Glyphicon' att={[{name:'glyph', value:'star'}]} after=' Star' />
+					</CodeXml>
+				</PanelFooter>
+				<PanelFooter>
+					<h5>HTML output</h5>
+					<CodeXml markup='button' att={[{name:'class',value:'btn ap-button btn-default'},{name:'type',value:'button'}]}>
+						<CodeXml markup='span' att={[{name:'class', value:'glyphicon ap-glyphicon glyphicon-align-left'}]} />
+					</CodeXml>
+					<CodeXml markup='button' att={[{name:'class',value:'btn ap-button btn-lg btn-default'},{name:'type',value:'button'}]}>
+						<CodeXml markup='span' att={[{name:'class', value:'glyphicon ap-glyphicon glyphicon-star'}]} after=' Star' />
+					</CodeXml>
+				</PanelFooter>
+			</Panel>
 			</div>
 		)
 	}

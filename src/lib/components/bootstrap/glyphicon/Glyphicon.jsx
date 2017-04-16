@@ -7,7 +7,7 @@ class Glyphicon extends Base {
 	constructor(props) {
 		super(props)
 		// Base class
-		this.baseClasses = [ 'glyphicon' ]
+		this.baseClasses = [ 'glyphicon', 'ap-glyphicon' ]
 		// Component properties
 		this.propsInfos = {
 			required : {

@@ -1,10 +1,7 @@
 import React from 'react'
 import PanelsData from 'components/bootstrap/panels/PanelsData'
 
-import { Panel, PanelHeader, PanelTitle, PanelBody, PanelFooter } from 'lib/exports'
-
-import CodeXml from 'components-lib/code/CodeXml'
-import CodeXmlComment from 'components-lib/code/CodeXmlComment'
+import { Panel, PanelHeader, PanelTitle, PanelBody, PanelFooter, CodeXml, CodeXmlComment } from 'lib/exports'
 
 import './Panels.scss'
 

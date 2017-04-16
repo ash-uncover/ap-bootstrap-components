@@ -1,6 +1,6 @@
 import React from 'react'
 // Custom components
-import { Button } from 'exports'
+import { Button } from 'lib/exports'
 import Base from 'lib/components/Base'
 
 import './ap-buttons.scss'
@@ -10,17 +10,16 @@ class BSButtonGroup extends Base {
 	constructor(props) {
 		super(props)
 		//
-		this.baseClasses = [ 'btn-group', 'ap-button-group' ]
+		this.baseClasses = [ 'ap-button-group' ]
 		// Sub components properties
-		this.buttonGroupProps = { 
-			role: 'group'
-		}
+		this.buttonGroupProps = {}
 		// Component properties
 		this.propsInfos = {
 			required : {
 			},
 			optionnal : {
-				buttons: { defaultValue: [] }
+				children: {},
+				role: { defaultValue: 'group', store: this.buttonGroupProps }
 			}
 		}
 	}
@@ -29,21 +28,17 @@ class BSButtonGroup extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 
-	_buildButtons() {
-		return (this.props.buttons || []).map(this.__buildButton.bind(this));
-	}
-
-	__buildButton(button, index) {
-		return (
-			<Button key={index} {...button} />
-		)
+	_buildClasses() {
+		let classes = this.baseClasses.slice()
+		classes.push('btn-' + this.buttonGroupProps.role)
+		return classes
 	}
 
 	render() {
 		this.buildProps('ButtonGroup')
 		return (
 			<div className={this.className} {...this.buttonGroupProps} >
-				{this._buildButtons()}
+				{this.props.children}
 			</div>
 		)
 	}

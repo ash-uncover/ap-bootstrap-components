@@ -16,6 +16,11 @@
 	.ap-code-xml-content {
 		color: black;
 	}
+	.ap-code-xml-content>.ap-code-xml {
+		font-size: 100%;
+		padding: 0;
+		padding-left: 15px;
+	}
 }
 
 .ap-code-xml-comment {

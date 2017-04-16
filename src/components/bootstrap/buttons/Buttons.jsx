@@ -105,22 +105,22 @@ class Buttons extends React.Component {
 					</p>
 				</PanelBody>
 				<PanelFooter>
-					<code style={{display:'block'}}>{"<p>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='primary'>Large button</Button>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='default'>Large button</Button>"}</code>
-					<code style={{display:'block'}}>{"</p>"}</code>
-					<code style={{display:'block'}}>{"<p>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='primary'>Default button</Button>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='default'>Default button</Button>"}</code>
-					<code style={{display:'block'}}>{"</p>"}</code>
-					<code style={{display:'block'}}>{"<p>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='primary'>Small button</Button>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='default'>Small button</Button>"}</code>
-					<code style={{display:'block'}}>{"</p>"}</code>
-					<code style={{display:'block'}}>{"<p>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='primary'>Extra small button</Button>"}</code>
-					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='default'>Extra small button</Button>"}</code>
-					<code style={{display:'block'}}>{"</p>"}</code>
+					<CodeXml markup='p'>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'primary'}]}>Large button</CodeXml>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'default'}]}>Large button</CodeXml>
+					</CodeXml>
+					<CodeXml markup='p'>
+						<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'primary'}]}>Default button</CodeXml>
+						<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'default'}]}>Default button</CodeXml>
+					</CodeXml>
+					<CodeXml markup='p'>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'sm'}, { name: 'bsStyle', value: 'primary'}]}>Small button</CodeXml>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'sm'}, { name: 'bsStyle', value: 'default'}]}>Small button</CodeXml>
+					</CodeXml>
+					<CodeXml markup='p'>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'xs'}, { name: 'bsStyle', value: 'primary'}]}>Extra small button</CodeXml>
+						<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'xs'}, { name: 'bsStyle', value: 'default'}]}>Extra small button</CodeXml>
+					</CodeXml>
 				</PanelFooter>
 			</Panel>
 			

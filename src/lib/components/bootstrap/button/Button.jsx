@@ -21,6 +21,7 @@ class BSButton extends Base {
 				bsSize: { defaultValue: '' },
 				bsStyle: { defaultValue: 'default' },
 				block: { defaultValue: false },
+				active: { defaultValue: false },
 				disabled: { defaultValue: false, store: this.buttonProps },
 				onClick: {},
 				type: { defaultValue: 'button', store: this.buttonProps }
@@ -45,6 +46,7 @@ class BSButton extends Base {
 	_buildClasses() {
 		let classes = this.baseClasses.slice()
 		if (this.props.block) classes.push('btn-block')
+		if (this.props.active) classes.push('active')
 		if (this.props.bsSize) classes.push('btn-' + this.props.bsSize)
 		if (this.props.bsStyle) classes.push('btn-' + this.props.bsStyle)
 		return classes

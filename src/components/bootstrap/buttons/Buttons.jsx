@@ -3,6 +3,9 @@ import ButtonsData from 'components/bootstrap/buttons/ButtonsData'
 
 import { Button, Panel, PanelBody, PanelFooter } from 'lib/exports'
 
+import CodeXml from 'components-lib/code/CodeXml'
+import CodeXmlComment from 'components-lib/code/CodeXmlComment'
+
 import './Buttons.scss'
 
 class Buttons extends React.Component {
@@ -24,13 +27,13 @@ class Buttons extends React.Component {
 	}
 
 	render() { return (
-		<div>
+		<div className='ap-rb-buttons'>
 			<h1>Buttons</h1>
 
 			<h2>Button tags</h2>
 
 			<h2>Options</h2>
-			<p>Use '<b>bsStyle</b>' to quickly create a styled button.</p>
+			<p>Use <code>bsStyle</code> to quickly create a styled button.</p>
 			<Panel className='ap-rb-buttons-style' bsStyle='default'>
 				<PanelBody>
 					<h4>Example</h4>
@@ -45,43 +48,43 @@ class Buttons extends React.Component {
 				</PanelBody>
 				<PanelFooter>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Unstyled button -->"}</code>
-							<code style={{display:'block'}}>{"<Button>No Style</Button>"}</code>
+							<CodeXmlComment>Unstyled button</CodeXmlComment>
+							<CodeXml markup='Button'>No Style</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Standard button -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='default'>Default</Button>"}</code>
+							<CodeXmlComment>Standard button</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'default'}]}>Default</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='primary'>Primary</Button>"}</code>
+							<CodeXmlComment>Provides extra visual weight and identifies the primary action in a set of buttons</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'primary'}]}>Primary</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Indicates a successful or positive action -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='success'>Success</Button>"}</code>
+							<CodeXmlComment>Indicates a successful or positive action</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'success'}]}>Success</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Contextual button for informational alert messages -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='info'>Info</Button>"}</code>
+							<CodeXmlComment>Contextual button for informational alert messages</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'info'}]}>Info</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Indicates caution should be taken with this action -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='warning'>Warning</Button>"}</code>
+							<CodeXmlComment>Indicates caution should be taken with this action</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'warning'}]}>Warning</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Indicates a dangerous or potentially negative action -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='danger'>Danger</Button>"}</code>
+							<CodeXmlComment>Indicates a dangerous or potentially negative action</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'danger'}]}>Danger</CodeXml>
 						</p>
 						<p>
-							<code style={{color:'grey', display:'block'}}>{"<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->"}</code>
-							<code style={{display:'block'}}>{"<Button bsStyle='link'>Link</Button>"}</code>
+							<CodeXmlComment>Deemphasize a button by making it look like a link while maintaining button behavior</CodeXmlComment>
+							<CodeXml markup='Button' att={[{ name: 'bsStyle', value: 'link'}]}>Link</CodeXml>
 						</p>
 				</PanelFooter>
 			</Panel>
 
 			<h2>Sizes</h2>
-			<p>Fancy larger or smaller buttons? Add '<b>bsSize</b>' for additional sizes.</p>
-			<Panel bsStyle='default'>
+			<p>Fancy larger or smaller buttons? Add <code>bsSize</code> for additional sizes.</p>
+			<Panel className='ap-rb-buttons-size' bsStyle='default'>
 				<PanelBody>
 					<h4>Example</h4>
 					<p>
@@ -102,22 +105,79 @@ class Buttons extends React.Component {
 					</p>
 				</PanelBody>
 				<PanelFooter>
-						<code style={{display:'block'}}>{"<p>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='primary'>Large button</Button>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='default'>Large button</Button>"}</code>
-						<code style={{display:'block'}}>{"</p>"}</code>
-						<code style={{display:'block'}}>{"<p>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='primary'>Default button</Button>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='default'>Default button</Button>"}</code>
-						<code style={{display:'block'}}>{"</p>"}</code>
-						<code style={{display:'block'}}>{"<p>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='primary'>Small button</Button>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='default'>Small button</Button>"}</code>
-						<code style={{display:'block'}}>{"</p>"}</code>
-						<code style={{display:'block'}}>{"<p>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='primary'>Extra small button</Button>"}</code>
-						<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='default'>Extra small button</Button>"}</code>
-						<code style={{display:'block'}}>{"</p>"}</code>
+					<code style={{display:'block'}}>{"<p>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='primary'>Large button</Button>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='lg' bsStyle='default'>Large button</Button>"}</code>
+					<code style={{display:'block'}}>{"</p>"}</code>
+					<code style={{display:'block'}}>{"<p>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='primary'>Default button</Button>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsStyle='default'>Default button</Button>"}</code>
+					<code style={{display:'block'}}>{"</p>"}</code>
+					<code style={{display:'block'}}>{"<p>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='primary'>Small button</Button>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='sm' bsStyle='default'>Small button</Button>"}</code>
+					<code style={{display:'block'}}>{"</p>"}</code>
+					<code style={{display:'block'}}>{"<p>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='primary'>Extra small button</Button>"}</code>
+					<code style={{display:'block'}}>&nbsp;&nbsp;{"<Button bsSize='xs' bsStyle='default'>Extra small button</Button>"}</code>
+					<code style={{display:'block'}}>{"</p>"}</code>
+				</PanelFooter>
+			</Panel>
+			
+			<p>Create block level buttons—those that span the full width of a parent— by adding <code>block</code>.</p>
+			
+			<Panel className='ap-rb-buttons-block' bsStyle='default'>
+				<PanelBody>
+					<h4>Example</h4>
+					<Button bsSize='lg' bsStyle='primary' block>Block level button</Button>
+					<Button bsSize='lg' bsStyle='default' block>Block level button</Button>
+				</PanelBody>
+				<PanelFooter>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'primary'}, { name: 'block'}]}>
+						Block level button
+					</CodeXml>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'default'}, { name: 'block'}]}>
+						Block level button
+					</CodeXml>
+				</PanelFooter>
+			</Panel>
+
+			<h2>Active state</h2>
+			<p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>{'<button>'}</code> elements, this is done via :active. For <code>{'<a>'}</code> elements, it's done with .active. However, you may use .active on {'<button>'} (and include the aria-pressed="true" attribute) should you need to replicate the active state programmatically.</p>
+
+			<Panel className='ap-rb-buttons-active-button' bsStyle='default'>
+				<PanelBody>
+					<h4>Example</h4>
+					<Button bsSize='lg' bsStyle='primary' active>Primary button</Button>
+					<Button bsSize='lg' bsStyle='default' active>Button</Button>
+				</PanelBody>
+				<PanelFooter>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'primary'}, { name: 'active'}]}>
+						Primary button
+					</CodeXml>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'default'}, { name: 'active'}]}>
+						Button
+					</CodeXml>
+				</PanelFooter>
+			</Panel>
+
+			<h2>Disabled state</h2>
+			<p>Make buttons look unclickable by fading them back with opacity.</p>
+			<p>Add the <code>disabled</code> attribute to <code>{'<button>'}</code> buttons.</p>
+
+			<Panel className='ap-rb-buttons-disabled-button' bsStyle='default'>
+				<PanelBody>
+					<h4>Example</h4>
+					<Button bsSize='lg' bsStyle='primary' disabled>Primary button</Button>
+					<Button bsSize='lg' bsStyle='default' disabled>Button</Button>
+				</PanelBody>
+				<PanelFooter>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'primary'}, { name: 'disabled'}]}>
+						Primary button
+					</CodeXml>
+					<CodeXml markup='Button' att={[{ name: 'bsSize', value: 'lg'}, { name: 'bsStyle', value: 'default'}, { name: 'disabled'}]}>
+						Button
+					</CodeXml>
 				</PanelFooter>
 			</Panel>
 		</div>

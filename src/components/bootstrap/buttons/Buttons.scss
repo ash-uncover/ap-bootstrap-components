@@ -1,0 +1,15 @@
+.ap-rb-app .ap-rb-buttons {
+	.ap-rb-buttons-style {
+		button {
+			margin-right: 5px;
+			margin-bottom: 5px;
+		}
+	}
+	.ap-rb-buttons-size,
+	.ap-rb-buttons-active-button,
+	.ap-rb-buttons-disabled-button {
+		button {
+			margin-right: 5px;
+		}
+	}
+}

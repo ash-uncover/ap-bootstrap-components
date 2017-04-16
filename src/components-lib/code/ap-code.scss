@@ -1,0 +1,23 @@
+.ap-code-xml {
+	display: block;
+
+	.ap-code-xml-markup {
+		color: slateblue;
+	}
+
+	.ap-code-xml-att {
+		.ap-code-xml-att-name {
+			color: seagreen;
+		}
+		.ap-code-xml-att-value {
+			color: goldenrod;
+		}
+	}
+	.ap-code-xml-content {
+		color: black;
+	}
+}
+
+.ap-code-xml-comment {
+	color: grey;	
+}

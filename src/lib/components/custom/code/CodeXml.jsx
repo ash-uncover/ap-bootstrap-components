@@ -31,7 +31,7 @@ class CodeXml extends Base {
 				</span>
 				{ att.value ?
 				<span className='ap-code-xml-att-value'>
-					{"'" + att.value + "'"}
+					{(att.value.startsWith('{') ? '' : "'") + att.value + (att.value.endsWith('}') ? '' : "'")}
 				</span>
 				: ''}
 			</span>

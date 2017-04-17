@@ -180,66 +180,20 @@ class Panels extends React.Component {
 					<Table> 
 						{this._buildTableHead()}
 						<tbody>
-							<TR bsStyle='active'>
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR >
-								<TD>1</TD>
-								<TD bsStyle='active'>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR bsStyle='success'>
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR >
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD bsStyle='success'>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR bsStyle='info'>
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR >
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD bsStyle='info'>Column content</TD>
-							</TR>
-							<TR bsStyle='warning'>
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR >
-								<TD>1</TD>
-								<TD bsStyle='warning'>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR bsStyle='danger'>
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
-							<TR >
-								<TD>1</TD>
-								<TD>Column content</TD>
-								<TD bsStyle='danger'>Column content</TD>
-								<TD>Column content</TD>
-							</TR>
+							<TR bsStyle='active'><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+							<TR><TD>1</TD><TD bsStyle='active'>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+
+							<TR bsStyle='success'><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+							<TR><TD>1</TD><TD>Column content</TD><TD bsStyle='success'>Column content</TD><TD>Column content</TD></TR>
+
+							<TR bsStyle='info'><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+							<TR><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD bsStyle='info'>Column content</TD></TR>
+
+							<TR bsStyle='warning'><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+							<TR><TD>1</TD><TD bsStyle='warning'>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+
+							<TR bsStyle='danger'><TD>1</TD><TD>Column content</TD><TD>Column content</TD><TD>Column content</TD></TR>
+							<TR><TD>1</TD><TD>Column content</TD><TD bsStyle='danger'>Column content</TD><TD>Column content</TD></TR>
 						</tbody>
 					</Table>
 				</PanelBody> 

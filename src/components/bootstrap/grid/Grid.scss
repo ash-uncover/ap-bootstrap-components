@@ -1,0 +1,16 @@
+.ap-rb-grid {
+	.ap-row.show-grid {
+		margin-bottom: 10px;
+
+		.ap-col {
+			padding: 10px;
+			text-align: center;
+			background: #DAEAEA;
+			border: 1px solid darkblue;
+
+			&:hover {
+				background: #BACACA;
+			}
+		}
+	}
+}

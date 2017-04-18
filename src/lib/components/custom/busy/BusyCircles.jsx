@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import './ap-busy.scss'
+import './ap-busy-circles.scss'
 
 class BusyCircles extends Base {
 
@@ -19,7 +19,7 @@ class BusyCircles extends Base {
     render() {
         this.buildProps('BusyCircles')
         return (
-            <div className='ap-busy-circles'>
+            <div className={this.className}>
                 <div className='ap-busy-circles-container'>
                     <div className='ap-busy-circle ap-busy-circle-1'/>
                     <div className='ap-busy-circle ap-busy-circle-2'/>

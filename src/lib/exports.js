@@ -7,6 +7,9 @@ export const AppRouter = AppRouterBase
 /* CUSTOM */
 
 // Busy
+import BusyBubblesBase from './components/custom/busy/BusyBubbles'
+export const BusyBubbles = BusyBubblesBase
+
 import BusyCirclesBase from './components/custom/busy/BusyCircles'
 export const BusyCircles = BusyCirclesBase
 

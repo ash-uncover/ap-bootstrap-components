@@ -1,0 +1,47 @@
+@keyframes bubble {
+    0% {
+        transform: scale(0.5);
+        background: #2291D9;
+    }
+    20% {
+        transform: scale(0.5);
+        background: #2291D9;
+    }
+    100% {
+        transform: scale(1);
+        background: #2291D9;
+        background: -webkit-radial-gradient(rgba(34, 145, 217, 0) 20%, #2291D9 80%);
+        background: -o-radial-gradient(rgba(34, 145, 217, 0) 20%, #2291D9 80%);
+        background: -moz-radial-gradient(rgba(34, 145, 217, 0) 20%, #2291D9 80%);
+        background: radial-gradient(rgba(34, 145, 217, 0) 20%, #2291D9 80%);
+    }
+}
+
+.ap-busy-bubbles {
+	text-align: center;
+    
+    .ap-busy-bubble {
+    	display: inline-block;
+    	margin: 3px;
+    	border-radius: 50%;
+    	width: 2rem;
+    	height: 2rem;
+
+    	background: #2291D9;
+
+    	animation-duration: 0.8s;
+     	animation-name: bubble;
+      	animation-iteration-count: infinite;
+      	animation-direction: alternate;
+      	animation-timing-function: linear;
+
+      	transform: scale(0.5);
+        
+        &.ap-busy-bubble-2 {
+          	animation-delay: 0.2s;
+        }
+        &.ap-busy-bubble-3 {
+          	animation-delay: 0.4s;
+        }
+    }
+}

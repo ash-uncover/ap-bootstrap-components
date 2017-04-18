@@ -55,7 +55,6 @@ class Panels extends React.Component {
 							<CodeXml>Basic panel example</CodeXml>
 						</CodeXml>
 					</CodeXml>
-
 				</PanelFooter>
 			</Panel>
 

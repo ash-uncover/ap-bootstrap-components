@@ -6,6 +6,10 @@ export const AppRouter = AppRouterBase
 
 /* CUSTOM */
 
+// Busy
+import BusyCirclesBase from './components/custom/busy/BusyCircles'
+export const BusyCircles = BusyCirclesBase
+
 // Code
 import CodeXmlBase from './components/custom/code/CodeXml'
 export const CodeXml = CodeXmlBase

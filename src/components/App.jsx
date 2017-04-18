@@ -3,6 +3,8 @@ import AppData from 'components/AppData'
 
 import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col } from 'lib/exports'
 
+import Busy from 'components/custom/busy/Busy'
+
 import Buttons from 'components/bootstrap/buttons/Buttons'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Grid from 'components/bootstrap/grid/Grid'
@@ -46,6 +48,8 @@ class App extends React.Component {
 				<Container className='ap-rb-app'>
 					<Row>
 						<Col md={9}>
+                            <Busy />
+
 							<Grid />
 							<Tables />
 							<Glyphicons />

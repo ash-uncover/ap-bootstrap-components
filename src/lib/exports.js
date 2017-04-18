@@ -106,6 +106,8 @@ export const TH = TableHeaderCellBase
 import TableRowBase from './components/bootstrap/table/TableRow'
 export const TR = TableRowBase
 
+import TableBuilderBase from './components/bootstrap/table/TableBuilder'
+export const TableBuilder = TableBuilderBase
 
 /* SERVICES */
 

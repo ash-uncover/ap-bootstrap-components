@@ -14,6 +14,7 @@ class BSTableFoot extends Base {
 			required : {
 			},
 			optionnal : {
+                children: {}
 			}
 		}
 	}

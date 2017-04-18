@@ -1,7 +1,7 @@
 import React from 'react'
 import TablesData from 'components/bootstrap/tables/TablesData'
 
-import { Panel, PanelBody, PanelFooter, CodeXml, CodeXmlComment, CodeXmlGroup, Table, THead, TH, TBody, TFoot, TR, TD } from 'lib/exports'
+import { Panel, PanelBody, PanelFooter, CodeXml, CodeXmlComment, CodeXmlGroup, Table, THead, TH, TBody, TFoot, TR, TD, TableBuilder } from 'lib/exports'
 
 import './Tables.scss'
 
@@ -279,6 +279,34 @@ class Panels extends React.Component {
 					</CodeXml>
 				</PanelFooter>
 			</Panel>
+
+            <h2>Table builder</h2>
+            <p>The <code>{'<TableBuilder>'}</code> offers a convenient way to build tables from javascript objects.</p>
+            <p>It leverages all the table items described before and builds a table matching the input structure.</p>
+
+            <Panel className='ap-rb-tables-builder'>
+                <PanelBody>
+                    <h4>Example</h4>
+                    <TableBuilder 
+                        condensed 
+                        head={[{cells:[{content:'#'}, {content:'Table head'}, {content:'Table head'}]}]}
+                        body={[{cells:[{content:'1',head:true}, {content:'Table body'}, {content:'Table body'}]}, {cells:[{content:'2',head:true}, {content:'Table body'}, {content:'Table body'}]}]}
+                        foot={[{cells:[{content:'*',head:true}, {content:'Table foot',bsStyle:'success'}, {content:'Table foot',bsStyle:'warning'}]}]}/> 
+                </PanelBody>
+                <PanelFooter>
+                    <h5>React code</h5>
+                    <CodeXml markup='TableBuilder' att={[{name:'condensed'}]}/>
+                </PanelFooter>
+                <PanelFooter>
+                    <h5>HTML output</h5>
+                    <CodeXml markup='div' att={[{name:'class',value:'table-responsive'}]}>
+                        <CodeXml markup='table' att={[{name:'class',value:'table ap-table'}]}>...</CodeXml>
+                    </CodeXml>
+                    <CodeXml markup='div' att={[{name:'class',value:'table-responsive'}]}>
+                        <CodeXml markup='table' att={[{name:'class',value:'table ap-table table-bordered'}]}>...</CodeXml>
+                    </CodeXml>
+                </PanelFooter>
+            </Panel>
 		</div>
 	)}
 }

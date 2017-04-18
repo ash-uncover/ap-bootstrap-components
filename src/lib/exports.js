@@ -23,6 +23,9 @@ export const CodeXmlComment = CodeXmlCommentBase
 import CodeXmlGroupBase from './components/custom/code/CodeXmlGroup'
 export const CodeXmlGroup = CodeXmlGroupBase
 
+// Rater
+import RaterStarBase from './components/custom/rater/RaterStar'
+export const RaterStar = RaterStarBase
 
 /* BOOTSTRAP CSS */
 

@@ -4,6 +4,7 @@ import AppData from 'components/AppData'
 import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col } from 'lib/exports'
 
 import Busy from 'components/custom/busy/Busy'
+import Rater from 'components/custom/rater/Rater'
 
 import Buttons from 'components/bootstrap/buttons/Buttons'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
@@ -49,6 +50,7 @@ class App extends React.Component {
 					<Row>
 						<Col md={9}>
                             <Busy />
+                            <Rater />
 
 							<Grid />
 							<Tables />

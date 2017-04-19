@@ -24,7 +24,7 @@ class Panels extends React.Component {
 	}
 
 	render() { return (
-		<div className='ap-rb-panels'>
+		<div className='ap-rb-section ap-rb-panels' id='ap-panels'>
 			<h1>Panels</h1>
 			<p>While not always necessary, sometimes you need to put your DOM in a box. For those situations, try the panel component.</p>
 			

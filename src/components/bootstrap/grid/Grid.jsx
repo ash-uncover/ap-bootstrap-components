@@ -25,7 +25,7 @@ class Grid extends React.Component {
 
 	render() {
 		return (
-			<div className='ap-rb-grid show-grid'>
+			<div className='ap-rb-section ap-rb-grid show-grid' id='ap-grid'>
 				<h1>Grid system</h1>
 
 				<h2>Example: Stacked-to-horizontal</h2>

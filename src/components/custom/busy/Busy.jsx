@@ -25,7 +25,7 @@ class Busy extends React.Component {
 
 	render() {
 		return (
-			<div className='ap-ct-busy'>
+			<div className='ap-rb-section ap-ct-busy' id='ap-busy'>
                 <h1>Busy indicators</h1>
 
                 <h2>Busy bubbles</h2>

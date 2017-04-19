@@ -62,7 +62,7 @@ class Panels extends React.Component {
 	}
 
 	render() { return (
-		<div className='ap-rb-tables'>
+		<div className='ap-rb-section ap-rb-tables'  id='ap-tables'>
 			<h1>Tables</h1>
 			<p></p>
 			

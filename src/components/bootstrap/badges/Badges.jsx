@@ -24,7 +24,7 @@ class Badges extends React.Component {
 	}
 
 	render() { return (
-		<div className='ap-rb-badges'>
+		<div className='ap-rb-section ap-rb-badges' id='ap-badges'>
 			<h1>Badges</h1>
 			<p>Easily highlight new or unread items by adding a <code>{'<Badge>'}</code> to links, Bootstrap navs, and more.</p>
 			<p>When there are no new or unread items, badges will simply collapse provided no content exists within.</p>

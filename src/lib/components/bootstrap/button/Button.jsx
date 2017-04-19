@@ -24,7 +24,10 @@ class BSButton extends Base {
 				active: { defaultValue: false },
 				disabled: { defaultValue: false, store: this.buttonProps },
 				onClick: {},
-				type: { defaultValue: 'button', store: this.buttonProps }
+				type: { defaultValue: 'button', store: this.buttonProps },
+                comp: {},
+                href: {},
+                value: {}
 			}
 		}
 	}
@@ -34,7 +37,9 @@ class BSButton extends Base {
 	// --------------------------------------------------------------------------------
 
 	onClick(event) {
-		event.preventDefault()
+        if (!(this.props.comp === 'a' && this.props.href)) {
+            event.preventDefault()
+        }
 		if (this.props.onClick) {
             this.props.onClick()
         }
@@ -54,6 +59,21 @@ class BSButton extends Base {
 
 	render() {
 		this.buildProps('Button')
+        if (this.props.comp === 'a') {
+            delete this.buttonProps.type
+            return (
+                <a className={this.className} href={this.props.href} {...this.buttonProps}>
+                    {this.props.children}
+                </a>
+            )    
+        }
+        if (this.props.comp === 'input') {
+            return (
+                <input className={this.className} value={this.props.value} {...this.buttonProps}>
+                    {this.props.children}
+                </input>
+            )    
+        }
 		return (
             <button className={this.className} {...this.buttonProps}>
                 {this.props.children}

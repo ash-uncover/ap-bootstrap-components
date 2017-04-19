@@ -24,7 +24,7 @@ class Buttons extends React.Component {
 	}
 
 	render() { return (
-		<div className='ap-rb-buttons'>
+		<div className='ap-rb-section ap-rb-buttons' id='ap-buttons'>
 			<h1>Buttons</h1>
 
 			<h2>Button tags</h2>

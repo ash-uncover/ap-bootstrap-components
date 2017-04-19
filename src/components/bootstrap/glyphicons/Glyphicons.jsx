@@ -25,7 +25,7 @@ class Glyphicons extends React.Component {
 
 	render() {
 		return (
-			<div>
+			<div className='ap-rb-section ap-rb-glyphicons' id='ap-glyphicons'>
 				<h1>Glyphicons</h1>
 
 				<h2>Available glyphs</h2>

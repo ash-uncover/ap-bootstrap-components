@@ -25,7 +25,7 @@ class Rater extends React.Component {
 
 	render() {
 		return (
-			<div className='ap-ct-rater'>
+			<div className='ap-rb-section ap-ct-rater' id='ap-rater'>
                 <h1>Raters</h1>
 
                 <h2>Rater star</h2>

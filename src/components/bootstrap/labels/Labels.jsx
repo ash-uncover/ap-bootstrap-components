@@ -25,7 +25,7 @@ class Labels extends React.Component {
 
 	render() {
 		return (
-			<div className='ap-rb-labels'>
+			<div className='ap-rb-section ap-rb-labels' id='ap-labels'>
 				<h1>Labels</h1>
 
 				<h2>Example</h2>

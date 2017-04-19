@@ -1,7 +1,7 @@
 import React from 'react'
 import TablesData from 'components/bootstrap/tables/TablesData'
 
-import { Panel, PanelBody, PanelFooter, CodeXml, CodeXmlComment, CodeXmlGroup, Table, THead, TH, TBody, TFoot, TR, TD, TableBuilder } from 'lib/exports'
+import { Panel, PanelBody, PanelFooter, CodeXml, CodeXmlComment, CodeXmlGroup, CodeJson, Table, THead, TH, TBody, TFoot, TR, TD, TableBuilder } from 'lib/exports'
 
 import './Tables.scss'
 
@@ -295,16 +295,16 @@ class Panels extends React.Component {
                 </PanelBody>
                 <PanelFooter>
                     <h5>React code</h5>
-                    <CodeXml markup='TableBuilder' att={[{name:'condensed'}]}/>
-                </PanelFooter>
-                <PanelFooter>
-                    <h5>HTML output</h5>
-                    <CodeXml markup='div' att={[{name:'class',value:'table-responsive'}]}>
-                        <CodeXml markup='table' att={[{name:'class',value:'table ap-table'}]}>...</CodeXml>
-                    </CodeXml>
-                    <CodeXml markup='div' att={[{name:'class',value:'table-responsive'}]}>
-                        <CodeXml markup='table' att={[{name:'class',value:'table ap-table table-bordered'}]}>...</CodeXml>
-                    </CodeXml>
+                    <CodeJson>
+                        {"let head=[{cells:[{content:'#'}, {content:'Table head'}, {content:'Table head'}]}]"}
+                    </CodeJson>
+                    <CodeJson>
+                        {"let body=[{cells:[{content:'1',head:true}, {content:'Table body'}, {content:'Table body'}]}, {cells:[{content:'2',head:true}, {content:'Table body'}, {content:'Table body'}]}]"}
+                    </CodeJson>
+                    <CodeJson>
+                        {"let foot=[{cells:[{content:'*',head:true}, {content:'Table foot',bsStyle:'success'}, {content:'Table foot',bsStyle:'warning'}]}]/> "}
+                    </CodeJson>
+                    <CodeXml markup='TableBuilder' att={[{name:'condensed'},{name:'head',value:'{head}'},{name:'body',value:'{body}'},{name:'foot',value:'{foot}'}]}/>
                 </PanelFooter>
             </Panel>
 		</div>

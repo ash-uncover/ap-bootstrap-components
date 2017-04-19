@@ -14,6 +14,9 @@ import BusyCirclesBase from './components/custom/busy/BusyCircles'
 export const BusyCircles = BusyCirclesBase
 
 // Code
+import CodeJsonBase from './components/custom/code/CodeJson'
+export const CodeJson = CodeJsonBase
+
 import CodeXmlBase from './components/custom/code/CodeXml'
 export const CodeXml = CodeXmlBase
 

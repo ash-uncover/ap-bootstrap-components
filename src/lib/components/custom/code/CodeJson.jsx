@@ -20,9 +20,7 @@ class CodeJson extends Base {
     }
 
     _buildChildren() {
-        console.log(this.props.children)
         let values = this._readLine(this.props.children || '')
-        console.log(values)
         let indent = 0
         let line = 0
         let result = []

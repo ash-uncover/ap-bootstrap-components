@@ -47,9 +47,9 @@ class Rater extends React.Component {
                     <PanelFooter>
                         <h5>HTML output</h5>
                         <CodeXml markup='div' att={[{name:'class',value:'ap-rater-star'}]}>
-                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star-empty ap-rater-star-full'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star-empty ap-rater-star-full'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star-empty ap-rater-star-full'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star ap-rater-star-full'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star ap-rater-star-full'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star ap-rater-star-full'}]} />
                             <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star-empty ap-rater-star-empty'}]} />
                             <CodeXml markup='div' att={[{name:'class',value:'glyphicon ap-glyphicon glyphicon-star-empty ap-rater-star-empty'}]} />
                         </CodeXml>

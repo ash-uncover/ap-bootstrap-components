@@ -15,9 +15,9 @@ class RaterStar extends Base {
 		// Component properties
 		this.propsInfos = {
 			required : {
-				value: {}
 			},
 			optionnal : {
+                value: {}
 			}
 		}
 	}
@@ -27,7 +27,7 @@ class RaterStar extends Base {
 	// --------------------------------------------------------------------------------
 
 	_resolveValue() {
-		let value = this.props.value
+		let value = this.props.value || 0
 		if (value < 0 || value > 5) {
 			return 0
 		}

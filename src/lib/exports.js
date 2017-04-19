@@ -32,6 +32,10 @@ export const RaterStar = RaterStarBase
 
 /* BOOTSTRAP CSS */
 
+// Badges
+import BadgeBase from './components/bootstrap/badge/Badge'
+export const Badge = BadgeBase
+
 // Buttons
 import ButtonBase from './components/bootstrap/button/Button'
 export const Button = ButtonBase

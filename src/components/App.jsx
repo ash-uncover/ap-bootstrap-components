@@ -6,6 +6,7 @@ import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col } fr
 import Busy from 'components/custom/busy/Busy'
 import Rater from 'components/custom/rater/Rater'
 
+import Badges from 'components/bootstrap/badges/Badges'
 import Buttons from 'components/bootstrap/buttons/Buttons'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Grid from 'components/bootstrap/grid/Grid'
@@ -50,16 +51,16 @@ class App extends React.Component {
 				<Container className='ap-rb-app'>
 					<Row>
 						<Col md={9}>
-							<Labels/>
-							
                             <Busy />
                             <Rater />
 
 							<Grid />
-							<Tables />
 							<Glyphicons />
 							<Buttons />
+							<Labels/>							
+							<Badges />
 							<Panels />
+							<Tables />
 						</Col>
 					</Row>
 				</Container>

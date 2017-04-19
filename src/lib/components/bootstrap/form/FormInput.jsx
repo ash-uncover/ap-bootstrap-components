@@ -1,14 +1,16 @@
 import React from 'react'
-import Base from '../Base.jsx';
+import Base from 'lib/components/Base'
 
-class FormInput extends Base {
+class BSFormInput extends Base {
 
 	constructor(props) {
-		super(props);
+		super(props)
+
+		this.baseClasses = [ 'form-control', 'ap-form-input' ]
 		
-		this.formGroupProps = {className: "form-group"};
-		this.controlLabelProps = {className: "control-label"};
-		this.formControlProps = {className: "form-control"};
+		this.formGroupProps = { className: 'form-group' }
+		this.controlLabelProps = { className: 'control-label' }
+		this.formControlProps = { className: 'form-control' }
 		
 		this.propsInfos = {
 			required : {
@@ -16,7 +18,7 @@ class FormInput extends Base {
 				onChange: {store: this.formControlProps, value: this.onChange.bind(this)}
 			},
 			optionnal : {
-				type: {store: this.formControlProps},
+				type: { defaultValue: 'text', store: this.formControlProps },
 				placeholder: {store: this.formControlProps},
 				defaultValue: {store: this.formControlProps},
 				label: {},
@@ -77,9 +79,9 @@ class FormInput extends Base {
 	}
 	
 	render() {
-		this.buildProps("FormInput");
-		return (this.getFormGroup());
+		this.buildProps('FormInput')
+		return (this.getFormGroup())
 	}
 }
 
-export default FormInput;
+export default BSFormInput

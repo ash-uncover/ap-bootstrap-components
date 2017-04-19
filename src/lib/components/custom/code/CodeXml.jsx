@@ -15,7 +15,8 @@ class CodeXml extends Base {
 				children: {},
 				markup: {},
 				att: {},
-				after: {}
+				after: {},
+				inline: {}
 			}
 		}
 	}
@@ -42,6 +43,12 @@ class CodeXml extends Base {
 		for (let i = 0 ; i < (this.props.children || []).length ; i++) {
 			
 		}
+	}
+
+	_buildClasses() {
+		let classes = this.baseClasses.slice()
+		if (this.props.inline) classes.push('ap-code-inline')	
+		return classes
 	}
 
 	render() {

@@ -32,6 +32,10 @@ export const RaterStar = RaterStarBase
 
 /* BOOTSTRAP CSS */
 
+// Badges
+import BadgeBase from './components/bootstrap/badge/Badge'
+export const Badge = BadgeBase
+
 // Buttons
 import ButtonBase from './components/bootstrap/button/Button'
 export const Button = ButtonBase
@@ -43,7 +47,6 @@ export const ButtonGroup = ButtonGroupBase
 import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'
 export const Glyphicon = GlyphiconBase
 
-
 // Grid
 import ColBase from './components/bootstrap/grid/Col'
 export const Col = ColBase
@@ -54,8 +57,11 @@ export const Container = ContainerBase
 import RowBase from './components/bootstrap/grid/Row'
 export const Row = RowBase
 
-// Navbar
+// Label
+import LabelBase from './components/bootstrap/label/Label'
+export const Label = LabelBase
 
+// Navbar
 import NavbarBase from './components/bootstrap/navbar/Navbar'
 export const Navbar = NavbarBase
 

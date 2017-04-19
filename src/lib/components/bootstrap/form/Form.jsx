@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from 'Base'
+import Base from 'lib/components/Base'
 
 class BSForm extends Base {
 	
@@ -44,7 +44,7 @@ class BSForm extends Base {
 	}
 
 	render() {
-		this.buildProps('BSForm')
+		this.buildProps('Form')
 		return (
 			<form className={this.className} {...this.formProps}>
 				{this.props.children}

@@ -66,9 +66,9 @@ class Panels extends React.Component {
 				<PanelBody>
 					<h4>Example</h4>
 					<Panel>
-						<PanelHeader>
+						<Panel.Header>
 							Panel heading without title
-						</PanelHeader>
+						</Panel.Header>
 						<PanelBody>
 							Panel content
 						</PanelBody>
@@ -87,7 +87,7 @@ class Panels extends React.Component {
 				<PanelFooter>
 					<h5>React code</h5>
 					<CodeXml markup='Panel'>
-						<CodeXml markup='PanelHeader'>
+						<CodeXml markup='Panel.Header'>
 							<CodeXml>Panel heading without title</CodeXml>
 						</CodeXml>
 						<CodeXml markup='PanelBody'>

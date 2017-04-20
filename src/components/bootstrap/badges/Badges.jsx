@@ -51,7 +51,6 @@ class Badges extends React.Component {
 					<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'}]}>
 						Messages <CodeXml markup='Badge' inline/>
 					</CodeXml>
-
 				</PanelFooter>
 			</Panel>
 

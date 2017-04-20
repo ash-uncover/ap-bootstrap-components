@@ -78,8 +78,6 @@ import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
 
 // Panels
-import PanelBase from './components/bootstrap/panel/Panel'
-export const Panel = PanelBase
 
 import PanelHeaderBase from './components/bootstrap/panel/PanelHeader'
 export const PanelHeader = PanelHeaderBase
@@ -92,6 +90,11 @@ export const PanelBody = PanelBodyBase
 
 import PanelFooterBase from './components/bootstrap/panel/PanelFooter'
 export const PanelFooter = PanelFooterBase
+
+import PanelBase from './components/bootstrap/panel/Panel'
+export const Panel = Object.assign(PanelBase, {
+    Header: PanelHeaderBase
+})
 
 // Tables
 import TableBase from './components/bootstrap/table/Table'

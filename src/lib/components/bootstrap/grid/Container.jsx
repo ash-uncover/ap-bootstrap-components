@@ -13,7 +13,7 @@ class Container extends Base {
 		this.propsInfos = {
 			required : {},
 			optionnal : {
-                fuild: {defaultValue: false },
+                fluid: { defaultValue: false },
 				children: {}
 			}
 		}

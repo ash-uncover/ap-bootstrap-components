@@ -20,6 +20,7 @@ class App extends React.Component {
 
 	constructor(props) {
 		super(props)
+		this.state = { scroll: 15 }
 	}
 
 	componentWillMount() {
@@ -33,6 +34,13 @@ class App extends React.Component {
 	onDataUpdate() {
 		this.setState({ AppData: AppData })
 	}
+
+	componentDidMount() {
+		window.addEventListener('scroll', function(e){
+			this.setState({ scroll: 15 + document.body.scrollTop })
+		}.bind(this), true)
+	}
+
 
 	render() {
 		return (
@@ -63,15 +71,18 @@ class App extends React.Component {
 							<Tables />
 						</Col>
                         <Col md={3} className='ap-rb-toc hidden-xs hidden-sm'>
-                            <div><Button comp='a' href='#ap-busy' bsStyle='link'>Busy</Button></div>
-                            <div><Button comp='a' href='#ap-rater' bsStyle='link'>Rater</Button></div>
-                            <div><Button comp='a' href='#ap-grid' bsStyle='link'>Grid</Button></div>
-                            <div><Button comp='a' href='#ap-glyphicons' bsStyle='link'>Glyphicons</Button></div>
-                            <div><Button comp='a' href='#ap-buttons' bsStyle='link'>Buttons</Button></div>
-                            <div><Button comp='a' href='#ap-labels' bsStyle='link'>Labels</Button></div>
-                            <div><Button comp='a' href='#ap-badges' bsStyle='link'>Badges</Button></div>
-                            <div><Button comp='a' href='#ap-panels' bsStyle='link'>Panels</Button></div>
-                            <div><Button comp='a' href='#ap-tables' bsStyle='link'>Tables</Button></div>
+                        	<div style={{height:this.state.scroll, transition:'height 0.3s'}}/>
+                        	<ul style={{listStyleType: 'none'}}>
+                            <li><Button comp='a' href='#ap-busy' bsStyle='link' bsSize='sm'>Busy</Button></li>
+                            <li><Button comp='a' href='#ap-rater' bsStyle='link' bsSize='sm'>Rater</Button></li>
+                            <li><Button comp='a' href='#ap-grid' bsStyle='link' bsSize='sm'>Grid</Button></li>
+                            <li><Button comp='a' href='#ap-glyphicons' bsStyle='link' bsSize='sm'>Glyphicons</Button></li>
+                            <li><Button comp='a' href='#ap-buttons' bsStyle='link' bsSize='sm'>Buttons</Button></li>
+                            <li><Button comp='a' href='#ap-labels' bsStyle='link' bsSize='sm'>Labels</Button></li>
+                            <li><Button comp='a' href='#ap-badges' bsStyle='link' bsSize='sm'>Badges</Button></li>
+                            <li><Button comp='a' href='#ap-panels' bsStyle='link' bsSize='sm'>Panels</Button></li>
+                            <li><Button comp='a' href='#ap-tables' bsStyle='link' bsSize='sm'>Tables</Button></li>
+                            </ul>
                         </Col>
 					</Row>
 				</Container>

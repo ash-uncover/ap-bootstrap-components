@@ -1,5 +1,6 @@
 // Globally import the bootstrap css;
 import 'bootstrap/dist/css/bootstrap.css';
+import '../assets/style/ap-react-bootstrap.scss';
 // React modules;
 import React from 'react';
 import { render } from 'react-dom';

@@ -41,6 +41,10 @@ class App extends React.Component {
 		}.bind(this), true)
 	}
 
+	_navigate() {
+
+	}
+
 
 	render() {
 		return (
@@ -48,12 +52,12 @@ class App extends React.Component {
 				<Navbar fixedTop>
 					<NavbarHeader brandText='ap-react-bootstrap' brandImage='/assets/img/logo.jpg'/>
 					<NavbarGroup>
-						<NavbarLink text='Link' />
-						<NavbarLink text='Active link' active/>
-						<NavbarLink text='Disabled link' disabled/>
+						<NavbarLink text='Link' link='#' onNavigate={this._navigate}/>
+						<NavbarLink text='Active link'  link='#' active onNavigate={this._navigate}/>
+						<NavbarLink text='Disabled link'  link='#'  onNavigate={this._navigate} disabled />
 					</NavbarGroup>
 					<NavbarGroup right>						
-						<NavbarLink text='Bootstrap' />
+						<NavbarLink text='Bootstrap' link='#'  onNavigate={this._navigate}/>
 					</NavbarGroup>
 				</Navbar>
 				<Container className='ap-rb-app'>
@@ -71,7 +75,7 @@ class App extends React.Component {
 							<Tables />
 						</Col>
                         <Col md={3} className='ap-rb-toc hidden-xs hidden-sm'>
-                        	<div style={{height:this.state.scroll, transition:'height 0.3s'}}/>
+                        	<div style={{height:this.state.scroll, transition:'height 0.2s'}}/>
                         	<ul style={{listStyleType: 'none'}}>
                             <li><Button comp='a' href='#ap-busy' bsStyle='link' bsSize='sm'>Busy</Button></li>
                             <li><Button comp='a' href='#ap-rater' bsStyle='link' bsSize='sm'>Rater</Button></li>
@@ -82,6 +86,9 @@ class App extends React.Component {
                             <li><Button comp='a' href='#ap-badges' bsStyle='link' bsSize='sm'>Badges</Button></li>
                             <li><Button comp='a' href='#ap-panels' bsStyle='link' bsSize='sm'>Panels</Button></li>
                             <li><Button comp='a' href='#ap-tables' bsStyle='link' bsSize='sm'>Tables</Button></li>
+                            { this.state.scroll > 15 ? 
+                            <li><Button comp='a' href='#' bsStyle='link' bsSize='sm'><span style={{fontSçize:'150%'}}> &uarr; </span> back to top</Button></li>
+                            : '' }
                             </ul>
                         </Col>
 					</Row>

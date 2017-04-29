@@ -1,9 +1,10 @@
 import React from 'react'
 import AppData from 'components/AppData'
 
-import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col, Button } from 'lib/exports'
+import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col, Button, GoogleAutocomplete } from 'lib/exports'
 
 import Busy from 'components/custom/busy/Busy'
+import GoogleMaps from 'components/custom/googlemap/GoogleMaps'
 import Rater from 'components/custom/rater/Rater'
 
 import Badges from 'components/bootstrap/badges/Badges'
@@ -64,6 +65,7 @@ class App extends React.Component {
 				<Container className='ap-rb-app'>
 					<Row>
 						<Col md={9}>
+							<GoogleMaps />
                             <Busy />
                             <Rater />
 

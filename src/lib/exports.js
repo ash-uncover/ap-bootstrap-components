@@ -26,6 +26,14 @@ export const CodeXmlComment = CodeXmlCommentBase
 import CodeXmlGroupBase from './components/custom/code/CodeXmlGroup'
 export const CodeXmlGroup = CodeXmlGroupBase
 
+// Google
+import GoogleAutocompleteBase from './components/custom/googlemap/GoogleAutocomplete'
+export const GoogleAutocomplete = GoogleAutocompleteBase
+
+export const Google = {
+    Autocomplete: GoogleAutocompleteBase
+}
+
 // Rater
 import RaterStarBase from './components/custom/rater/RaterStar'
 export const RaterStar = RaterStarBase
@@ -101,7 +109,6 @@ import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
 
 // Panels
-
 import PanelHeaderBase from './components/bootstrap/panel/PanelHeader'
 export const PanelHeader = PanelHeaderBase
 
@@ -116,13 +123,13 @@ export const PanelFooter = PanelFooterBase
 
 import PanelBase from './components/bootstrap/panel/Panel'
 export const Panel = Object.assign(PanelBase, {
-    Header: PanelHeaderBase
+    Header: PanelHeaderBase,
+    Title: PanelTitleBase,
+    Body: PanelBodyBase,
+    Footer: PanelFooterBase
 })
 
 // Tables
-import TableBase from './components/bootstrap/table/Table'
-export const Table = TableBase
-
 import TableBodyBase from './components/bootstrap/table/TableBody'
 export const TBody = TableBodyBase
 
@@ -143,6 +150,17 @@ export const TR = TableRowBase
 
 import TableBuilderBase from './components/bootstrap/table/TableBuilder'
 export const TableBuilder = TableBuilderBase
+
+import TableBase from './components/bootstrap/table/Table'
+export const Table = Object.assign(TableBase, {
+    Head: TableHeadBase,
+    Body: TableBodyBase,
+    Foot: TableFootBase,
+    TR: TableRowBase,
+    TH: TableHeaderCellBase,
+    TD: TableCellBase
+})
+
 
 /* SERVICES */
 

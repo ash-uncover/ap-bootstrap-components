@@ -1,26 +1,26 @@
 import React from 'react'
-import GoogleMapsData from 'components/custom/googlemap/GoogleMapsData'
+import GoogleAutocompletesData from 'components/custom/googlemap/GoogleAutocompletesData'
 
 import { Panel, CodeXml, CodeJson, Table, Button, Google } from 'lib/exports'
 
-import './GoogleMaps.scss'
+import './GoogleAutocompletes.scss'
 
-class GoogleMaps extends React.Component {
+class GoogleAutocompletes extends React.Component {
 
 	constructor(props) {
 		super(props);
 	}
 
 	componentWillMount() {
-		GoogleMapsData.register(this.onDataUpdate.bind(this))
+		GoogleAutocompletesData.register(this.onDataUpdate.bind(this))
 	}
 
 	componentWillUnmount() {
-		GoogleMapsData.unregister()
+		GoogleAutocompletesData.unregister()
 	}
 
 	onDataUpdate() {
-		this.setState({ GoogleMapsData: GoogleMapsData })
+		this.setState({ data: GoogleAutocompletesData })
 	}
 
 	render() {
@@ -36,19 +36,19 @@ class GoogleMaps extends React.Component {
 				<Panel>
 					<Panel.Body>
 						<h4>Example</h4>
-						<Google.Autocomplete {...this.state.GoogleMapsData.autocompleteData} />
+						<Google.Autocomplete {...this.state.data.autocompleteData} />
 						<br/>
 						<Table hover>
 							<Table.Head>
 								<Table.TR><Table.TH>Field</Table.TH><Table.TH>Value</Table.TH></Table.TR>
 							</Table.Head>
 							<Table.Body>
-								<Table.TR><Table.TH>Address</Table.TH><Table.TD>{this.state.GoogleMapsData.address.address}</Table.TD></Table.TR>
-								<Table.TR><Table.TH>Postal code</Table.TH><Table.TD>{this.state.GoogleMapsData.address.postalCode}</Table.TD></Table.TR>
-								<Table.TR><Table.TH>City</Table.TH><Table.TD>{this.state.GoogleMapsData.address.city}</Table.TD></Table.TR>
-								<Table.TR><Table.TH>Country</Table.TH><Table.TD>{this.state.GoogleMapsData.address.country}</Table.TD></Table.TR>
-								<Table.TR><Table.TH>lattitude</Table.TH><Table.TD>{this.state.GoogleMapsData.address.lattitude}</Table.TD></Table.TR>
-								<Table.TR><Table.TH>longitude</Table.TH><Table.TD>{this.state.GoogleMapsData.address.longitude}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>Address</Table.TH><Table.TD>{this.state.data.address.address}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>Postal code</Table.TH><Table.TD>{this.state.data.address.postalCode}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>City</Table.TH><Table.TD>{this.state.data.address.city}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>Country</Table.TH><Table.TD>{this.state.data.address.country}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>lattitude</Table.TH><Table.TD>{this.state.data.address.lattitude}</Table.TD></Table.TR>
+								<Table.TR><Table.TH>longitude</Table.TH><Table.TD>{this.state.data.address.longitude}</Table.TD></Table.TR>
 							</Table.Body>
 						</Table>
 					</Panel.Body>
@@ -65,9 +65,9 @@ class GoogleMaps extends React.Component {
 				<Panel>
 					<Panel.Body>
 						<h4>Example</h4>
-						<Google.Autocomplete {...this.state.GoogleMapsData.autocomplete2Data} />
+						<Google.Autocomplete {...this.state.data.autocomplete2Data} />
 						<br/>
-						<Button {...this.state.GoogleMapsData.buttonResetData}>Reset</Button>
+						<Button {...this.state.data.buttonResetData}>Reset</Button>
 					</Panel.Body>
 					<Panel.Footer>
 						<h5>React code</h5>
@@ -84,4 +84,4 @@ class GoogleMaps extends React.Component {
 		)
 	}
 }
-export default GoogleMaps
+export default GoogleAutocompletes

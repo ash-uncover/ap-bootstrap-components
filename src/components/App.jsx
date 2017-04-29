@@ -11,6 +11,7 @@ import Buttons from 'components/bootstrap/buttons/Buttons'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Grid from 'components/bootstrap/grid/Grid'
 import Labels from 'components/bootstrap/labels/Labels'
+import Lists from 'components/bootstrap/lists/Lists'
 import Panels from 'components/bootstrap/panels/Panels'
 import Tables from 'components/bootstrap/tables/Tables'
 
@@ -72,6 +73,7 @@ class App extends React.Component {
 							<Labels/>							
 							<Badges />
 							<Panels />
+							<Lists />
 							<Tables />
 						</Col>
                         <Col md={3} className='ap-rb-toc hidden-xs hidden-sm'>
@@ -85,6 +87,7 @@ class App extends React.Component {
                             <li><Button comp='a' href='#ap-labels' bsStyle='link' bsSize='sm'>Labels</Button></li>
                             <li><Button comp='a' href='#ap-badges' bsStyle='link' bsSize='sm'>Badges</Button></li>
                             <li><Button comp='a' href='#ap-panels' bsStyle='link' bsSize='sm'>Panels</Button></li>
+                            <li><Button comp='a' href='#ap-lists' bsStyle='link' bsSize='sm'>Lists</Button></li>
                             <li><Button comp='a' href='#ap-tables' bsStyle='link' bsSize='sm'>Tables</Button></li>
                             { this.state.scroll > 15 ? 
                             <li><Button comp='a' href='#' bsStyle='link' bsSize='sm'><span style={{fontSçize:'150%'}}> &uarr; </span> back to top</Button></li>

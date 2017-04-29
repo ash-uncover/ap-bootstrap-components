@@ -100,7 +100,7 @@ class Base extends React.Component {
 		
 		for (var attr in this.propsInfos.required) {
 			if (this.propsInfos.required.hasOwnProperty(attr)) {
-				if (!this.props[attr]) {
+				if (typeof this.props[attr] === 'undefined' || this.props[attr] === null) {
 					let errorMessage = 'ERROR : Compo require ' + compoName + '  properties: ' + attr
 					console.log(errorMessage)
 					this.errorMessage.push(errorMessage)

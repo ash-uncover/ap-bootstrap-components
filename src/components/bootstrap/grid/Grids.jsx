@@ -1,26 +1,26 @@
 import React from 'react'
-import GridData from 'components/bootstrap/grid/GridData'
+import GridsData from 'components/bootstrap/grid/GridsData'
 
 import { Navbar, NavbarHeader, NavbarGroup, NavbarLink, Container, Row, Col, Button, Panel, PanelBody, PanelFooter, CodeXml } from 'lib/exports'
 
-import './Grid.scss'
+import './Grids.scss'
 
-class Grid extends React.Component {
+class Grids extends React.Component {
 
 	constructor(props) {
 		super(props);
 	}
 
 	componentWillMount() {
-		GridData.register(this.onDataUpdate.bind(this))
+		GridsData.register(this.onDataUpdate.bind(this))
 	}
 
 	componentWillUnmount() {
-		GridData.unregister()
+		GridsData.unregister()
 	}
 
 	onDataUpdate() {
-		this.setState({ GridData: GridData })
+		this.setState({ data: GridsData })
 	}
 
 	render() {
@@ -231,4 +231,4 @@ class Grid extends React.Component {
 	}
 
 }
-export default Grid
+export default Grids

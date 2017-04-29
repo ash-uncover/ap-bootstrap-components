@@ -65,6 +65,13 @@ export const Container = ContainerBase
 import RowBase from './components/bootstrap/grid/Row'
 export const Row = RowBase
 
+export const Grid = {
+    Container: ContainerBase,
+    Row: RowBase,
+    Col: ColBase
+}
+
+
 // Label
 import LabelBase from './components/bootstrap/label/Label'
 export const Label = LabelBase
@@ -91,11 +98,19 @@ export const ListGroupItemHeading = ListGroupItemHeadingBase
 import ListGroupItemTextBase from './components/bootstrap/list/ListGroupItemText'
 export const ListGroupItemText = ListGroupItemTextBase
 
+export const List = {
+    Group: ListGroupBase,
+    Item: ListGroupItemBase,
+    GroupLink: ListGroupLinkBase,
+    ItemLink: ListGroupLinkItemBase,
+    GroupButton: ListGroupButtonBase,
+    ItemButton: ListGroupButtonItemBase,
+    ItemHeading: ListGroupItemHeadingBase,
+    ItemText: ListGroupItemTextBase
+}
+
 
 // Navbar
-import NavbarBase from './components/bootstrap/navbar/Navbar'
-export const Navbar = NavbarBase
-
 import NavbarHeaderBase from './components/bootstrap/navbar/NavbarHeader'
 export const NavbarHeader = NavbarHeaderBase
 
@@ -107,6 +122,15 @@ export const NavbarGroup = NavbarGroupBase
 
 import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
+
+import NavbarBase from './components/bootstrap/navbar/Navbar'
+export const Navbar = Object.assign(NavbarBase, {
+    Header: NavbarHeaderBase,
+    Brand: NavbarBrandBase,
+    Group: NavbarGroupBase,
+    Link: NavbarLinkBase
+})
+
 
 // Panels
 import PanelHeaderBase from './components/bootstrap/panel/PanelHeader'

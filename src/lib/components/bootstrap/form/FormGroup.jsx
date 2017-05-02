@@ -1,18 +1,18 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSForm extends Base {
+class BSFormGroup extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'ap-form' ]
+		this.baseClasses = [ 'form-group', 'ap-form-group' ]
 		// Component props
 		this.propsInfos = {
 			required : {
+				children: {}
 			},
 			optionnal : {
-				children: {}
 			}
 		}
 	}
@@ -22,12 +22,12 @@ class BSForm extends Base {
 	// --------------------------------------------------------------------------------
 	
 	render() {
-		this.buildProps('Form')
+		this.buildProps('FormGroup')
 		return (
-			<form className={this.className}>
+			<div className={this.className}>
 				{this.props.children}
-			</form>
+			</div>
 		)
 	}
 }
-export default BSForm
+export default BSFormGroup

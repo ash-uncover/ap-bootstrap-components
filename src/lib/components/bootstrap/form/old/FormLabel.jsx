@@ -2,32 +2,32 @@ import React from 'react'
 import Base from 'lib/components/Base'
 
 class BSFormLabel extends Base {
-
+	
 	constructor(props) {
 		super(props)
-		// Base classes
+		// Base class
 		this.baseClasses = [ 'ap-form-label' ]
-		// Sub-component props
-		this.containerProps = {}
-		// Component props
+		// Sub components properties
+		this.labelProps = {}
+		// Component properties
 		this.propsInfos = {
 			required : {
 				children: {}
 			},
 			optionnal : {
-				for: { rename: 'htmlFor', store: this.containerProps }
+				for: { store: this.labelProps }
 			}
 		}
 	}
 
-	
+
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
-	
+
 	render() {
 		this.buildProps('FormLabel')
 		return (
-			<label className={this.className} {...this.containerProps}>
+			<label className={this.className} {...this.labelProps}>
 				{this.props.children}
 			</label>
 		)

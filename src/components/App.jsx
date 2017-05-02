@@ -9,6 +9,7 @@ import Rater from 'components/custom/rater/Rater'
 
 import Badges from 'components/bootstrap/badges/Badges'
 import Buttons from 'components/bootstrap/buttons/Buttons'
+import Forms from 'components/bootstrap/forms/Forms'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Grids from 'components/bootstrap/grid/Grids'
 import Labels from 'components/bootstrap/labels/Labels'
@@ -65,6 +66,8 @@ class App extends React.Component {
 				<Grid.Container className='ap-rb-app'>
 					<Grid.Row>
 						<Grid.Col md={9}>
+						<Forms />
+
 							<GoogleAutocompletes />
                             <Busy />
                             <Rater />
@@ -79,7 +82,7 @@ class App extends React.Component {
 							<Tables />
 						</Grid.Col>
                         <Grid.Col md={3} className='ap-rb-toc hidden-xs hidden-sm'>
-                        	<div style={{height:this.state.scroll, transition:'height 0.2s'}}/>
+                        	<div style={{height:this.state.scroll, transition:'height 0.5s'}}/>
                         	<ul style={{listStyleType: 'none'}}>
 	                        	<li><Button comp='a' href='#ap-rb-googlemap' bsStyle='link' bsSize='sm'>Google autocomplete</Button></li>
 	                            <li><Button comp='a' href='#ap-busy' bsStyle='link' bsSize='sm'>Busy</Button></li>

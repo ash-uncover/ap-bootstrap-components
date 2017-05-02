@@ -38,11 +38,13 @@ export const Google = {
 import RaterStarBase from './components/custom/rater/RaterStar'
 export const RaterStar = RaterStarBase
 
+
 /* BOOTSTRAP CSS */
 
 // Badges
 import BadgeBase from './components/bootstrap/badge/Badge'
 export const Badge = BadgeBase
+
 
 // Buttons
 import ButtonBase from './components/bootstrap/button/Button'
@@ -51,9 +53,29 @@ export const Button = ButtonBase
 import ButtonGroupBase from './components/bootstrap/button/ButtonGroup'
 export const ButtonGroup = ButtonGroupBase
 
+
+// Form
+import FormGroupBase from './components/bootstrap/form/FormGroup'
+export const FormGroup = FormGroupBase
+
+import FormLabelBase from './components/bootstrap/form/FormLabel'
+export const FormLabel = FormLabelBase
+
+import FormInputBase from './components/bootstrap/form/FormInput'
+export const FormInput = FormInputBase
+
+import FormBase from './components/bootstrap/form/Form'
+export const Form = Object.assign(FormBase, {
+    Group: FormGroupBase,
+    Label: FormLabelBase,
+    Input: FormInputBase
+})
+
+
 // Glyphicons
 import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'
 export const Glyphicon = GlyphiconBase
+
 
 // Grid
 import ColBase from './components/bootstrap/grid/Col'

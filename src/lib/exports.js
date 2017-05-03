@@ -8,6 +8,9 @@ export const AppRouter = AppRouterBase
 import BasicLoginBase from './components/complex/auth/BasicLogin'
 export const BasicLogin = BasicLoginBase
 
+import BasicRegistrationBase from './components/complex/auth/BasicRegistration'
+export const BasicRegistration = BasicRegistrationBase
+
 /* CUSTOM */
 
 // Busy

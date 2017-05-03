@@ -1,64 +1,55 @@
 import React from 'react'
-import Base from 'Base'
+import Base from 'lib/components/Base'
 // Custom components
-import { Panel, Col, LayoutColumn, Form, FormInput, Button } from 'index'
-// Utils
-import Validators from 'utils/form/Validators'
+import { Row, Col, Panel, Form, Button } from 'lib/exports'
 
-import './ap-basic-auth.css'
-
-class BasicRegistration extends Base {
+class BasicLogin extends Base {
 
 	constructor(props) {
-		super(props);
+		super(props)
 		this.state = {
-			username: '',
-			password: '',
-			passwordConfirm: '',
-			captcha: ''
+			username: this.props.username || '',
+			password: this.props.password || '',
+			confirm: this.props.confirm || ''
 		}
+		// Base classes
+		this.baseClasses = [ 'ap-basic-login' ]
 		// Sub components
-		this.containerProps = {
-			smOffset: 1, 
-			sm: 10, 
-			mdOffset: 2, 
-			md: 8 
+		this.panelProps = {}
+		this.panelHeaderProps = {}
+ 		this.labelUsernameProps = {
+			for: 'registerUsername'
 		}
-		this.panelProps = {
-			footer: ' '
-		}
-		this.errorDivProps = {
-			className: 'ap-register-error'
-		}
-		this.usernameFieldProps = {
-			name: 'user',
+		this.inputUsernameProps = {
+			id: 'registerUsername',
 			type: 'email',
 			onChange: this._onUsernameChanged.bind(this)
 		}
-		this.passwordFieldProps = {
-			name: 'pass',
+		this.labelPasswordProps = {
+			for: 'registerPassword'
+		}
+		this.inputPasswordProps = {
+			id: 'registerPassword',
 			type: 'password',
 			onChange: this._onPasswordChanged.bind(this)
 		}
-		this.passwordConfirmFieldProps = {
-			name: 'confirm',
+		this.labelConfirmProps = {
+			for: 'registerConfirm'
+		}
+		this.inputConfirmProps = {
+			id: 'registerConfirm',
 			type: 'password',
-			onChange: this._onPasswordConfirmChanged.bind(this)
+			onChange: this._onConfirmChanged.bind(this)
 		}
-		this.captchaFieldProps = {
-			name: 'captcha',
-			onChange: this._onCaptchaChanged.bind(this),
-			placeholder: 'Réponse'
-		}
-		this.cancelButtonProps = {
+		this.buttonCancelProps = {
 			block: true,
-			children: 'Annuler',
+			children: 'Cancel',
 			bsStyle: 'primary',
 			bsSize: 'large'
 		}
-		this.submitButtonProps = {
+		this.buttonSubmitProps = {
 			block: true,
-			children: 'Créer compte',
+			children: 'Login',
 			bsStyle: 'success',
 			bsSize: 'large',
 			type: 'submit',
@@ -67,88 +58,137 @@ class BasicRegistration extends Base {
 		// Component properties
 		this.propsInfos = {
 			required : {
-				onCancel: { rename: 'onClick', store: this.cancelButtonProps },
+				onCancel: { rename: 'onClick', store: this.buttonCancelProps },
 				onSubmit: {}
 			},
 			optionnal : {
+				buttonsInBody: { defaultValue: false },
+				children: {},
 				onChange: {},
-				title: { defaultValue: 'Création compte', rename: 'header', store: this.panelProps },
-				errorMessage: { defaultValue: null, rename: 'children', store: this.errorDivProps },
-
-				userLabel: { defaultValue: 'Adresse électronique', rename: 'label', store: this.usernameFieldProps },
-				userPlaceholder: { defaultValue: 'Adresse électronique', rename: 'placeholder', store: this.usernameFieldProps },
-				passLabel: { defaultValue: 'Mot de passe', rename: 'label', store: this.passwordFieldProps },
-				passPlaceholder: { defaultValue: 'Mot de passe', rename: 'placeholder', store: this.passwordFieldProps },
-				confirmLabel: { defaultValue: 'Confirmation de votre mot de passe', rename: 'label', store: this.passwordConfirmFieldProps },
-				confirmPlaceholder: { defaultValue: 'Mot de passe', rename: 'placeholder', store: this.passwordConfirmFieldProps },
-				captcha: { defaultValue: '', rename: 'label', store: this.captchaFieldProps }
+				title: { defaultValue: 'User credentials', rename: 'children', store: this.panelHeaderProps },
+				usernameLabel: { defaultValue: 'Username', rename: 'children', store: this.labelUsernameProps },
+				usernamePlaceholder: { defaultValue: 'Enter username', rename: 'placeholder', store: this.inputUsernameProps },
+				username: {},
+				passwordLabel: { defaultValue: 'Password', rename: 'children', store: this.labelPasswordProps },
+				passwordPlaceholder: { defaultValue: 'Enter password', rename: 'placeholder', store: this.inputPasswordProps },
+				password: {},
+				confirmLabel: { defaultValue: 'Confirm password', rename: 'children', store: this.labelConfirmProps },
+				confirmPlaceholder: { defaultValue: 'Confirm password', rename: 'placeholder', store: this.inputConfirmProps },
+				confirm: {}
 			}
 		}
 	}
 
+	// State management //
+	// --------------------------------------------------------------------------------
+
+	componentWillReceiveProps(props) {
+		this.setState({
+			username: props.username || '',
+			password: props.password || ''
+		})
+	}
+
+
 	// View Callbacks //
 	// --------------------------------------------------------------------------------
 
-	_onUsernameChanged(_, value) {
+	_onUsernameChanged(e, value) {
+		if (this.props.onChange) {
+			this.props.onChange({
+				username: value,
+				password: this.state.password,
+				confirm: this.state.confirm
+			})
+		}
 		this.setState({ username: value })
 	}
-	_onPasswordChanged(_, value) {
+
+	_onPasswordChanged(e, value) {
+		if (this.props.onChange) {
+			this.props.onChange({
+				username: this.state.username,
+				password: value,
+				confirm: this.state.confirm
+			})
+		}
 		this.setState({ password: value })
 	}
-	_onPasswordConfirmChanged(_, value) {
-		this.setState({ passwordConfirm: value })
-	}
-	_onCaptchaChanged(_, value) {
-		this.setState({ captcha: value })
+
+	_onConfirmChanged(e, value) {
+		if (this.props.onChange) {
+			this.props.onChange({
+				username: this.state.username,
+				password: this.state.password,
+				confirm: value
+			})
+		}
+		this.setState({ confirm: value })
 	}
 
 	_onSubmit() {
 		this.props.onSubmit({
 			username: this.state.username,
-			password: this.state.password,
-			confirm: this.state.passwordConfirm,
-			captcha: this.state.captcha
+			password: this.state.password
 		})
 	}
 
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
-	
+
 	_checkSubmitButtonState() {
-		let disabled = !this.state.username || !this.state.password || (this.props.captcha && !this.state.captcha) || this.state.password !== this.state.passwordConfirm
-		this.submitButtonProps.disabled = disabled
-		this.submitButtonProps.bsStyle = disabled ? 'default' : 'success'
+		let disabled = !this.state.username || !this.state.password || (this.state.password !== this.state.confirm)
+		this.buttonSubmitProps.disabled = disabled
+		this.buttonSubmitProps.bsStyle = disabled ? 'default' : 'success'
 	}
 
 	render() { 
 		this.buildProps('BasicRegistration')
 		this._checkSubmitButtonState()
 		return (
-			<div className='row ap-basic-registration'>
-				<Col {...this.containerProps} >
-					<Panel {...this.panelProps} >
-						<Form onSubmit={this._onSubmit.bind(this)}>
-							{this.errorDivProps.children ? 
-								<div {...this.errorDivProps} />
-							: '' }
-							<FormInput {...this.usernameFieldProps} />
-							<FormInput {...this.passwordFieldProps} />
-							<FormInput {...this.passwordConfirmFieldProps} />
-							{this.props.captcha ?
-							<FormInput {...this.captchaFieldProps} />
-							: '' }
-							<br/><br/>
-							<Col xs={12}>
-								<LayoutColumn>
-									<Button {...this.cancelButtonProps} />
-									<Button {...this.submitButtonProps} />
-								</LayoutColumn>
-							</Col>
-						</Form>
-					</Panel>
-				</Col>
-			</div>
+			<Panel className={this.className} {...this.panelProps} >
+				<Panel.Header {...this.panelHeaderProps} />
+				<Panel.Body>
+					<Form>
+						<Form.Group>
+							<Form.Label {...this.labelUsernameProps} />
+							<Form.Input {...this.inputUsernameProps} defaultValue={this.state.username} />
+						</Form.Group>
+						<Form.Group>
+							<Form.Label {...this.labelPasswordProps} />
+							<Form.Input {...this.inputPasswordProps} defaultValue={this.state.password} />
+						</Form.Group>
+						<Form.Group>
+							<Form.Label {...this.labelConfirmProps} />
+							<Form.Input {...this.inputConfirmProps} defaultValue={this.state.confirm} />
+						</Form.Group>
+						{this.props.children}
+						{this.props.footer ?
+							<Row>
+								<Col sm={6}>
+									<Button {...this.buttonCancelProps} />
+								</Col>
+								<Col sm={6}>
+									<Button {...this.buttonSubmitProps} />
+								</Col>
+							</Row>
+						: '' }					
+					</Form>
+				</Panel.Body>
+				<Panel.Footer>
+				{this.props.footer ? this.props.footer :
+					<Row>
+						<Col sm={6}>
+							<Button {...this.buttonCancelProps} />
+						</Col>
+						<Col sm={6}>
+							<Button {...this.buttonSubmitProps} />
+						</Col>
+					</Row>
+				}
+				</Panel.Footer>
+			</Panel>
 		)
 	}
 }
-export default BasicRegistration;
+export default BasicLogin

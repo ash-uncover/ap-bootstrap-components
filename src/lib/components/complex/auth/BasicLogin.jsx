@@ -2,7 +2,6 @@ import React from 'react'
 import Base from 'lib/components/Base'
 // Custom components
 import { Row, Col, Panel, Form, Button } from 'lib/exports'
-import { LinkContainer } from 'react-router-bootstrap'
 
 class BasicLogin extends Base {
 
@@ -62,7 +61,7 @@ class BasicLogin extends Base {
 				usernamePlaceholder: { defaultValue: 'Enter username', rename: 'placeholder', store: this.inputUsernameProps },
 				username: {},
 				passwordLabel: { defaultValue: 'Password', rename: 'children', store: this.labelPasswordProps },
-				passwoardPlaceholder: { defaultValue: 'Enter password', rename: 'placeholder', store: this.inputPasswordProps },
+				passwordPlaceholder: { defaultValue: 'Enter password', rename: 'placeholder', store: this.inputPasswordProps },
 				password: {}
 			}
 		}
@@ -134,6 +133,7 @@ class BasicLogin extends Base {
 							<Form.Label {...this.labelPasswordProps} />
 							<Form.Input {...this.inputPasswordProps} defaultValue={this.state.password} />
 						</Form.Group>
+						{this.props.children}
 						{this.props.buttonsInBody ?
 							<Row>
 								<Col sm={6}>
@@ -145,7 +145,6 @@ class BasicLogin extends Base {
 							</Row>
 						: '' }					
 					</Form>
-					{this.props.children}
 				</Panel.Body>
 				<Panel.Footer>
 				{!this.props.buttonsInBody ?

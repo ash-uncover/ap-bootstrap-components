@@ -11,6 +11,13 @@ class Data {
 		this.loginSubmitPassword = ''
 		this.loginErrorData = ''
 
+		this.registerUsername = ''
+		this.registerPassword = ''
+		this.registerConfirm = ''
+		this.registerSubmitUsername = ''
+		this.registerSubmitPassword = ''
+		this.registerErrorData = ''
+
 		this.onStoreUpdate()
 	}
 
@@ -29,6 +36,15 @@ class Data {
 			onChange: this.onLoginChange.bind(this),
 			username: this.loginUsername,
 			password: this.loginPassword
+		}
+
+		this.registerData = {
+			onCancel: this.onRegisterCancel.bind(this),
+			onSubmit: this.onRegisterSubmit.bind(this),
+			onChange: this.onRegisterChange.bind(this),
+			username: this.registerUsername,
+			password: this.registerPassword,
+			confirm: this.registerConfirm
 		}
 	}
 
@@ -54,6 +70,32 @@ class Data {
 		this.loginErrorData = ''
 		this.onStoreUpdate()
 	}
+
+	onRegisterCancel(value) {
+		this.registerUsername = ''
+		this.registerPassword = ''
+		this.registerConfirm = ''
+		this.registerErrorData = ''
+		this.onStoreUpdate()
+	}
+	onRegisterSubmit(value) {
+		if (value.username === 'a' && value.password === 'a') {
+			this.registerErrorData = 'Success'
+		} else {
+			this.registerErrorData = 'Error'
+		}
+		this.registerSubmitUsername = value.username
+		this.registerSubmitPassword = value.password
+		this.onStoreUpdate()
+	}
+	onRegisterChange(value) {
+		this.registerUsername = value.username
+		this.registerPassword = value.password
+		this.registerConfirm = value.confirm
+		this.registerErrorData = ''
+		this.onStoreUpdate()
+	}
+
 
 }
 var Obj = new Data()

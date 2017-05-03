@@ -4,6 +4,10 @@
 import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase
 
+// auth
+import BasicLoginBase from './components/complex/auth/BasicLogin'
+export const BasicLogin = BasicLoginBase
+
 /* CUSTOM */
 
 // Busy
@@ -64,11 +68,15 @@ export const FormLabel = FormLabelBase
 import FormInputBase from './components/bootstrap/form/FormInput'
 export const FormInput = FormInputBase
 
+import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
+export const FormCheckbox = FormCheckboxBase
+
 import FormBase from './components/bootstrap/form/Form'
 export const Form = Object.assign(FormBase, {
     Group: FormGroupBase,
     Label: FormLabelBase,
-    Input: FormInputBase
+    Input: FormInputBase,
+    Checkbox: FormCheckboxBase
 })
 
 
@@ -206,7 +214,6 @@ export const Table = Object.assign(TableBase, {
     TH: TableHeaderCellBase,
     TD: TableCellBase
 })
-
 
 /* SERVICES */
 

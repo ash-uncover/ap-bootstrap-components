@@ -2,9 +2,9 @@ import React from 'react'
 
 import { Grid } from 'lib/exports'
 
-import './Bootstrap.scss'
+import './Complex.scss'
 
-class Bootstrap extends React.Component {
+class Complex extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -19,4 +19,4 @@ class Bootstrap extends React.Component {
 	}
 
 }
-export default Bootstrap
+export default Complex

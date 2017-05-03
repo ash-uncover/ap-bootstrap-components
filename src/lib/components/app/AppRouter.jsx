@@ -1,5 +1,5 @@
 import React from 'react'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 import Base from 'lib/components/Base'
 
@@ -24,8 +24,10 @@ class AppRouter extends Base {
                     {route.routes.map(this.buildRoutes.bind(this))}
                 </Route>
             );
+        } else if (route.path) {
+            return(<Route key={index} path={route.path} component={route.component} />)
         } else {
-            return(<Route key={index} path={route.path} component={route.component} />);
+            return(<IndexRoute key={index} component={route.component} />)
         }
     }
     

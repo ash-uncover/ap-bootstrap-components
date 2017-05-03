@@ -30,7 +30,7 @@ class Forms extends React.Component {
 
 				<h2>Basic example</h2>
 				
-				<p></p>
+				<p>Individual form controls automatically receive some global styling. Components <code>{'<FormInput>'}</code>, <code>{'<FormTextArea>'}</code>, and <code>{'<FormCheckbox>'}</code> are set to width: 100%; by default. Wrap labels and controls in <code>{'<FormGroup>'}</code> for optimum spacing</p>
 
 				<Panel className='ap-rb-forms-examples'>
 					<Panel.Body>
@@ -49,6 +49,7 @@ class Forms extends React.Component {
 								<Form.Input id='exampleInputFile' type='file' />
 								<p className='help-block'>Example block-level help text here.</p>
 							</Form.Group>
+							<Form.Checkbox text='Check me out' />
 							<Button bsStyle='default' type='submit'>Submit</Button>
 						</Form>
 					</Panel.Body>
@@ -76,6 +77,7 @@ class Forms extends React.Component {
 									Example block-level help text here.
 								</CodeXml>
 							</CodeXml>
+							<CodeXml markup='FormCheckbox' att={[{name:'text',value:'Check me out'}]}/>
 							<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'},{name:'type',value:'submit'}]}>
 								Submit
 							</CodeXml>
@@ -103,6 +105,11 @@ class Forms extends React.Component {
 								<CodeXml markup='input' att={[{name:'class',value:'form-control ap-form-input'},{name:'id',value:'exampleInputFile'},{name:'type',value:'file'}]} />
 								<CodeXml markup='p' att={[{name:'class',value:'help-block'}]}>
 									Example block-level help text here.
+								</CodeXml>
+							</CodeXml>
+							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-checkbox'}]}>
+								<CodeXml markup='label'>
+									<CodeXml markup='input' att={[{name:'type',value:'checkbox'}]} after=' Check me out'/>
 								</CodeXml>
 							</CodeXml>
 							<CodeXml markup='button' att={[{name:'class',value:'btn ap-button btn-default'},{name:'type',value:'submit'}]}>

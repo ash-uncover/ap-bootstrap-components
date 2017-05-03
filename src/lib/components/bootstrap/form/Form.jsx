@@ -7,11 +7,14 @@ class BSForm extends Base {
 		super(props)
 		// Base classes
 		this.baseClasses = [ 'ap-form' ]
+		// Sub-component props
+		this.formProps = {}
 		// Component props
 		this.propsInfos = {
 			required : {
 			},
 			optionnal : {
+				onSubmit: { store: this.formProps },
 				children: {}
 			}
 		}
@@ -24,7 +27,7 @@ class BSForm extends Base {
 	render() {
 		this.buildProps('Form')
 		return (
-			<form className={this.className}>
+			<form className={this.className} {...this.formProps}>
 				{this.props.children}
 			</form>
 		)

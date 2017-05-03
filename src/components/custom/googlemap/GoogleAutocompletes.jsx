@@ -77,9 +77,6 @@ class GoogleAutocompletes extends React.Component {
 						<CodeXml markup='GoogleAutocomplete' att={[{name:'location',value:'{myLocation}'}]} />
 					</Panel.Footer>
 				</Panel>
-
-				<h1>Google Maps</h1>
-
 			</div>
 		)
 	}

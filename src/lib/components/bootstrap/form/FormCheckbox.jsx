@@ -1,12 +1,12 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSFormInput extends Base {
+class BSFormCheckbox extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'form-control', 'ap-form-input' ]
+		this.baseClasses = [ 'checkbox', 'ap-form-checkbox' ]
 		// Sub component props
 		this.inputProps = {}
 		// Component props
@@ -14,11 +14,9 @@ class BSFormInput extends Base {
 			required : {
 			},
 			optionnal : {
-				id: { store: this.inputProps },
-				type: { defaultValue: 'text', store: this.inputProps },
-				placeholder: { store: this.inputProps },
+				text: {},
 				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
-				defaultValue: { rename: 'value', store: this.inputProps }
+				defaultValue: { store: this.inputProps }
 			}
 		}
 	}
@@ -28,8 +26,8 @@ class BSFormInput extends Base {
 	// --------------------------------------------------------------------------------
 	
 	onChange(event) {
-		if (this.props.onChange) {
-			this.props.onChange(event, event.target.value);
+		if  (this.props.onChange) {
+			this.props.onChange(event, event.target.value, this.props.name, this.validInput(event.target.value));
 		}
 	}
 
@@ -37,19 +35,18 @@ class BSFormInput extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 	
-	_buildClasses() {
-		if (this.props.type === 'file') {
-			return []
-		}
-		return this.baseClasses
-	}
-
 	render() {
-		this.buildProps('FormInput')
+		this.buildProps('FormCheckbox')
 		return (
-			<input ref='input' className={this.className} {...this.inputProps} />
+			<div className={this.className}>
+				<label>
+					{ this.props.text && this.props.checkboxAfter ? this.props.text + ' ' : '' }
+					<input type='checkbox' {...this.inputProps} />
+					{ this.props.text ? ' ' + this.props.text : '' }
+				</label>
+			</div>
 		)
 	}
 }
 
-export default BSFormInput
+export default BSFormCheckbox

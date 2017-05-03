@@ -1,7 +1,7 @@
 {
   "name": "ap-react-bootstrap",
   "version": "0.0.1",
-  "description": "React component librairy using bootstrap",
+  "description": "React component library using bootstrap",
   "repository": {
     "type": "git",
     "url": "ash-uncover/ap-react-bootstrap"

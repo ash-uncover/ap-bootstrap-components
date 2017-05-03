@@ -72,12 +72,10 @@ class BasicLogin extends Base {
 	// --------------------------------------------------------------------------------
 
 	componentWillReceiveProps(props) {
-		/*
 		this.setState({
 			username: props.username || '',
 			password: props.password || ''
 		})
-		*/
 	}
 
 

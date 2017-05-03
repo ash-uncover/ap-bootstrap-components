@@ -28,6 +28,8 @@ class Auths extends React.Component {
 			<div className='ap-rb-section ap-cp-auths' id='ap-cp-auths'>
 				<h1>Authentication component</h1>
 
+				<p>The components described in this section provide shorthand for handling generic authentication scenarios. Yet using these components is under-optimized; they should rather be used as templates for live usages.</p>
+
 				<h2>Basic login</h2>
 				<p>The <code>{'<BasicLogin>'}</code> component provides a generic way to retrieve user credentials.</p>
 				<p>The component handles three callbacks: <code>onChange</code>, <code>onSubmit</code> and <code>onCancel</code> that can be used to retreive the current state of the user inputs.</p>

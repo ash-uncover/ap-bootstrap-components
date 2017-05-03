@@ -53,7 +53,6 @@ class BasicLogin extends Base {
 				onSubmit: {}
 			},
 			optionnal : {
-				buttonsInBody: { defaultValue: false },
 				children: {},
 				onChange: {},
 				title: { defaultValue: 'User credentials', rename: 'children', store: this.panelHeaderProps },
@@ -117,6 +116,17 @@ class BasicLogin extends Base {
 		this.buttonSubmitProps.bsStyle = disabled ? 'default' : 'success'
 	}
 
+	_buildButtons() { return (
+		<Row>
+			<Col sm={6}>
+				<Button {...this.buttonCancelProps} />
+			</Col>
+			<Col sm={6}>
+				<Button {...this.buttonSubmitProps} />
+			</Col>
+		</Row>
+	)}
+
 	render() { 
 		this.buildProps('BasicLogin')
 		this._checkSubmitButtonState()
@@ -134,29 +144,11 @@ class BasicLogin extends Base {
 							<Form.Input {...this.inputPasswordProps} defaultValue={this.state.password} />
 						</Form.Group>
 						{this.props.children}
-						{this.props.buttonsInBody ?
-							<Row>
-								<Col sm={6}>
-									<Button {...this.buttonCancelProps} />
-								</Col>
-								<Col sm={6}>
-									<Button {...this.buttonSubmitProps} />
-								</Col>
-							</Row>
-						: '' }					
+						{ this.props.footer ? this._buildButtons() : '' }					
 					</Form>
 				</Panel.Body>
 				<Panel.Footer>
-				{!this.props.buttonsInBody ?
-					<Row>
-						<Col sm={6}>
-							<Button {...this.buttonCancelProps} />
-						</Col>
-						<Col sm={6}>
-							<Button {...this.buttonSubmitProps} />
-						</Col>
-					</Row>
-				: ' ' }
+					{ this.props.footer ? this.props.footer : this._buildButtons() }
 				</Panel.Footer>
 			</Panel>
 		)

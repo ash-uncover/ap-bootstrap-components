@@ -12,11 +12,11 @@ class BSNavbarBrand extends Base {
 		// Component properties
 		this.propsInfos = {
 			required : {
+				link: {},
 				text: {}
 			},
 			optionnal : {
-				onNavigate: {},
-				link: {},
+				onNavigate: {},				
 				image: {}
 			}
 		}
@@ -32,7 +32,7 @@ class BSNavbarBrand extends Base {
 	render() { 
 		this.buildProps('NavbarBrand')
 		return (
-			<a className={this.className} onClick={this.onNavigate.bind(this)}>
+			<a className={this.className} onClick={this.props.onNavigate ? this.onNavigate.bind(this) : null} href={this.props.onNavigate ? null : this.props.link}>
 			{this.props.image ?
 				<img style={{ height: '36px', marginTop: '-8px' }} alt={this.props.text} src={this.props.image}/>
 			:

@@ -10,13 +10,13 @@ export default class BSNavbarLink extends Base {
 		this.baseClasses = [ 'ap-navbar-link' ]
 		this.propsInfos = {
 			required : {
-				link: {},
-				onNavigate: {}
+				link: {}				
 			},
 			optionnal : {
-				active: { },
-				text: { },
-				glyph: { },
+				active: {},
+				onNavigate: {},
+				text: {},
+				glyph: {},
 				disabled: { defaultValue: false }
 			}
 		}
@@ -38,8 +38,8 @@ export default class BSNavbarLink extends Base {
 	render() {
 		this.buildProps('NavbarLink')
 		return (
-			<li className={this.className} onClick={this.onNavigate.bind(this)}>
-				<a>
+			<li className={this.className} onClick={this.props.onNavigate ? this.onNavigate.bind(this) : null}>
+				<a href={this.props.onNavigate ? null : this.props.link}>
 					{this.props.glyph ? this._buildGlyph() : ''}
 					{this.props.text}
 				</a>

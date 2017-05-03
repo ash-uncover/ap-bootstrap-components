@@ -16,11 +16,11 @@ class BSNavbarHeader extends Base {
 		// Component properties
 		this.propsInfos = {
 			required : {
-				brandText: { rename: 'text', store: this.brandProps }
+				brandText: { rename: 'text', store: this.brandProps },
+				brandLink: { rename: 'link', store: this.brandProps },
 			},
 			optionnal : {
-				onNavigate: { store: this.brandProps },
-				brandLink: { rename: 'link', store: this.brandProps },
+				onNavigate: { store: this.brandProps },				
 				brandImage: { rename: 'image', store: this.brandProps }
 			}
 		}

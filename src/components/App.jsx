@@ -53,14 +53,14 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar fixedTop>
-					<Navbar.Header brandText='ap-react-bootstrap' brandImage='/assets/img/logo.jpg'/>
+					<Navbar.Header brandText='ap-react-bootstrap' brandImage='/assets/img/logo.jpg' brandLink="/" />
 					<Navbar.Group>
-						<Navbar.Link text='Link' link='#' onNavigate={this._navigate}/>
-						<Navbar.Link text='Active link'  link='#' active onNavigate={this._navigate}/>
-						<Navbar.Link text='Disabled link'  link='#'  onNavigate={this._navigate} disabled />
+						<Navbar.Link text='Link' link='/' />
+						<Navbar.Link text='Active link'  link='/' active />
+						<Navbar.Link text='Disabled link'  link='/'  disabled />
 					</Navbar.Group>
 					<Navbar.Group right>						
-						<Navbar.Link text='Bootstrap' link='#'  onNavigate={this._navigate}/>
+						<Navbar.Link text='Bootstrap' link='http://getbootstrap.com/' />
 					</Navbar.Group>
 				</Navbar>
 				<Grid.Container className='ap-rb-app'>
@@ -73,7 +73,7 @@ class App extends React.Component {
 		return (
 			<div>
 				<Navbar fixedTop>
-					<Navbar.Header brandText='ap-react-bootstrap' brandImage='/assets/img/logo.jpg'/>
+					<Navbar.Header brandText='ap-react-bootstrap' brandImage='/assets/img/logo.jpg' brandLink="/" />
 					<Navbar.Group>
 						<Navbar.Link text='Link' link='#' onNavigate={this._navigate}/>
 						<Navbar.Link text='Active link'  link='#' active onNavigate={this._navigate}/>

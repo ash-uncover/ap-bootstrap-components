@@ -82,8 +82,8 @@ export const Form = Object.assign(FormBase, {
     Checkbox: FormCheckboxBase
 })
 
-import IFormBase from './components/bootstrap/form/old/IForm'
-export const IForm = IFormBase
+// import IFormBase from './components/bootstrap/form/old/IForm'
+// export const IForm = IFormBase
 
 
 // Glyphicons
@@ -167,11 +167,11 @@ export const Navbar = Object.assign(NavbarBase, {
     Link: NavbarLinkBase
 })
 
-import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'
-export const NavbarMobile = NavbarMobileBase
+// import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'
+// export const NavbarMobile = NavbarMobileBase
 
-import SidebarBase from './components/bootstrap/navbar/Sidebar'
-export const Sidebar = SidebarBase
+// import SidebarBase from './components/bootstrap/navbar/Sidebar'
+// export const Sidebar = SidebarBase
 
 
 // Panels
@@ -227,11 +227,11 @@ export const Table = Object.assign(TableBase, {
     TD: TableCellBase
 })
 
-import StoreTableBase from './components/bootstrap/table/StoreTable'
-export const StoreTable = StoreTableBase
+// import StoreTableBase from './components/bootstrap/table/StoreTable'
+// export const StoreTable = StoreTableBase
 
-import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
-export const ObjInfo = ObjInfoBase
+// import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
+// export const ObjInfo = ObjInfoBase
 
 /* SERVICES */
 

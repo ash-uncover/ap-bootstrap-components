@@ -1,11 +1,11 @@
 import React from 'react'
-import Base from 'Base'
+import Base from 'lib/components/Base'
 // Custom components
 import { Form } from 'react-bootstrap'
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap'
 import { LayoutColumn, Button, Row, Col, FormInput, FormSelect, FormTextArea, FormDate, FormGoogleAutocomplete, FormTime, FormCheckbox, FormButtonGroup, FormSelectMulti} from 'index'
 
-import './ap-forms.css'
+import '../ap-forms.css'
 
 class IForm extends Base {
 

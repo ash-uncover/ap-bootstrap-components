@@ -82,6 +82,9 @@ export const Form = Object.assign(FormBase, {
     Checkbox: FormCheckboxBase
 })
 
+import IFormBase from './components/bootstrap/form/old/IForm'
+export const IForm = IFormBase
+
 
 // Glyphicons
 import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'
@@ -223,6 +226,9 @@ export const Table = Object.assign(TableBase, {
     TH: TableHeaderCellBase,
     TD: TableCellBase
 })
+
+import StoreTableBase from './components/bootstrap/table/StoreTable'
+export const StoreTable = StoreTableBase
 
 /* SERVICES */
 

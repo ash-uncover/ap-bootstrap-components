@@ -230,8 +230,8 @@ export const Table = Object.assign(TableBase, {
 import StoreTableBase from './components/bootstrap/table/StoreTable'
 export const StoreTable = StoreTableBase
 
-// import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
-// export const ObjInfo = ObjInfoBase
+import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
+export const ObjInfo = ObjInfoBase
 
 /* SERVICES */
 

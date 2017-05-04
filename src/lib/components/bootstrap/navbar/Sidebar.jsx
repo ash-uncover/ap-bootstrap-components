@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from 'lib/components/Base'
+import Base from 'lib/Base'
 
 import './Sidebar.css'
 

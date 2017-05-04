@@ -227,8 +227,8 @@ export const Table = Object.assign(TableBase, {
     TD: TableCellBase
 })
 
-// import StoreTableBase from './components/bootstrap/table/StoreTable'
-// export const StoreTable = StoreTableBase
+import StoreTableBase from './components/bootstrap/table/StoreTable'
+export const StoreTable = StoreTableBase
 
 // import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
 // export const ObjInfo = ObjInfoBase

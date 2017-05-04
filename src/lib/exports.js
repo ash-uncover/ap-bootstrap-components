@@ -167,11 +167,11 @@ export const Navbar = Object.assign(NavbarBase, {
     Link: NavbarLinkBase
 })
 
-// import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'
-// export const NavbarMobile = NavbarMobileBase
+import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'
+export const NavbarMobile = NavbarMobileBase
 
-// import SidebarBase from './components/bootstrap/navbar/Sidebar'
-// export const Sidebar = SidebarBase
+import SidebarBase from './components/bootstrap/navbar/Sidebar'
+export const Sidebar = SidebarBase
 
 
 // Panels

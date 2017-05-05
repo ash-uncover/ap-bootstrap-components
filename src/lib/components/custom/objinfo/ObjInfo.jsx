@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import {Row, Col} from 'lib/Lib';
+import { Row, Col } from 'lib/exports'
 
 class ObjInfo extends Base {
 

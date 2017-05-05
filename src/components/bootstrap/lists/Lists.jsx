@@ -41,13 +41,13 @@ class Lists extends React.Component {
 				<Panel>
 					<PanelBody>
 						<h4>Example</h4>
-						<ListGroup>
-							<ListGroupItem>Cras justo odio</ListGroupItem>
-							<ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-							<ListGroupItem>Morbi leo risus</ListGroupItem>
-							<ListGroupItem>Porta ac consectetur ac</ListGroupItem>
-							<ListGroupItem>Vestibulum at eros</ListGroupItem>
-						</ListGroup>
+						<List.Group>
+							<List.Item>Cras justo odio</List.Item>
+							<List.Item>Dapibus ac facilisis in</List.Item>
+							<List.Item>Morbi leo risus</List.Item>
+							<List.Item>Porta ac consectetur ac</List.Item>
+							<List.Item>Vestibulum at eros</List.Item>
+						</List.Group>
 					</PanelBody>
 					<PanelFooter>
 						<h5>React code</h5>

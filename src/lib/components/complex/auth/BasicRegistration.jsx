@@ -49,7 +49,7 @@ class BasicLogin extends Base {
 		}
 		this.buttonSubmitProps = {
 			block: true,
-			children: 'Login',
+			children: 'Create account',
 			bsStyle: 'success',
 			bsSize: 'large',
 			type: 'submit',

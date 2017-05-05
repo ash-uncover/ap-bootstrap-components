@@ -41,9 +41,18 @@ export const Google = {
     Autocomplete: GoogleAutocompleteBase
 }
 
+// Objinfo
+import ObjInfoBase from './components/custom/objinfo/ObjInfo'
+export const ObjInfo = ObjInfoBase
+
 // Rater
 import RaterStarBase from './components/custom/rater/RaterStar'
 export const RaterStar = RaterStarBase
+
+// Store table
+import StoreTableBase from './components/custom/storetable/StoreTable'
+export const StoreTable = StoreTableBase
+
 
 
 /* BOOTSTRAP CSS */
@@ -227,11 +236,6 @@ export const Table = Object.assign(TableBase, {
     TD: TableCellBase
 })
 
-import StoreTableBase from './components/bootstrap/table/StoreTable'
-export const StoreTable = StoreTableBase
-
-import ObjInfoBase from './components/bootstrap/objinfo/ObjInfo'
-export const ObjInfo = ObjInfoBase
 
 /* SERVICES */
 

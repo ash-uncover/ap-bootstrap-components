@@ -15,7 +15,8 @@ class BSTableCell extends Base {
 			},
 			optionnal : {
 				bsStyle: {},
-				children: {}
+				children: {},
+				onClick: {}
 			}
 		}
 	}
@@ -29,7 +30,7 @@ class BSTableCell extends Base {
 	render() {
 		this.buildProps('TableCell')
 		return (
-			<td className={this.className}>
+			<td className={this.className} onClick={this.props.onClick}>
 				{this.props.children}
 			</td>
 		)

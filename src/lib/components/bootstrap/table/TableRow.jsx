@@ -15,7 +15,8 @@ class BSTableRow extends Base {
 			},
 			optionnal : {
 				bsStyle: {},
-				children: {}
+				children: {},
+				onClick: {}
 			}
 		}
 	}
@@ -29,7 +30,7 @@ class BSTableRow extends Base {
 	render() {
 		this.buildProps('TableRow')
 		return (
-			<tr className={this.className}>
+			<tr className={this.className} onClick={this.props.onClick}>
 				{this.props.children}
 			</tr>
 		)

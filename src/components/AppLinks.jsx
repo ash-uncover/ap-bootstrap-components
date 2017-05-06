@@ -49,6 +49,7 @@ class AppLinks extends React.Component {
 				<h4>Authentication</h4>
 				<ul>
 					<li><Button comp='a' href='/complex/auth' bsStyle='link' bsSize='sm'>Authentication components</Button></li>
+					<li><Button comp='a' href='/complex/stores' bsStyle='link' bsSize='sm'>Store components</Button></li>
 				</ul>
 			</Grid.Row>
 		)

@@ -1,11 +1,12 @@
 import React from 'react'
 import Base from 'lib/components/Base'
+import { Table, Utils } from 'lib/exports'
 
 class StoreTable extends Base {
 
 	constructor(props) {
-		super(props);
-		
+		super(props)
+		// Component properties
 		this.propsInfos = {
 			required : {
 				data: {}
@@ -17,42 +18,75 @@ class StoreTable extends Base {
 	}
 	
 	onClick(id) {
-		this.props.onClick(id)
-	}
-	
-	buildTable() {
-		
-		let headCol = []
-		let first = true;
-		let allRow = []
-		for (var key in this.props.data) {
-			
-			let item = this.props.data[key]
-			let oneRow = []
-			for (var key2 in item) {
-				if (first)
-					headCol.push((<th key={key2}>{key2}</th>))
-				oneRow.push((<td key={key2}>{item[key2]}</td>))	
-			}
-			
-			if (this.props.onClick)
-				allRow.push((<tr key={item.id} onClick={this.onClick.bind(this, item.id)}>{oneRow}</tr>))
-			else
-				allRow.push((<tr key={item.id}>{oneRow}</tr>))
-			first = false;
+		if (this.props.onClick) {
+			this.props.onClick(id)
 		}
-		
-		return (<table className="table table-bordered"><thead><tr>{headCol}</tr></thead><tbody>{allRow}</tbody></table>)
 	}
-	
-	render() {
-		this.buildProps("StoreTable");
+
+	_buildTableHead() {
+		this.headers = ['_id']
+		// Resolve all fields
+		for (var key in this.props.data) {
+			if (this.props.data.hasOwnProperty(key)) {
+				let item = this.props.data[key]
+				for (var itemKey in item) {
+					if (item.hasOwnProperty(itemKey) && this.headers.indexOf(itemKey) === -1) {
+						this.headers.push(itemKey)
+					}
+				}
+			}
+		}
+		// Build table header
 		return (
-			<div>
-				{this.buildTable()}
-			</div>
-		);
+			<Table.Head>
+				<Table.TR>
+					{this.headers.map(this._buildTableHeader)}
+				</Table.TR>
+			</Table.Head>
+		)
+	}
+	_buildTableHeader(header) {
+		return (
+			<Table.TH key={header}>{header}</Table.TH>
+		)
+	}
+
+	_buildTableBody() {
+		let items = []
+		for (var key in this.props.data) {
+			if (this.props.data.hasOwnProperty(key)) {
+				items.push(Object.assign({ '_id': key }, this.props.data[key]))
+			}
+		}
+		return (
+			<Table.Body>
+				{items.map(this._buildTableItem.bind(this))}
+			</Table.Body>
+		)
+	}
+	_buildTableItem(item, index) {
+		return (
+			<Table.TR key={index} onClick={this.onClick.bind(this, item._id)}>
+				{this.headers.map(this._buildTableProp.bind(this, item, index))}
+			</Table.TR>
+		)
+	}
+	_buildTableProp(item, index, prop) {
+		return (
+			<Table.TD key={prop + '-' + index}>
+				{item[prop]}
+			</Table.TD>
+		)
+	}
+
+	render() {
+		this.buildProps('StoreTable')
+		return (
+			<Table bordered responsive>
+				{this._buildTableHead()}
+				{this._buildTableBody()}
+			</Table>
+		)
 	}
 }
-
 export default StoreTable

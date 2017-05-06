@@ -20,6 +20,7 @@ import GoogleAutocompletes from 'components/custom/googlemap/GoogleAutocompletes
 
 import Complex from 'components/complex/Complex'
 import Auths from 'components/complex/auth/Auths'
+import Stores from 'components/complex/stores/Stores'
 
 let routes = [
 	{ 
@@ -52,7 +53,8 @@ let routes = [
 			{
 				path: 'complex', component: Complex, 
 				routes: [
-					{ path: 'auth', component: Auths }
+					{ path: 'auth', component: Auths },
+					{ path: 'stores', component: Stores }
 				]
 			}
 		] 

@@ -49,7 +49,10 @@ class Forms extends React.Component {
 								<Form.Input id='exampleInputFile' type='file' />
 								<p className='help-block'>Example block-level help text here.</p>
 							</Form.Group>
+							<Form.Checkbox />
 							<Form.Checkbox text='Check me out' />
+							<Form.Switch text='Switch me out' />
+							<Form.Switch />
 							<Button bsStyle='default' type='submit'>Submit</Button>
 						</Form>
 					</Panel.Body>

@@ -1,7 +1,7 @@
 import React from 'react'
 import BusyData from 'components/custom/busy/BusyData'
 
-import { Panel, PanelBody, PanelFooter, CodeXml, BusyBars, BusyBubbles, BusyCircles } from 'lib/exports'
+import { Panel, PanelBody, PanelFooter, CodeXml, Button, BusyBars, BusyBubbles, BusyCircles } from 'lib/exports'
 
 import './Busy.scss'
 
@@ -27,6 +27,29 @@ class Busy extends React.Component {
 		return (
 			<div className='ap-rb-section ap-ct-busy' id='ap-busy'>
                 <h1>Busy indicators</h1>
+
+                <h2>Busy bars</h2>
+                <p>Busy bars is a continous indicator that can be used over a component to mark its busy state.</p>
+
+                <Panel>
+                    <PanelBody>
+                        <BusyBars />
+                    </PanelBody>
+                    <PanelFooter>
+                        <h5>React code</h5>
+                        <CodeXml markup='BusyBars' />
+                    </PanelFooter>
+                    <PanelFooter>
+                        <h5>HTML output</h5>
+                        <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bars'}]}>
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-1'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-2'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-3'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-4'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-5'}]} />
+                        </CodeXml>
+                    </PanelFooter>
+                </Panel>
 
                 <h2>Busy bubbles</h2>
                 <p>Busy bubbles is a continous indicator that can be used over a component to mark its busy state.</p>
@@ -75,30 +98,7 @@ class Busy extends React.Component {
                             </CodeXml>
                         </CodeXml>
                     </PanelFooter>
-                </Panel>
-
-                <h2>Busy bars</h2>
-                <p>Busy .</p>
-
-                <Panel>
-                    <PanelBody>
-                        <BusyBars />
-                    </PanelBody>
-                    <PanelFooter>
-                        <h5>React code</h5>
-                        <CodeXml markup='BusyBars' />
-                    </PanelFooter>
-                    <PanelFooter>
-                        <h5>HTML output</h5>
-                        <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bars'}]}>
-                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-1'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-2'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-3'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-4'}]} />
-                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-5'}]} />
-                        </CodeXml>
-                    </PanelFooter>
-                </Panel>
+                </Panel>               
             </div>
 		)
 	}

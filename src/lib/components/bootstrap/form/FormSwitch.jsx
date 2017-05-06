@@ -1,12 +1,14 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSFormCheckbox extends Base {
+import './ap-forms.scss'
+
+class BSFormSwitch extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'checkbox', 'ap-form-checkbox' ]
+		this.baseClasses = [ 'checkbox', 'ap-form-switch' ]
 		// Sub component props
 		this.inputProps = {}
 		// Component props
@@ -36,16 +38,16 @@ class BSFormCheckbox extends Base {
 	// --------------------------------------------------------------------------------
 	
 	render() {
-		this.buildProps('FormCheckbox')
+		this.buildProps('FormSwitch')
 		return (
 			<div className={this.className}>
 				<label>
-					<input type='checkbox' {...this.inputProps} />
-					{' ' + (this.props.text || '')}
+					{this.props.text}
+					<input type='checkbox' className='ap-form-switch-checkbox' {...this.inputProps} />
 				</label>
 			</div>
 		)
 	}
 }
 
-export default BSFormCheckbox
+export default BSFormSwitch

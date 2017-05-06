@@ -86,12 +86,16 @@ export const FormInput = FormInputBase
 import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
 export const FormCheckbox = FormCheckboxBase
 
+import FormSwitchBase from './components/bootstrap/form/FormSwitch'
+export const FormSwitch = FormSwitchBase
+
 import FormBase from './components/bootstrap/form/Form'
 export const Form = Object.assign(FormBase, {
     Group: FormGroupBase,
     Label: FormLabelBase,
     Input: FormInputBase,
-    Checkbox: FormCheckboxBase
+    Checkbox: FormCheckboxBase,
+    Switch: FormSwitchBase
 })
 
 // import IFormBase from './components/bootstrap/form/old/IForm'

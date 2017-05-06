@@ -1,12 +1,12 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import { Row, Col } from 'lib/exports'
+import { Row, Col, Utils } from 'lib/exports'
 
 class ObjInfo extends Base {
 
 	constructor(props) {
-		super(props);
+		super(props)
 		// Component properties
 		this.propsInfos = {
 			required : {
@@ -20,9 +20,20 @@ class ObjInfo extends Base {
 	buildInfos() {
 		let infos = []
 		for (var key in this.props.obj) {
-			infos.push(<Row><Col md='6'>{key}</Col><Col md='6'>{this.props.obj[key]}</Col></Row>)
+			if (this.props.obj.hasOwnProperty(key)) {
+				infos.push(this._buildInfo(key, this.props.obj[key]))
+			}
 		}
 		return infos
+	}
+
+	_buildInfo(key, obj) {
+		return (
+			<Row key={key}>
+				<Col md={6}>{key}</Col>
+				<Col md={6}>{obj}</Col>
+			</Row>
+		)
 	}
 	
 	render() {
@@ -34,5 +45,4 @@ class ObjInfo extends Base {
 		)
 	}
 }
-
-export default ObjInfo;
+export default ObjInfo

@@ -38,6 +38,7 @@ class AppLinks extends React.Component {
 				<ul>
 					<li><Button comp='a' href='/custom/busy' bsStyle='link' bsSize='sm'>Busy indicators</Button></li>
 					<li><Button comp='a' href='/custom/rater' bsStyle='link' bsSize='sm'>Raters</Button></li>
+					<li><Button comp='a' href='/custom/objinfos' bsStyle='link' bsSize='sm'>Objects Infos</Button></li>
 				</ul>
 				<h4>Google components</h4>
 				<ul>

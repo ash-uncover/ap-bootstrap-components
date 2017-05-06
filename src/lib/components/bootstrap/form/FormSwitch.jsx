@@ -10,14 +10,16 @@ class BSFormSwitch extends Base {
 		// Base classes
 		this.baseClasses = [ 'checkbox', 'ap-form-switch' ]
 		// Sub component props
-		this.inputProps = {}
+		this.inputProps = {
+			onChange: this.onChange.bind(this)
+		}
 		// Component props
 		this.propsInfos = {
 			required : {
 			},
 			optionnal : {
 				text: {},
-				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
+				onChange: {},
 				defaultValue: { store: this.inputProps }
 			}
 		}
@@ -28,8 +30,8 @@ class BSFormSwitch extends Base {
 	// --------------------------------------------------------------------------------
 	
 	onChange(event) {
-		if  (this.props.onChange) {
-			this.props.onChange(event, event.target.value, this.props.name, this.validInput(event.target.value));
+		if(this.props.onChange) {
+			this.props.onChange(event, event.target.value);
 		}
 	}
 

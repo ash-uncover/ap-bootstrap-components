@@ -51,8 +51,8 @@ class Forms extends React.Component {
 							</Form.Group>
 							<Form.Checkbox />
 							<Form.Checkbox text='Check me out' />
-							<Form.Switch text='Switch me out' />
 							<Form.Switch />
+							<Form.Switch text='Switch me out' />
 							<Button bsStyle='default' type='submit'>Submit</Button>
 						</Form>
 					</Panel.Body>
@@ -80,7 +80,10 @@ class Forms extends React.Component {
 									Example block-level help text here.
 								</CodeXml>
 							</CodeXml>
+							<CodeXml markup='FormCheckbox'/>
 							<CodeXml markup='FormCheckbox' att={[{name:'text',value:'Check me out'}]}/>
+							<CodeXml markup='FormSwitch' />
+							<CodeXml markup='FormSwitch' att={[{name:'text',value:'Switch me out'}]}/>
 							<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'},{name:'type',value:'submit'}]}>
 								Submit
 							</CodeXml>
@@ -112,7 +115,22 @@ class Forms extends React.Component {
 							</CodeXml>
 							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-checkbox'}]}>
 								<CodeXml markup='label'>
-									<CodeXml markup='input' att={[{name:'type',value:'checkbox'}]} after=' Check me out'/>
+									<CodeXml markup='input' att={[{name:'type',value:'checkbox'},{name:'value',value:'on'}]}/>
+								</CodeXml>
+							</CodeXml>
+							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-checkbox'}]}>
+								<CodeXml markup='label'>
+									<CodeXml markup='input' att={[{name:'type',value:'checkbox'},{name:'value',value:'on'}]} after=' Check me out'/>
+								</CodeXml>
+							</CodeXml>
+							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-switch'}]}>
+								<CodeXml markup='label'>
+									<CodeXml markup='input' att={[{name:'class',value:'ap-form-switch-checkbox'},{name:'type',value:'checkbox'},{name:'value',value:'on'}]}/>
+								</CodeXml>
+							</CodeXml>
+							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-switch'}]}>
+								<CodeXml markup='label'>
+									<CodeXml markup='input' att={[{name:'class',value:'ap-form-switch-checkbox'},{name:'type',value:'checkbox'},{name:'value',value:'on'}]} after='Switch me out'/>
 								</CodeXml>
 							</CodeXml>
 							<CodeXml markup='button' att={[{name:'class',value:'btn ap-button btn-default'},{name:'type',value:'submit'}]}>

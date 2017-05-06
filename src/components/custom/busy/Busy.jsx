@@ -1,7 +1,7 @@
 import React from 'react'
 import BusyData from 'components/custom/busy/BusyData'
 
-import { Panel, PanelBody, PanelFooter, CodeXml, BusyBubbles, BusyCircles } from 'lib/exports'
+import { Panel, PanelBody, PanelFooter, CodeXml, BusyBars, BusyBubbles, BusyCircles } from 'lib/exports'
 
 import './Busy.scss'
 
@@ -73,6 +73,29 @@ class Busy extends React.Component {
                                 <CodeXml markup='div' att={[{name:'class',value:'ap-busy-circle ap-busy-circle-7'}]} />
                                 <CodeXml markup='div' att={[{name:'class',value:'ap-busy-circle ap-busy-circle-8'}]} />
                             </CodeXml>
+                        </CodeXml>
+                    </PanelFooter>
+                </Panel>
+
+                <h2>Busy bars</h2>
+                <p>Busy .</p>
+
+                <Panel>
+                    <PanelBody>
+                        <BusyBars />
+                    </PanelBody>
+                    <PanelFooter>
+                        <h5>React code</h5>
+                        <CodeXml markup='BusyBars' />
+                    </PanelFooter>
+                    <PanelFooter>
+                        <h5>HTML output</h5>
+                        <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bars'}]}>
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-1'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-2'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-3'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-4'}]} />
+                            <CodeXml markup='div' att={[{name:'class',value:'ap-busy-bar ap-busy-bar-5'}]} />
                         </CodeXml>
                     </PanelFooter>
                 </Panel>

@@ -14,6 +14,9 @@ export const BasicRegistration = BasicRegistrationBase
 /* CUSTOM */
 
 // Busy
+import BusyBarsBase from './components/custom/busy/BusyBars'
+export const BusyBars = BusyBarsBase
+
 import BusyBubblesBase from './components/custom/busy/BusyBubbles'
 export const BusyBubbles = BusyBubblesBase
 

@@ -3,7 +3,7 @@ import Base from 'lib/components/Base'
 // Custom components
 import { Form } from 'react-bootstrap'
 import { LinkContainer, IndexLinkContainer } from 'react-router-bootstrap'
-import LayoutColumn from 'lib_old/components/layout/LayoutColumn'
+import LayoutColumn from './layout/LayoutColumn'
 //import { Button, Row, Col, FormInput, FormSelect, FormTextArea, FormDate, FormGoogleAutocomplete, FormTime, FormCheckbox, FormButtonGroup, FormSelectMulti} from 'index'
 
 import '../ap-forms.scss'

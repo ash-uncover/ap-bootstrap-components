@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from '../Base.jsx';
+import Base from 'lib/components/Base'
 
 class FormSelect extends Base {
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import Base from '../Base.jsx';
+import Base from 'lib/components/Base'
 import moment from 'moment'
 
 import { FormGroup, FormControl, ControlLabel, Col, OverlayTrigger, Popover, Button } from 'react-bootstrap'

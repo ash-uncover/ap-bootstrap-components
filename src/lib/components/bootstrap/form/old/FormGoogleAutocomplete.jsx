@@ -1,7 +1,7 @@
 import React from 'react'
-import Base from '../Base.jsx';
+import Base from 'lib/components/Base'
 
-import GoogleAutocomplete from 'components-lib/Map/GoogleAutocomplete'
+import { GoogleAutocomplete } from 'lib/exports'
 
 class FormGoogleAutocomplete extends Base {
 

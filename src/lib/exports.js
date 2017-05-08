@@ -98,8 +98,8 @@ export const Form = Object.assign(FormBase, {
     Switch: FormSwitchBase
 })
 
-// import IFormBase from './components/bootstrap/form/old/IForm'
-// export const IForm = IFormBase
+import IFormBase from './components/bootstrap/form/old/IForm'
+export const IForm = IFormBase
 
 
 // Glyphicons

@@ -17,7 +17,7 @@ class BasicLogin extends Base {
 		this.panelProps = {}
 		this.panelHeaderProps = {}
  		this.labelUsernameProps = {
-			for: 'loginUsername'
+			htmlFor: 'loginUsername'
 		}
 		this.inputUsernameProps = {
 			id: 'loginUsername',
@@ -25,7 +25,7 @@ class BasicLogin extends Base {
 			onChange: this._onUsernameChanged.bind(this)
 		}
 		this.labelPasswordProps = {
-			for: 'loginPassword'
+			htmlFor: 'loginPassword'
 		}
 		this.inputPasswordProps = {
 			id: 'loginPassword',
@@ -137,11 +137,11 @@ class BasicLogin extends Base {
 					<Form>
 						<Form.Group>
 							<Form.Label {...this.labelUsernameProps} />
-							<Form.Input {...this.inputUsernameProps} defaultValue={this.state.username} />
+							<Form.Input {...this.inputUsernameProps} value={this.state.username} />
 						</Form.Group>
 						<Form.Group>
 							<Form.Label {...this.labelPasswordProps} />
-							<Form.Input {...this.inputPasswordProps} defaultValue={this.state.password} />
+							<Form.Input {...this.inputPasswordProps} value={this.state.password} />
 						</Form.Group>
 						{this.props.children}
 						{ this.props.footer ? this._buildButtons() : '' }					

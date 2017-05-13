@@ -1,7 +1,7 @@
 import React from 'react'
 import FormsData from 'components/bootstrap/forms/FormsData'
 
-import { Panel, Button, CodeXml, CodeXmlComment, Form } from 'lib/exports'
+import { Panel, Button, CodeXml, CodeXmlComment, Form, FormGroupBuilder } from 'lib/exports'
 
 import './Forms.scss'
 
@@ -37,15 +37,15 @@ class Forms extends React.Component {
 						<h4>Example</h4>
 						<Form>
 							<Form.Group>
-								<Form.Label for='exampleInputEmail'>Email address</Form.Label>
+								<Form.Label htmlFor='exampleInputEmail'>Email address</Form.Label>
 								<Form.Input id='exampleInputEmail' placeholder='Email' type='email' />
 							</Form.Group>
 							<Form.Group>
-								<Form.Label for='exampleInputPassword1'>Password</Form.Label>
+								<Form.Label htmlFor='exampleInputPassword1'>Password</Form.Label>
 								<Form.Input id='exampleInputPassword1' placeholder='Password' type='password' />
 							</Form.Group>
 							<Form.Group>
-								<Form.Label for='exampleInputFile'>File input</Form.Label>
+								<Form.Label htmlFor='exampleInputFile'>File input</Form.Label>
 								<Form.Input id='exampleInputFile' type='file' />
 								<p className='help-block'>Example block-level help text here.</p>
 							</Form.Group>
@@ -60,19 +60,19 @@ class Forms extends React.Component {
 						<h5>React code</h5>
 						<CodeXml markup='Form'>
 							<CodeXml markup='FormGroup'>
-								<CodeXml markup='FormLabel' att={[{name:'for',value:'exampleInputEmail'}]}>
+								<CodeXml markup='FormLabel' att={[{name:'htmlFor',value:'exampleInputEmail'}]}>
 									Email address
 								</CodeXml>
 								<CodeXml markup='FormInput' att={[{name:'id',value:'exampleInputEmail'},{name:'placeholder',value:'Email'},{name:'type',value:'email'}]} />
 							</CodeXml>
 							<CodeXml markup='FormGroup'>
-								<CodeXml markup='FormLabel' att={[{name:'for',value:'exampleInputPassword1'}]}>
+								<CodeXml markup='FormLabel' att={[{name:'htmlFor',value:'exampleInputPassword1'}]}>
 									Password
 								</CodeXml>
 								<CodeXml markup='FormInput' att={[{name:'id',value:'exampleInputPassword1'},{name:'placeholder',value:'Password'},{name:'type',value:'password'}]} />
 							</CodeXml>
 							<CodeXml markup='FormGroup'>
-								<CodeXml markup='FormLabel' att={[{name:'for',value:'exampleInputFile'}]}>
+								<CodeXml markup='FormLabel' att={[{name:'htmlFor',value:'exampleInputFile'}]}>
 									File input
 								</CodeXml>
 								<CodeXml markup='FormInput' att={[{name:'id',value:'exampleInputFile'},{name:'type',value:'file'}]} />
@@ -138,6 +138,16 @@ class Forms extends React.Component {
 							</CodeXml>
 						</CodeXml>
 					</Panel.Footer>
+				</Panel>
+
+				<h3>FormGroupBuilder</h3>
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form horizontal>
+							<FormGroupBuilder label='kiko' labelSm={2} type='input'/>
+						</Form>
+					</Panel.Body>
 				</Panel>
 			</div>
 		)

@@ -18,7 +18,7 @@ class BasicLogin extends Base {
 		this.panelProps = {}
 		this.panelHeaderProps = {}
  		this.labelUsernameProps = {
-			for: 'registerUsername'
+			htmlFor: 'registerUsername'
 		}
 		this.inputUsernameProps = {
 			id: 'registerUsername',
@@ -26,7 +26,7 @@ class BasicLogin extends Base {
 			onChange: this._onUsernameChanged.bind(this)
 		}
 		this.labelPasswordProps = {
-			for: 'registerPassword'
+			htmlFor: 'registerPassword'
 		}
 		this.inputPasswordProps = {
 			id: 'registerPassword',
@@ -34,7 +34,7 @@ class BasicLogin extends Base {
 			onChange: this._onPasswordChanged.bind(this)
 		}
 		this.labelConfirmProps = {
-			for: 'registerConfirm'
+			htmlFor: 'registerConfirm'
 		}
 		this.inputConfirmProps = {
 			id: 'registerConfirm',
@@ -163,15 +163,15 @@ class BasicLogin extends Base {
 					<Form>
 						<Form.Group>
 							<Form.Label {...this.labelUsernameProps} />
-							<Form.Input {...this.inputUsernameProps} defaultValue={this.state.username} />
+							<Form.Input {...this.inputUsernameProps} value={this.state.username} />
 						</Form.Group>
 						<Form.Group>
 							<Form.Label {...this.labelPasswordProps} />
-							<Form.Input {...this.inputPasswordProps} defaultValue={this.state.password} />
+							<Form.Input {...this.inputPasswordProps} value={this.state.password} />
 						</Form.Group>
 						<Form.Group>
 							<Form.Label {...this.labelConfirmProps} />
-							<Form.Input {...this.inputConfirmProps} defaultValue={this.state.confirm} />
+							<Form.Input {...this.inputConfirmProps} value={this.state.confirm} />
 						</Form.Group>
 						{this.props.children}
 						{ this.props.footer ? this._buildButtons() : '' }					

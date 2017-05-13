@@ -15,11 +15,12 @@
 }
 
 .ap-form-checkbox {
-
+	user-select: none;
 }
 
 .ap-form-switch {
 	line-height: 30px;
+	user-select: none;
 	label {
 		margin-left: 40px;
 	}

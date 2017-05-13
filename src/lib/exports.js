@@ -98,6 +98,9 @@ export const Form = Object.assign(FormBase, {
     Switch: FormSwitchBase
 })
 
+import FormGroupBuilderBase from './components/bootstrap/form/FormGroupBuilder'
+export const FormGroupBuilder = FormGroupBuilderBase
+
 import IFormBase from './components/bootstrap/form/old/IForm'
 export const IForm = IFormBase
 

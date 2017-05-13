@@ -18,7 +18,7 @@ class BSFormInput extends Base {
 				type: { defaultValue: 'text', store: this.inputProps },
 				placeholder: { store: this.inputProps },
 				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
-				defaultValue: { rename: 'value', store: this.inputProps }
+				value: { rename: 'value', store: this.inputProps }
 			}
 		}
 	}

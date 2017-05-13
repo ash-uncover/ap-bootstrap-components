@@ -14,6 +14,7 @@ class BSForm extends Base {
 			required : {
 			},
 			optionnal : {
+				horizontal: {},
 				onSubmit: { store: this.formProps },
 				children: {}
 			}
@@ -24,6 +25,12 @@ class BSForm extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 	
+	_buildClasses() {
+		let classes = this.baseClasses.slice()
+		if (this.props.horizontal) classes.push('form-horizontal')
+		return classes
+	}
+
 	render() {
 		this.buildProps('Form')
 		return (

@@ -15,7 +15,7 @@ class BSFormLabel extends Base {
 				children: {}
 			},
 			optionnal : {
-				for: { rename: 'htmlFor', store: this.containerProps }
+				htmlFor: { rename: 'htmlFor', store: this.containerProps }
 			}
 		}
 	}

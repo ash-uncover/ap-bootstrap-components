@@ -22,6 +22,7 @@ class AppLinks extends React.Component {
 					<li><Button comp='a' href='/bootstrap/labels' bsStyle='link' bsSize='sm'>Labels</Button></li>
 					<li><Button comp='a' href='/bootstrap/buttons' bsStyle='link' bsSize='sm'>Buttons</Button></li>
 					<li><Button comp='a' href='/bootstrap/glyphicons' bsStyle='link' bsSize='sm'>Glyphicons</Button></li>
+					<li><Button comp='a' href='/bootstrap/images' bsStyle='link' bsSize='sm'>Images</Button></li>
 					<li><Button comp='a' href='/bootstrap/badges' bsStyle='link' bsSize='sm'>Badges</Button></li>
 					<li><Button comp='a' href='/bootstrap/Forms' bsStyle='link' bsSize='sm'>Forms</Button></li>
 					<li><Button comp='a' href='/bootstrap/panels' bsStyle='link' bsSize='sm'>Panels</Button></li>

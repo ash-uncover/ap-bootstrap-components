@@ -5,6 +5,7 @@ import Bootstrap from 'components/bootstrap/Bootstrap'
 import Badges from 'components/bootstrap/badges/Badges'
 import Buttons from 'components/bootstrap/buttons/Buttons'
 import Forms from 'components/bootstrap/forms/Forms'
+import Images from 'components/bootstrap/images/Images'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
 import Grids from 'components/bootstrap/grid/Grids'
 import Labels from 'components/bootstrap/labels/Labels'
@@ -33,6 +34,7 @@ let routes = [
 					{ path: 'badges', component: Badges },
 					{ path: 'buttons', component: Buttons },
 					{ path: 'forms', component: Forms },
+					{ path: 'images', component: Images },
 					{ path: 'glyphicons', component: Glyphicons },
 					{ path: 'grid', component: Grids },
 					{ path: 'labels', component: Labels },

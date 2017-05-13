@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Clearfix } from 'react-bootstrap'
+import { Row, Col, Clearfix } from 'lib/exports'
 
 import Base from 'lib/components/Base'
 

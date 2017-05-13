@@ -111,6 +111,9 @@ export const Glyphicon = GlyphiconBase
 import ColBase from './components/bootstrap/grid/Col'
 export const Col = ColBase
 
+import ClearfixBase from './components/bootstrap/grid/Clearfix'
+export const Clearfix = ClearfixBase
+
 import ContainerBase from './components/bootstrap/grid/Container'
 export const Container = ContainerBase
 
@@ -118,11 +121,15 @@ import RowBase from './components/bootstrap/grid/Row'
 export const Row = RowBase
 
 export const Grid = {
+    Clearfix: ClearfixBase,
     Container: ContainerBase,
     Row: RowBase,
     Col: ColBase
 }
 
+// Image
+import ImageBase from './components/bootstrap/image/Image'
+export const Image = ImageBase
 
 // Label
 import LabelBase from './components/bootstrap/label/Label'

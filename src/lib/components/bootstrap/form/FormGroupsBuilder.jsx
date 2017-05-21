@@ -33,7 +33,6 @@ class BSFormGroupsBuilder extends Base {
 
 	render() {
 		this.buildProps('FormGroupsBuilder')
-		console.log(this.props)
 		return (
 			<div>
 				{this.buildFormGroups()}

@@ -86,6 +86,9 @@ export const FormInput = FormInputBase
 import FormSelectBase from './components/bootstrap/form/FormSelect'
 export const FormSelect = FormSelectBase
 
+import FormBooleanBase from './components/bootstrap/form/FormBoolean'
+export const FormBoolean = FormBooleanBase
+
 import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
 export const FormCheckbox = FormCheckboxBase
 
@@ -98,6 +101,7 @@ export const Form = Object.assign(FormBase, {
     Label: FormLabelBase,
     Input: FormInputBase,
     Select: FormSelectBase,
+    Boolean: FormBooleanBase,
     Checkbox: FormCheckboxBase,
     Switch: FormSwitchBase
 })

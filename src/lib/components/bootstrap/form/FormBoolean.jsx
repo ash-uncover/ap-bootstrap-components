@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSFormSelect extends Base {
+class BSFormBoolean extends Base {
 
 	constructor(props) {
 		super(props)
@@ -12,11 +12,11 @@ class BSFormSelect extends Base {
 		// Component props
 		this.propsInfos = {
 			required : {
-				values: {}
 			},
 			optionnal : {
 				id: { store: this.inputProps },
 				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
+				defaultValue: { store: this.inputProps }
 			}
 		}
 	}
@@ -27,7 +27,10 @@ class BSFormSelect extends Base {
 	
 	onChange(event) {
 		if (this.props.onChange) {
-			this.props.onChange(event, event.target.value);
+			let value = false
+			if (event.target.value == 'true')
+				value = true
+			this.props.onChange(event, value);
 		}
 	}
 
@@ -39,10 +42,11 @@ class BSFormSelect extends Base {
 		this.buildProps('FormSelect')
 		return (
 			<select className={this.className} {...this.inputProps}>
-				{this.props.values.map(function(v) {return (<option key={v} value={v}>{v}</option>);})}
+				<option key='true' value={true}>true</option>
+				<option key='false' value={false}>false</option>
 			</select>
 		)
 	}
 }
 
-export default BSFormSelect
+export default BSFormBoolean

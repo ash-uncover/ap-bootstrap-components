@@ -83,6 +83,9 @@ export const FormLabel = FormLabelBase
 import FormInputBase from './components/bootstrap/form/FormInput'
 export const FormInput = FormInputBase
 
+import FormSelectBase from './components/bootstrap/form/FormSelect'
+export const FormSelect = FormSelectBase
+
 import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
 export const FormCheckbox = FormCheckboxBase
 
@@ -94,6 +97,7 @@ export const Form = Object.assign(FormBase, {
     Group: FormGroupBase,
     Label: FormLabelBase,
     Input: FormInputBase,
+    Select: FormSelectBase,
     Checkbox: FormCheckboxBase,
     Switch: FormSwitchBase
 })
@@ -106,9 +110,6 @@ export const FormGroupBuilder2 = FormGroupBuilderBase2
 
 import FormGroupsBuilderBase from './components/bootstrap/form/FormGroupsBuilder'
 export const FormGroupsBuilder = FormGroupsBuilderBase
-
-import IFormBase from './components/bootstrap/form/old/IForm'
-export const IForm = IFormBase
 
 
 // Glyphicons

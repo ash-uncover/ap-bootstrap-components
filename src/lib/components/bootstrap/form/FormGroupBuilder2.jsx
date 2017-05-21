@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-import { FormGroup, FormLabel, FormInput, Col } from 'lib/exports'
+import { FormGroup, FormLabel, FormInput, FormSelect, Col } from 'lib/exports'
 
 class BSFormGroupBuilder extends Base {
 
@@ -39,6 +39,10 @@ class BSFormGroupBuilder extends Base {
 			case 'input': 
 				return (
 					<FormInput {...this.props.data} />
+				)
+			case 'select': 
+				return (
+					<FormSelect {...this.props.data} />
 				)
 			default: return (
 				<div>Unsupported type: '{this.props.type}'</div>

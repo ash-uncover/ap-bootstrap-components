@@ -101,6 +101,12 @@ export const Form = Object.assign(FormBase, {
 import FormGroupBuilderBase from './components/bootstrap/form/FormGroupBuilder'
 export const FormGroupBuilder = FormGroupBuilderBase
 
+import FormGroupBuilderBase2 from './components/bootstrap/form/FormGroupBuilder2'
+export const FormGroupBuilder2 = FormGroupBuilderBase2
+
+import FormGroupsBuilderBase from './components/bootstrap/form/FormGroupsBuilder'
+export const FormGroupsBuilder = FormGroupsBuilderBase
+
 import IFormBase from './components/bootstrap/form/old/IForm'
 export const IForm = IFormBase
 

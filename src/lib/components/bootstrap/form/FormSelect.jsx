@@ -17,6 +17,7 @@ class BSFormSelect extends Base {
 			optionnal : {
 				id: { store: this.inputProps },
 				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
+				defaultValue: { store: this.inputProps }
 			}
 		}
 	}

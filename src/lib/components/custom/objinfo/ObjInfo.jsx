@@ -3,6 +3,8 @@ import Base from 'lib/components/Base'
 
 import { Row, Col, Utils } from 'lib/exports'
 
+import './ObjInfo.css'
+
 class ObjInfo extends Base {
 
 	constructor(props) {
@@ -30,8 +32,8 @@ class ObjInfo extends Base {
 	_buildInfo(key, obj) {
 		return (
 			<Row key={key}>
-				<Col md={6}>{key}</Col>
-				<Col md={6}>{obj}</Col>
+				<Col md={4}>{key} :</Col>
+				<Col md={8}>{obj}</Col>
 			</Row>
 		)
 	}

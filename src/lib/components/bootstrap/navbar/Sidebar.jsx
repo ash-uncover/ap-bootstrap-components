@@ -59,14 +59,14 @@ class Sidebar extends Base {
 	}
 
 	buildLink(link) {
-		return (<li key={link.name}><a onClick={this.props.onClick.bind(this, link.path)}>{link.name}</a></li>)
+		return (<li key={link.name} onClick={this.props.onClick.bind(this, link.path)}>{link.name}</li>)
 	}
 
 	render() {
 		this.buildProps("Sidebar");
 		return (
 			<div>
-				<div className="ap-sidebar" style={{'backgroundColor' : '#f8f8f8', 'paddingTop': '3%', 'zIndex': '9'}}>
+				<div className="ap-sidebar">
 					{this.buildLogo(this.props.logo)}
 					<ul>
 						{this.buildElements(this.props.elements)}

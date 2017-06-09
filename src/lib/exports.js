@@ -115,6 +115,10 @@ export const FormGroupBuilder2 = FormGroupBuilderBase2
 import FormGroupsBuilderBase from './components/bootstrap/form/FormGroupsBuilder'
 export const FormGroupsBuilder = FormGroupsBuilderBase
 
+// Filter
+import FilterBase from './components/bootstrap/filter/Filter'
+export const Filter = FilterBase
+
 
 // Glyphicons
 import GlyphiconBase from './components/bootstrap/glyphicon/Glyphicon'

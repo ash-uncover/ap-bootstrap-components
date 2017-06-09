@@ -83,9 +83,9 @@ class BSFilter extends Base {
 		}
 	}
 
-	buildFilters(filter) {
+	buildFilters(filter, i) {
 		return (
-			<div className={'filter'}>
+			<div className={'filter'} key={i}>
 				{filter.filter + " " + filter.operator + " " + filter.value}
 				<i className={"glyphicon glyphicon-remove filter-icon"} onClick={this.onFilterClick.bind(this, filter)}></i>
 			</div>)

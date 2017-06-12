@@ -16,18 +16,23 @@ class AppRouter extends Base {
             }
         }
     }
-    
+     
     buildRoutes(route, index) {
+        let path = route.path
+        if (path && path !== '/' && path.startsWith('/')) {
+            path = path.substring(1)
+        }
+        let key = route.path + '-' + index
         if (route.routes) {
             return(
-                <Route key={index} path={route.path} component={route.component}>
+                <Route key={key} path={path} component={route.component}>
                     {route.routes.map(this.buildRoutes.bind(this))}
                 </Route>
-            );
+            )
         } else if (route.path) {
-            return(<Route key={index} path={route.path} component={route.component} />)
+            return(<Route key={key} path={path} component={route.component} />)
         } else {
-            return(<IndexRoute key={index} component={route.component} />)
+            return(<IndexRoute key={key} component={route.component} />)
         }
     }
     
@@ -41,4 +46,4 @@ class AppRouter extends Base {
     }
 
 }
-export default AppRouter;
+export default AppRouter

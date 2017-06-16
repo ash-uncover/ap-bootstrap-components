@@ -18,7 +18,8 @@ class RaterStar extends Base {
             required : {
             },
             optionnal : {
-                value: {}
+                value: {},
+                starMax: 5
             }
         }
     }
@@ -28,7 +29,7 @@ class RaterStar extends Base {
 
     _resolveValue() {
         let value = this.props.value || 0
-        if (value < 0 || value > 5) {
+        if (value < 0 || value > this.props.starMax) {
             return 0
         }
         return Math.round(value)
@@ -56,7 +57,7 @@ class RaterStar extends Base {
         return (
             <div className={this.className}>
                 {this._buildFullStars(value)}
-                {this._buildEmptyStars(5 - value)}
+                {this._buildEmptyStars(this.props.starMax - value)}
             </div>
         )
     }

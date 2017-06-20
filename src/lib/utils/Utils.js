@@ -32,7 +32,7 @@ class Utils {
 			if (callback) {
 				result.push(callback(object[member], member));
 			} else {
-				result.push(object[member], member);
+				result.push(object[member]);
 			}
 		}
 		return result;

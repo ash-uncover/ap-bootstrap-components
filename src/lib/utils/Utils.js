@@ -30,9 +30,9 @@ class Utils {
 		let result = [];
 		for (let member in object) {
 			if (callback) {
-				result.push(callback(object[member]));
+				result.push(callback(object[member], member));
 			} else {
-				result.push(object[member]);
+				result.push(object[member], member);
 			}
 		}
 		return result;

@@ -1,5 +1,9 @@
 /* COMPONENTS */
 
+// Data
+import BaseDataBase from './components/BaseData'
+export const BaseData = BaseDataBase
+
 // app
 import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase

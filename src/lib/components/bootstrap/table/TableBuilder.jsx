@@ -44,7 +44,7 @@ class TableBuilder extends Base {
     }
 
     _forceHead(cell) {
-        return Object.assign({}, cell, { head: true})
+        return Object.assign({}, cell, { head: true })
     }
     
     _buildCell(cell, index) {

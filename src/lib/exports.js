@@ -100,15 +100,14 @@ import FormSwitchBase from './components/bootstrap/form/FormSwitch'
 export const FormSwitch = FormSwitchBase
 
 import FormBase from './components/bootstrap/form/Form'
-export const Form = Object.assign(FormBase, {
-    Group: FormGroupBase,
-    Label: FormLabelBase,
-    Input: FormInputBase,
-    Select: FormSelectBase,
-    Boolean: FormBooleanBase,
-    Checkbox: FormCheckboxBase,
-    Switch: FormSwitchBase
-})
+FormBase.Group = FormGroupBase
+FormBase.Label = FormLabelBase,
+FormBase.Input = FormInputBase,
+FormBase.Select = FormSelectBase,
+FormBase.Boolean = FormBooleanBase,
+FormBase.Checkbox = FormCheckboxBase,
+FormBase.Switch = FormSwitchBase
+export const Form = FormBase
 
 import FormGroupBuilderBase from './components/bootstrap/form/FormGroupBuilder'
 export const FormGroupBuilder = FormGroupBuilderBase
@@ -205,12 +204,11 @@ import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
 
 import NavbarBase from './components/bootstrap/navbar/Navbar'
-export const Navbar = Object.assign(NavbarBase, {
-    Header: NavbarHeaderBase,
-    Brand: NavbarBrandBase,
-    Group: NavbarGroupBase,
-    Link: NavbarLinkBase
-})
+NavbarBase.Header = NavbarHeaderBase
+NavbarBase.Brand = NavbarBrandBase
+NavbarBase.Group = NavbarGroupBase
+NavbarBase.Link = NavbarLinkBase
+export const Navbar = NavbarBase
 
 import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'
 export const NavbarMobile = NavbarMobileBase
@@ -233,12 +231,11 @@ import PanelFooterBase from './components/bootstrap/panel/PanelFooter'
 export const PanelFooter = PanelFooterBase
 
 import PanelBase from './components/bootstrap/panel/Panel'
-export const Panel = Object.assign(PanelBase, {
-    Header: PanelHeaderBase,
-    Title: PanelTitleBase,
-    Body: PanelBodyBase,
-    Footer: PanelFooterBase
-})
+PanelBase.Header = PanelHeaderBase
+PanelBase.Title = PanelTitleBase
+PanelBase.Body = PanelBodyBase
+PanelBase.Footer = PanelFooterBase
+export const Panel = PanelBase
 
 // Tables
 import TableBodyBase from './components/bootstrap/table/TableBody'
@@ -263,14 +260,13 @@ import TableBuilderBase from './components/bootstrap/table/TableBuilder'
 export const TableBuilder = TableBuilderBase
 
 import TableBase from './components/bootstrap/table/Table'
-export const Table = Object.assign(TableBase, {
-    Head: TableHeadBase,
-    Body: TableBodyBase,
-    Foot: TableFootBase,
-    TR: TableRowBase,
-    TH: TableHeaderCellBase,
-    TD: TableCellBase
-})
+TableBase.Head = TableHeadBase
+TableBase.Body = TableBodyBase
+TableBase.Foot = TableFootBase
+TableBase.TR = TableRowBase
+TableBase.TH = TableHeaderCellBase
+TableBase.TD = TableCellBase
+export const Table = TableBase
 
 
 /* SERVICES */

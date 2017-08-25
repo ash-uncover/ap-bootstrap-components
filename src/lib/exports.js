@@ -189,6 +189,8 @@ export const List = {
     ItemText: ListGroupItemTextBase
 }
 
+import SearchBarBase from './components/bootstrap/searchbar/SearchBar'
+export const SearchBar = SearchBarBase
 
 // Navbar
 import NavbarHeaderBase from './components/bootstrap/navbar/NavbarHeader'

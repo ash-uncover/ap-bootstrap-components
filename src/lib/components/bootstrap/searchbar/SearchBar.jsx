@@ -1,7 +1,6 @@
 import React from 'react'
-import { FormControl, InputGroup, Glyphicon, Button } from 'react-bootstrap';
 
-import './ap-searchbar.css'
+import './ap-searchbar.scss'
 
 class SearchBar extends React.Component {
 

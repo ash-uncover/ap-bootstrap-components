@@ -96,6 +96,9 @@ export const FormBoolean = FormBooleanBase
 import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
 export const FormCheckbox = FormCheckboxBase
 
+import FormStaticBase from './components/bootstrap/form/FormStatic'
+export const FormStatic = FormStaticBase
+
 import FormSwitchBase from './components/bootstrap/form/FormSwitch'
 export const FormSwitch = FormSwitchBase
 
@@ -106,6 +109,7 @@ FormBase.Input = FormInputBase,
 FormBase.Select = FormSelectBase,
 FormBase.Boolean = FormBooleanBase,
 FormBase.Checkbox = FormCheckboxBase,
+FormBase.Static = FormStaticBase,
 FormBase.Switch = FormSwitchBase
 export const Form = FormBase
 

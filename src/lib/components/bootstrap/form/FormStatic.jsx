@@ -1,7 +1,7 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSFormInput extends Base {
+class BSFormStatic extends Base {
 
 	constructor(props) {
 		super(props)
@@ -10,9 +10,9 @@ class BSFormInput extends Base {
 		// Component props
 		this.propsInfos = {
 			required : {
+				children: {}
 			},
 			optionnal : {
-				value: {}
 			}
 		}
 	}
@@ -21,18 +21,14 @@ class BSFormInput extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 	
-	_buildClasses() {
-		return this.baseClasses
-	}
-
 	render() {
 		this.buildProps('FormStatic')
 		return (
 			<p className={this.className}>
-				{this.props.value}
+				{this.props.children}
 			</p>
 		)
 	}
 }
 
-export default BSFormInput
+export default BSFormStatic

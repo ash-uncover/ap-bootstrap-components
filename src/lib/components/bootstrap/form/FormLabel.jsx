@@ -6,7 +6,7 @@ class BSFormLabel extends Base {
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'ap-form-label' ]
+		this.baseClasses = [ 'ap-form-label', 'control-label' ]
 		// Sub-component props
 		this.containerProps = {}
 		// Component props

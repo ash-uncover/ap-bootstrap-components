@@ -209,11 +209,15 @@ export const NavbarGroup = NavbarGroupBase
 import NavbarLinkBase from './components/bootstrap/navbar/NavbarLink'
 export const NavbarLink = NavbarLinkBase
 
+import NavbarTextBase from './components/bootstrap/navbar/NavbarText'
+export const NavbarText = NavbarTextBase
+
 import NavbarBase from './components/bootstrap/navbar/Navbar'
 NavbarBase.Header = NavbarHeaderBase
 NavbarBase.Brand = NavbarBrandBase
 NavbarBase.Group = NavbarGroupBase
 NavbarBase.Link = NavbarLinkBase
+NavbarBase.Text = NavbarTextBase
 export const Navbar = NavbarBase
 
 import NavbarMobileBase from './components/bootstrap/navbar/NavbarMobile'

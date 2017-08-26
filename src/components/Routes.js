@@ -4,6 +4,7 @@ import AppLinks from 'components/AppLinks'
 import Bootstrap from 'components/bootstrap/Bootstrap'
 import Badges from 'components/bootstrap/badges/Badges'
 import Buttons from 'components/bootstrap/buttons/Buttons'
+import Carousels from 'components/bootstrap/carousels/Carousels'
 import Forms from 'components/bootstrap/forms/Forms'
 import Images from 'components/bootstrap/images/Images'
 import Glyphicons from 'components/bootstrap/glyphicons/Glyphicons'
@@ -33,6 +34,7 @@ let routes = [
 				routes: [
 					{ path: 'badges', component: Badges },
 					{ path: 'buttons', component: Buttons },
+					{ path: 'carousels', component: Carousels },
 					{ path: 'forms', component: Forms },
 					{ path: 'images', component: Images },
 					{ path: 'glyphicons', component: Glyphicons },

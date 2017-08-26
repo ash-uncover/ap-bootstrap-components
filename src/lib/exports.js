@@ -77,6 +77,11 @@ import ButtonGroupBase from './components/bootstrap/button/ButtonGroup'
 export const ButtonGroup = ButtonGroupBase
 
 
+// Carousels
+import CarouselBase from './components/bootstrap/carousel/Carousel'
+export const Carousel = CarouselBase
+
+
 // Form
 import FormGroupBase from './components/bootstrap/form/FormGroup'
 export const FormGroup = FormGroupBase

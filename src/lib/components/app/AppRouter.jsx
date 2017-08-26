@@ -19,7 +19,7 @@ class AppRouter extends Base {
         }
     }
     
-    _onUpdate() {
+    onUpdate() {
         if (this.props.onUpdate) {
             this.props.onUpdate()
         }

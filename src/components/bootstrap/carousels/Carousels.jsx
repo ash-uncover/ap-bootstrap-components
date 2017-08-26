@@ -44,7 +44,12 @@ class Carousels extends React.Component {
 				<Panel className='ap-rb-carousels-style' bsStyle='default'>
 					<PanelBody>
 						<h4>Example {this.state.currentSlide}</h4>
-						<Carousel id='carousel-1' slides={slides} onSlideChange={this.onSlideChange.bind(this)}/>
+						<Carousel 
+							id='carousel-1' 
+							slides={slides} 
+							showIndicators={false}
+							preventArrowCycling={true}
+							onSlideChange={this.onSlideChange.bind(this)}/>
 					</PanelBody>
 					<PanelFooter>
 					</PanelFooter>

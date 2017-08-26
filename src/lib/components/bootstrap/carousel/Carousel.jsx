@@ -4,22 +4,27 @@ import Base from 'lib/components/Base'
 
 import './ap-carousels.scss'
 
+$.fn.exists = function () {
+    return this.length !== 0;
+}
+
 class BSCarousel extends Base {
 	
 	constructor(props) {
 		super(props)
 
-		this.onActiveIndexChanged = this._onActiveIndexChanged.bind(this)
+		this.onSlideChanged = this._onSlideChanged.bind(this)
 
 		this.buildIndicator = this._buildIndicator.bind(this)
 		this.buildSlide = this._buildSlide.bind(this)
 
-		// Base class
-		this.baseClasses = [ 'carousel', 'slide', 'ap-carousel' ]
-		// Properties store
-		this.carouselProps = {
+		this.state = {
 			currentIndex: 0
 		}
+
+		// Base class
+		this.baseClasses = [ 'carousel', 'slide', 'ap-carousel' ]
+		this.propStore = {}
 		// Component properties
 		this.propsInfos = {
 			required : {
@@ -27,32 +32,32 @@ class BSCarousel extends Base {
 				slides: {}
 			},
 			optionnal : {
-				showIndicators: { defaultValue: false },
+				showIndicators: { defaultValue: false, store: this.propStore },
+				preventArrowCycling: { defaultValue: false, store: this.propStore },
 				onSlideChange: {}
 			}
 		}
 	}
 
 	componentDidMount() {
-		$('#' + this.props.id).on('slide.bs.carousel', this.onActiveIndexChanged)
+		$('#' + this.props.id).on('slid.bs.carousel', this.onSlideChanged)
 	}
 
 	// View callbacks //
 	// --------------------------------------------------------------------------------
 
 	_onActiveIndexChanged(e) {
+		
+		
+	}
+	_onSlideChanged(e) {
+		let index = $('.active', e.target).index()
 		if (this.props.onSlideChange) {
-			this.props.onSlideChange(this._getActiveIndex(e))
+			this.props.onSlideChange(index)
 		}
+		this.setState({ currentIndex: index })
 	}
 
-	_getActiveIndex(e) {
-		if ($('.active.right', e.target)) {
-			return ($('.active', e.target).index() + 1) % this.props.slides.length
-		} else if ($('.active.left', e.target)) {
-			return ($('.active', e.target).index() - 1) % this.props.slides.length
-		}		
-	}
 
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
@@ -72,13 +77,13 @@ class BSCarousel extends Base {
 				key={index} 
 				data-target={'#' + this.props.id} 
 				data-slide-to={index} 
-				className={index === this.carouselProps.currentIndex ? 'active' : ''} />
+				className={index === 0 ? 'active' : ''} />
 		)
 	}
 
 	_buildSlide(slide, index) {
 		return (
-			<div className={'item' + (index === this.carouselProps.currentIndex ? ' active' : '')} key={index}>
+			<div className={'item' + (index === 0 ? ' active' : '')} key={index}>
 				<img src={slide.src} alt={slide.alt} />
 				{slide.caption ?
 					<div className='carousel-caption'>
@@ -93,22 +98,31 @@ class BSCarousel extends Base {
 		this.buildProps('Carousel')
 		return (
 			<div id={this.props.id} className={this.className} data-ride='carousel' data-interval={false}>
-
-				<ol className='carousel-indicators'>
-					{this.props.slides.map(this.buildIndicator)}
-				</ol>
+				{this.propStore.showIndicators ?
+					<ol className='carousel-indicators'>
+						{this.props.slides.map(this.buildIndicator)}
+					</ol>
+				: null }
 
 				<div className='carousel-inner'>
 					{this.props.slides.map(this.buildSlide)}
 					
 				</div>
 
-				<a className='left carousel-control' href={'#' + this.props.id} data-slide='prev'>
-					<span className='glyphicon glyphicon-chevron-left'></span>
-				</a>
-				<a className='right carousel-control' href={'#' + this.props.id} data-slide='next'>
-					<span className='glyphicon glyphicon-chevron-right'></span>
-				</a>
+				{this.propStore.preventArrowCycling && this.state.currentIndex === 0 ? 
+					null
+				:
+					<a className='left carousel-control' href={'#' + this.props.id} data-slide='prev'>
+						<span className='glyphicon glyphicon-chevron-left'></span>
+					</a>
+				}
+				{this.propStore.preventArrowCycling && this.state.currentIndex === this.props.slides.length - 1 ? 
+					null
+				:
+					<a className='right carousel-control' href={'#' + this.props.id} data-slide='next'>
+						<span className='glyphicon glyphicon-chevron-right'></span>
+					</a>
+				}
 			</div>
 		)
 	}

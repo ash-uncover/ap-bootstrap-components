@@ -7,16 +7,24 @@ class AppRouter extends Base {
 
     constructor(props) {
         super(props)
+        this._onUpdate = this.onUpdate.bind(this)
         // Component properties
         this.propsInfos = {
             required : {
                 routes: {}
             },
             optionnal : {
+                onUpdate: {}
             }
         }
     }
-     
+    
+    _onUpdate() {
+        if (this.props.onUpdate) {
+            this.props.onUpdate()
+        }
+    }
+
     buildRoutes(route, index) {
         let path = route.path
         if (path && path !== '/' && path.startsWith('/')) {
@@ -39,7 +47,7 @@ class AppRouter extends Base {
     render() {
         this.buildProps('AppRouter')
         return (
-            <Router history={browserHistory}>
+            <Router history={browserHistory} onUpdate={this._onUpdate}>
                 {this.props.routes.map(this.buildRoutes.bind(this))}
             </Router>
         );

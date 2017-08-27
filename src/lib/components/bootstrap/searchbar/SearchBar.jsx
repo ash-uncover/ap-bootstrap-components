@@ -1,13 +1,28 @@
 import React from 'react'
-
+import Base from 'lib/components/Base'
 import './ap-searchbar.scss'
 
-class SearchBar extends React.Component {
+import { FormInput, Button, Glyphicon } from 'lib/exports'
+
+class SearchBar extends Base {
 
 	constructor(props) {
-		super(props);
-		this.state = {
-			value: this.props.defaultValue ? this.props.defaultValue : ''
+		super(props)
+		// Base classes
+		this.baseClasses = [ 'input-group', 'ap-search-bar' ]
+		// Sub component props
+		this.inputProps = {
+			
+		}
+		// Component props
+		this.propsInfos = {
+			required : {
+			},
+			optionnal : {
+				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
+				placeholder: { store: this.inputProps },
+				value: { store: this.inputProps }
+			}
 		}
 	}
 
@@ -27,14 +42,14 @@ class SearchBar extends React.Component {
 	// --------------------------------------------------------------------------------
 
 	render() {
+		this.buildProps('SearchBar')
 		return (
-			<div className='ap-searchbar'>
-				<input className="ap-searchbar-input" type='text' placeholder={this.props.placeholder} onChange={this.onChange.bind(this)}/>
-				<i className="glyphicon glyphicon-search ap-searchbar-icon"></i>
+			<div className={this.className}>
+				<FormInput className='ap-searchbar-input' {...this.inputProps} />
+				<Glyphicon className='input-group-addon ap-searchbar-icon' glyph='search'/>
 			</div>
-		);
+		)
 	}
-
 }
 
-export default SearchBar;
+export default SearchBar

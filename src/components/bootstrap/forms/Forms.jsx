@@ -1,7 +1,7 @@
 import React from 'react'
 import FormsData from 'components/bootstrap/forms/FormsData'
 
-import { Panel, Button, CodeXml, CodeXmlComment, Form, FormGroupBuilder } from 'lib/exports'
+import { Panel, Button, CodeXml, CodeXmlComment, Form, FormGroupBuilder, SearchBar } from 'lib/exports'
 
 import './Forms.scss'
 
@@ -20,7 +20,14 @@ class Forms extends React.Component {
 	}
 
 	onDataUpdate() {
-		this.setState({ data: FormsData })
+		this.setState({ 
+			data: FormsData,
+			search: ''
+		})
+	}
+
+	onSearch(value) {
+		this.setState({search: value })
 	}
 
 	render() {
@@ -149,6 +156,20 @@ class Forms extends React.Component {
 						</Form>
 					</Panel.Body>
 				</Panel>
+
+				<h2>Forms Presets</h2>
+
+				<h3>SearchBar</h3>
+
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<SearchBar value={this.state.search} onChange={this.onSearch.bind(this)} />
+						<p>Searching: {'"' + this.state.search + '"'}</p>
+						<Button onClick={this.onSearch.bind(this, '')}>Reset</Button>
+					</Panel.Body>
+				</Panel>
+				
 			</div>
 		)
 	}

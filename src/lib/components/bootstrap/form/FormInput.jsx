@@ -41,7 +41,7 @@ class BSFormInput extends Base {
 		if (this.props.type === 'file') {
 			return []
 		}
-		return this.baseClasses
+		return this.baseClasses.slice()
 	}
 
 	render() {

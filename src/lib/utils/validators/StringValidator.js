@@ -1,4 +1,4 @@
-import ValidatorBase from 'lib/utils/form/ValidatorBase'
+import ValidatorBase from 'lib/utils/validators/ValidatorBase'
 
 export default class StringValidator extends ValidatorBase {
 

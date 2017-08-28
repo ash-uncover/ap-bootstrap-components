@@ -301,6 +301,10 @@ export const MomentHelper = MomentHelperBase
 import UtilsBase from './utils/Utils'
 export const Utils = UtilsBase
 
+// validators
+import ValidatorsBase from './utils/validators/Validators'
+export const Validators = ValidatorsBase
+
 
 /*
 import AppMainDefaultBase from './app/AppMainDefault'

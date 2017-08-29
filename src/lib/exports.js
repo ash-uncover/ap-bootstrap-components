@@ -62,6 +62,14 @@ export const StoreTable = StoreTableBase
 
 
 
+/* DATA */
+
+// Nationalities
+import NationalityBase from './data/geo/Nationality'
+export const Nationality = NationalityBase
+
+
+
 /* BOOTSTRAP CSS */
 
 // Badges

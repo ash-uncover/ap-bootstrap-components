@@ -19,7 +19,7 @@ class BSFormSelect extends Base {
 			optionnal : {
 				id: { store: this.inputProps },
 				onChange: { store: this.inputProps, value: this.onChange.bind(this) },
-				defaultValue: { store: this.inputProps }
+				value: { store: this.inputProps }
 			}
 		}
 	}
@@ -42,8 +42,7 @@ class BSFormSelect extends Base {
 		return this.props.values.map(this.buildValue)
 	}
 
-	_buildValue(v) {
-		
+	_buildValue(v) {		
 		if (typeof v === 'string') {
 			return (
 				<option key={v} value={v}>{v}</option>

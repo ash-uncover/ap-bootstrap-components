@@ -91,23 +91,26 @@ export const Carousel = CarouselBase
 
 
 // Form
-import FormGroupBase from './components/bootstrap/form/FormGroup'
-export const FormGroup = FormGroupBase
-
-import FormLabelBase from './components/bootstrap/form/FormLabel'
-export const FormLabel = FormLabelBase
-
-import FormInputBase from './components/bootstrap/form/FormInput'
-export const FormInput = FormInputBase
-
-import FormSelectBase from './components/bootstrap/form/FormSelect'
-export const FormSelect = FormSelectBase
-
 import FormBooleanBase from './components/bootstrap/form/FormBoolean'
 export const FormBoolean = FormBooleanBase
 
 import FormCheckboxBase from './components/bootstrap/form/FormCheckbox'
 export const FormCheckbox = FormCheckboxBase
+
+import FormDateBase from './components/bootstrap/form/FormDate'
+export const FormDate = FormDateBase
+
+import FormGroupBase from './components/bootstrap/form/FormGroup'
+export const FormGroup = FormGroupBase
+
+import FormInputBase from './components/bootstrap/form/FormInput'
+export const FormInput = FormInputBase
+
+import FormLabelBase from './components/bootstrap/form/FormLabel'
+export const FormLabel = FormLabelBase
+
+import FormSelectBase from './components/bootstrap/form/FormSelect'
+export const FormSelect = FormSelectBase
 
 import FormStaticBase from './components/bootstrap/form/FormStatic'
 export const FormStatic = FormStaticBase
@@ -116,12 +119,13 @@ import FormSwitchBase from './components/bootstrap/form/FormSwitch'
 export const FormSwitch = FormSwitchBase
 
 import FormBase from './components/bootstrap/form/Form'
-FormBase.Group = FormGroupBase
-FormBase.Label = FormLabelBase,
-FormBase.Input = FormInputBase,
-FormBase.Select = FormSelectBase,
 FormBase.Boolean = FormBooleanBase,
 FormBase.Checkbox = FormCheckboxBase,
+FormBase.Date = FormDateBase,
+FormBase.Group = FormGroupBase
+FormBase.Input = FormInputBase,
+FormBase.Label = FormLabelBase,
+FormBase.Select = FormSelectBase,
 FormBase.Static = FormStaticBase,
 FormBase.Switch = FormSwitchBase
 export const Form = FormBase

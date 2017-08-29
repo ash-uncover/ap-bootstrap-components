@@ -16,9 +16,9 @@ class BaseData {
         return arg ? this.obj.state[arg] : this.obj.state
     }
 	
-	onChange(id, event) {
+	onChange(id, event, value) {
         let data = {}
-        data[id] = event.target.value
+        data[id] = value
         this.setState(data)
 	}
 

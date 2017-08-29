@@ -48,7 +48,7 @@ class FormDate extends Base {
 			optionnal : {
 				onChange: {},
 				date: { defaultValue: moment().date(), store: this.dateProps },
-				month: { defaultValue: moment().month(), store: this.dateProps },
+				month: { defaultValue: moment().month() + 1, store: this.dateProps },
 				year: { defaultValue: moment().year(), store: this.dateProps }
 			}
 		}
@@ -73,7 +73,7 @@ class FormDate extends Base {
 	}
 	_onMonthChange(event) {
 		this.onChange(event, [
-			this.dateProps.month,
+			this.dateProps.year,
 			Number(event.target.value),
 			this.dateProps.date
 		])

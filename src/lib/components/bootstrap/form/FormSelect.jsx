@@ -5,6 +5,8 @@ class BSFormSelect extends Base {
 
 	constructor(props) {
 		super(props)
+
+		this.buildValue = this._buildValue.bind(this)
 		// Base classes
 		this.baseClasses = [ 'selectpicker', 'form-control', 'ap-form-select' ]
 		// Sub component props
@@ -36,11 +38,27 @@ class BSFormSelect extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 
+	_buildValues() {
+		this.props.values.map(this.buildValue)
+	}
+
+	_buildValue(value) {
+		if (typeof value === 'string') {
+			return (
+				<option key={v} value={v}>{v}</option>
+			)
+		} else {
+			return (
+				<option key={v.key} value={v.key}>{v.value}</option>
+			)
+		}
+	}
+
 	render() {
 		this.buildProps('FormSelect')
 		return (
 			<select className={this.className} {...this.inputProps}>
-				{this.props.values.map(function(v) {return (<option key={v} value={v}>{v}</option>);})}
+				{this._buildValues()}
 			</select>
 		)
 	}

@@ -12,6 +12,7 @@ let _AS = { key: 'AS' }
 let _AT = { key: 'AT' }
 let _AU = { key: 'AU' }
 let _AW = { key: 'AW' }
+let _AX = { key: 'AX' }
 let _AZ = { key: 'AZ' }
 let _BA = { key: 'BA' }
 let _BB = { key: 'BB' }
@@ -22,26 +23,21 @@ let _BG = { key: 'BG' }
 let _BH = { key: 'BH' }
 let _BI = { key: 'BI' }
 let _BJ = { key: 'BJ' }
-let _BL = { key: 'BL' }
-let _BM = { key: 'BM' }
 let _BN = { key: 'BN' }
 let _BO = { key: 'BO' }
 let _BQ = { key: 'BQ' }
 let _BR = { key: 'BR' }
 let _BS = { key: 'BS' }
 let _BT = { key: 'BT' }
-let _BV = { key: 'BV' }
 let _BW = { key: 'BW' }
 let _BY = { key: 'BY' }
 let _BZ = { key: 'BZ' }
 let _CA = { key: 'CA' }
-let _CC = { key: 'CC' }
 let _CD = { key: 'CD' }
 let _CF = { key: 'CF' }
 let _CG = { key: 'CG' }
 let _CH = { key: 'CH' }
 let _CI = { key: 'CI' }
-let _CK = { key: 'CK' }
 let _CL = { key: 'CL' }
 let _CM = { key: 'CM' }
 let _CN = { key: 'CN' }
@@ -49,8 +45,6 @@ let _CO = { key: 'CO' }
 let _CR = { key: 'CR' }
 let _CU = { key: 'CU' }
 let _CV = { key: 'CV' }
-let _CW = { key: 'CW' }
-let _CX = { key: 'CX' }
 let _CY = { key: 'CY' }
 let _CZ = { key: 'CZ' }
 let _DE = { key: 'DE' }
@@ -62,37 +56,25 @@ let _DZ = { key: 'DZ' }
 let _EC = { key: 'EC' }
 let _EE = { key: 'EE' }
 let _EG = { key: 'EG' }
-let _EH = { key: 'EH' }
 let _ER = { key: 'ER' }
 let _ES = { key: 'ES' }
 let _ET = { key: 'ET' }
 let _FI = { key: 'FI' }
 let _FJ = { key: 'FJ' }
-let _FK = { key: 'FK' }
-let _FM = { key: 'FM' }
-let _FO = { key: 'FO' }
 let _FR = { key: 'FR' }
 let _GA = { key: 'GA' }
 let _GB = { key: 'BG' }
 let _GD = { key: 'GD' }
 let _GE = { key: 'GE' }
-let _GF = { key: 'GF' }
 let _GG = { key: 'GG' }
 let _GH = { key: 'GH' }
-let _GI = { key: 'GI' }
-let _GL = { key: 'GL' }
 let _GM = { key: 'GM' }
 let _GN = { key: 'GN' }
-let _GP = { key: 'GP' }
 let _GQ = { key: 'GQ' }
 let _GR = { key: 'GR' }
-let _GS = { key: 'GS' }
 let _GT = { key: 'GT' }
-let _GU = { key: 'GU' }
 let _GW = { key: 'GW' }
 let _GY = { key: 'GY' }
-let _HK = { key: 'HK' }
-let _HM = { key: 'HM' }
 let _HN = { key: 'HN' }
 let _HR = { key: 'HR' }
 let _HT = { key: 'HT' }
@@ -102,7 +84,6 @@ let _IE = { key: 'IE' }
 let _IL = { key: 'IL' }
 let _IM = { key: 'IM' }
 let _IN = { key: 'IN' }
-let _IO = { key: 'IO' }
 let _IQ = { key: 'IQ' }
 let _IR = { key: 'IR' }
 let _IS = { key: 'IS' }
@@ -120,24 +101,18 @@ let _KN = { key: 'KN' }
 let _KP = { key: 'KP' } 
 let _KR = { key: 'KR' }
 let _KW = { key: 'KW' }
-let _KY = { key: 'KY' }
 let _KZ = { key: 'KZ' }
 let _LA = { key: 'LA' }
-let _LB = { key: 'LB' }
-let _LC = { key: 'LC' }
 let _LI = { key: 'LI' }
-let _LK = { key: 'LK' }
 let _LR = { key: 'LR' }
 let _LS = { key: 'LS' }
 let _LT = { key: 'LT' }
 let _LU = { key: 'LU' }
-let _LV = { key: 'LV' }
 let _LY = { key: 'LY' }
 let _MA = { key: 'MA' }
 let _MC = { key: 'MC' }
 let _MD = { key: 'MD' }
-let _ME = { key: 'ME' }
-let _MF = { key: 'MF' } 
+let _ME = { key: 'ME' } 
 let _MG = { key: 'MG' }
 let _MH = { key: 'MH' }
 let _MK = { key: 'MK' }
@@ -241,6 +216,7 @@ let _VN = { key: 'VN' }
 let _VU = { key: 'VU' }
 let _WF = { key: 'WF' }
 let _WS = { key: 'WS' }
+let _XK = { key: 'XK' }
 let _YE = { key: 'YE' }
 let _YT = { key: 'YT' }
 let _ZA = { key: 'ZA' }
@@ -263,6 +239,7 @@ class Nationality {
 	static get AT() { return _AT }
 	static get AU() { return _AU }
 	static get AW() { return _AW }
+	static get AX() { return _AX }
 	static get AZ() { return _AZ }
 	static get BA() { return _BA }
 	static get BB() { return _BB }
@@ -273,26 +250,21 @@ class Nationality {
 	static get BH() { return _BH }
 	static get BI() { return _BI }
 	static get BJ() { return _BJ }
-	static get BL() { return _BL }
-	static get BM() { return _BM }
 	static get BN() { return _BN }
 	static get BO() { return _BO }
 	static get BQ() { return _BQ }
 	static get BR() { return _BR }
 	static get BS() { return _BS }
 	static get BT() { return _BT }
-	static get BV() { return _BV }
 	static get BW() { return _BW }
 	static get BY() { return _BY }
 	static get BZ() { return _BZ }
 	static get CA() { return _CA }
-	static get CC() { return _CC }
 	static get CD() { return _CD }
 	static get CF() { return _CF }
 	static get CG() { return _CG }
 	static get CH() { return _CH }
 	static get CI() { return _CI }
-	static get CK() { return _CK }
 	static get CL() { return _CL }
 	static get CM() { return _CM }
 	static get CN() { return _CN }
@@ -300,8 +272,6 @@ class Nationality {
 	static get CR() { return _CR }
 	static get CU() { return _CU }
 	static get CV() { return _CV }
-	static get CW() { return _CW }
-	static get CX() { return _CX }
 	static get CY() { return _CY }
 	static get CZ() { return _CZ }
 	static get DE() { return _DE }
@@ -313,37 +283,25 @@ class Nationality {
 	static get EC() { return _EC }
 	static get EE() { return _EE }
 	static get EG() { return _EG }
-	static get EH() { return _EH }
 	static get ER() { return _ER }
 	static get ES() { return _ES }
 	static get ET() { return _ET }
 	static get FI() { return _FI }
 	static get FJ() { return _FJ }
-	static get FK() { return _FK }
-	static get FM() { return _FM }
-	static get FO() { return _FO }
 	static get FR() { return _FR }
 	static get GA() { return _GA }
 	static get GB() { return _GB }
 	static get GD() { return _GD }
 	static get GE() { return _GE }
-	static get GF() { return _GF }
 	static get GG() { return _GG }
 	static get GH() { return _GH }
-	static get GI() { return _GI }
-	static get GL() { return _GL }
 	static get GM() { return _GM }
 	static get GN() { return _GN }
-	static get GP() { return _GP }
 	static get GQ() { return _GQ }
 	static get GR() { return _GR }
-	static get GS() { return _GS }
 	static get GT() { return _GT }
-	static get GU() { return _GU }
 	static get GW() { return _GW }
 	static get GY() { return _GY }
-	static get HK() { return _HK }
-	static get HM() { return _HM }
 	static get HN() { return _HN }
 	static get HR() { return _HR }
 	static get HT() { return _HT }
@@ -353,7 +311,6 @@ class Nationality {
 	static get IL() { return _IL }
 	static get IM() { return _IM }
 	static get IN() { return _IN }
-	static get IO() { return _IO }
 	static get IQ() { return _IQ }
 	static get IR() { return _IR }
 	static get IS() { return _IS }
@@ -371,24 +328,18 @@ class Nationality {
 	static get KP() { return _KP }
 	static get KR() { return _KR }
 	static get KW() { return _KW }
-	static get KY() { return _KY }
 	static get KZ() { return _KZ }
 	static get LA() { return _LA }
-	static get LB() { return _LB }
-	static get LC() { return _LC }
 	static get LI() { return _LI }
-	static get LK() { return _LK }
 	static get LR() { return _LR }
 	static get LS() { return _LS }
 	static get LT() { return _LT }
 	static get LU() { return _LU }
-	static get LV() { return _LV }
 	static get LY() { return _LY }
 	static get MA() { return _MA }
 	static get MC() { return _MC }
 	static get MD() { return _MD }
 	static get ME() { return _ME }
-	static get MF() { return _MF }
 	static get MG() { return _MG }
 	static get MH() { return _MH }
 	static get MK() { return _MK }
@@ -492,6 +443,7 @@ class Nationality {
 	static get VU() { return _VU }
 	static get WF() { return _WF }
 	static get WS() { return _WS }
+	static get XK() { return _XK }
 	static get YE() { return _YE }
 	static get YT() { return _YT }
 	static get ZA() { return _ZA }
@@ -500,7 +452,7 @@ class Nationality {
 
 	static get VALUES() {
 		return [
-			_AD,_AE,_AF,_AG,_AI,_AL,_AM,_AO,_AQ,_AR,_AS,_AT,_AU,_AW,_AZ,_BA,_BB,_BD,_BE,_BF,_BG,_BH,_BI,_BJ,_BL,_BM,_BN,_BO,_BQ,_BR,_BS,_BT,_BV,_BW,_BY,_BZ,_CA,_CC,_CD,_CF,_CG,_CH,_CI,_CK,_CL,_CM,_CN,_CO,_CR,_CU,_CV,_CW,_CX,_CY,_CZ,_DE,_DJ,_DK,_DM,_DO,_DZ,_EC,_EE,_EG,_EH,_ER,_ES,_ET,_FI,_FJ,_FK,_FM,_FO,_FR,_GA,_GB,_GD,_GE,_GF,_GG,_GH,_GI,_GL,_GM,_GN,_GP,_GQ,_GR,_GS,_GT,_GU,_GW,_GY,_HK,_HM,_HN,_HR,_HT,_HU,_ID,_IE,_IL,_IM,_IN,_IO,_IQ,_IR,_IS,_IT,_JE,_JM,_JO,_JP,_KE,_KG,_KH,_KI,_KM,_KN,_KP,_KR,_KW,_KY,_KZ,_LA,_LB,_LC,_LI,_LK,_LR,_LS,_LT,_LU,_LV,_LY,_MA,_MC,_MD,_ME,_MF,_MG,_MH,_MK,_ML,_MM,_MN,_MO,_MP,_MQ,_MR,_MS,_MT,_MU,_MV,_MW,_MX,_MY,_MZ,_NA,_NC,_NE,_NF,_NG,_NI,_NL,_NO,_NP,_NR,_NU,_NZ,_OM,_PA,_PE,_PF,_PG,_PH,_PK,_PL,_PM,_PN,_PR,_PS,_PT,_PW,_PY,_QA,_RE,_RO,_RS,_RU,_RW,_SA,_SB,_SC,_SD,_SE,_SG,_SH,_SI,_SJ,_SK,_SL,_SM,_SN,_SO,_SR,_SS,_ST,_SV,_SX,_SY,_SZ,_TC,_TD,_TF,_TG,_TH,_TJ,_TK,_TL,_TM,_TN,_TO,_TR,_TT,_TV,_TW,_TZ,_UA,_UG,_UM,_US,_UY,_UZ,_VA,_VC,_VE,_VG,_VI,_VN,_VU,_WF,_WS,_YE,_YT,_ZA,_ZM,_ZW
+			_AD,_AE,_AF,_AG,_AI,_AL,_AM,_AO,_AQ,_AR,_AS,_AT,_AU,_AW,_AX,_AZ,_BA,_BB,_BD,_BE,_BF,_BG,_BH,_BI,_BJ,_BN,_BO,_BQ,_BR,_BS,_BT,_BW,_BY,_BZ,_CA,_CD,_CF,_CG,_CH,_CI,_CL,_CM,_CN,_CO,_CR,_CU,_CV,_CY,_CZ,_DE,_DJ,_DK,_DM,_DO,_DZ,_EC,_EE,_EG,_ER,_ES,_ET,_FI,_FJ,_FR,_GA,_GB,_GD,_GE,_GG,_GH,_GM,_GN,_GQ,_GR,_GT,_GW,_GY,_HN,_HR,_HT,_HU,_ID,_IE,_IL,_IM,_IN,_IQ,_IR,_IS,_IT,_JE,_JM,_JO,_JP,_KE,_KG,_KH,_KI,_KM,_KN,_KP,_KR,_KW,_KZ,_LA,_LI,_LR,_LS,_LT,_LU,_LY,_MA,_MC,_MD,_ME,_MG,_MH,_MK,_ML,_MM,_MN,_MO,_MP,_MQ,_MR,_MS,_MT,_MU,_MV,_MW,_MX,_MY,_MZ,_NA,_NC,_NE,_NF,_NG,_NI,_NL,_NO,_NP,_NR,_NU,_NZ,_OM,_PA,_PE,_PF,_PG,_PH,_PK,_PL,_PM,_PN,_PR,_PS,_PT,_PW,_PY,_QA,_RE,_RO,_RS,_RU,_RW,_SA,_SB,_SC,_SD,_SE,_SG,_SH,_SI,_SJ,_SK,_SL,_SM,_SN,_SO,_SR,_SS,_ST,_SV,_SX,_SY,_SZ,_TC,_TD,_TF,_TG,_TH,_TJ,_TK,_TL,_TM,_TN,_TO,_TR,_TT,_TV,_TW,_TZ,_UA,_UG,_UM,_US,_UY,_UZ,_VA,_VC,_VE,_VG,_VI,_VN,_VU,_WF,_WS,_XK,_YE,_YT,_ZA,_ZM,_ZW
 		]
 	}
 

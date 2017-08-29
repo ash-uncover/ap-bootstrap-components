@@ -2,8 +2,6 @@ import React from 'react'
 import Base from 'lib/components/Base'
 import moment from 'moment'
 
-import MomentHelper from 'utils/moment/MomentHelper'
-import { FormSelect } from 'lib/exports'
 
 moment.locale('fr')
 
@@ -45,7 +43,7 @@ class FormDate extends Base {
 			required : {
 			},
 			optionnal : {
-				onChange: {}
+				onChange: {},
 				date: { defaultValue: moment.date(), store: this.dateProps },
 				month: { defaultValue: moment.month(), store: this.dateProps },
 				year: { defaultValue: moment.year(), store: this.dateProps }

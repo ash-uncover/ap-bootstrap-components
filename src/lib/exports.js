@@ -309,6 +309,10 @@ export const RestService = RestServiceBase
 import MomentHelperBase from './utils/date/MomentHelper'
 export const MomentHelper = MomentHelperBase
 
+// text
+import TextUtilsBase from './utils/TextUtils'
+export const TextUtils = TextUtilsBase
+
 // javascript
 import UtilsBase from './utils/Utils'
 export const Utils = UtilsBase

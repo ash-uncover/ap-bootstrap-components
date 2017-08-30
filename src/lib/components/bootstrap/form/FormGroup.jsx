@@ -13,6 +13,7 @@ class BSFormGroup extends Base {
 				children: {}
 			},
 			optionnal : {
+				state: {}
 			}
 		}
 	}
@@ -21,6 +22,16 @@ class BSFormGroup extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 	
+	_buildClasses() {
+		let classes = this.baseClasses.slice()
+		switch (this.props.state) {
+			case 'success': classes.push('has-success')
+			case 'warning': classes.push('has-warning')
+			case 'error': classes.push('has-error')
+		}
+		return classes
+	}
+
 	render() {
 		this.buildProps('FormGroup')
 		return (

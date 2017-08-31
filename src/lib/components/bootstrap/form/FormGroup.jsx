@@ -26,12 +26,14 @@ class BSFormGroup extends Base {
 		let classes = this.baseClasses.slice()
 		switch (this.props.state) {
 		case 'success': 
-			return classes.push('has-success')
-			
+			classes.push('has-success')			
+			break
 		case 'warning': 
-			return classes.push('has-warning')
+			classes.push('has-warning')
+			break
 		case 'error': 
-			return classes.push('has-error')
+			classes.push('has-error')
+			break
 		}
 		return classes
 	}

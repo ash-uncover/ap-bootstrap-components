@@ -9,6 +9,7 @@ import NonNullValidator from 'lib/utils/validators/NonNullValidator'
 import NumberValidator from 'lib/utils/validators/NumberValidator'
 import StringValidator from 'lib/utils/validators/StringValidator'
 
+import moment from 'moment'
 import MomentHelper from 'lib/utils/date/MomentHelper'
 
 let email = new EmailValidator()

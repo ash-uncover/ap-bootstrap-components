@@ -1,6 +1,8 @@
 import ValidatorBase from 'lib/utils/validators/ValidatorBase'
 import MomentHelper from 'lib/utils/date/MomentHelper'
 
+import moment from 'moment'
+
 export default class DateValidator extends ValidatorBase {
 
 	constructor(props) {

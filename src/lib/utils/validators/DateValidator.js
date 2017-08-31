@@ -7,8 +7,8 @@ export default class DateValidator extends ValidatorBase {
 
 	constructor(props) {
 		super(props)
-		this.dateMin = MomentHelper.fromLocalDate(props.dateMin)
-		this.dateMax = MomentHelper.fromLocalDate(props.dateMax)
+		this.dateMin = props.dateMin ? MomentHelper.fromLocalDate(props.dateMin) : null
+		this.dateMax = props.dateMax ? MomentHelper.fromLocalDate(props.dateMax) : null
 	}
 
 	getState(value) {

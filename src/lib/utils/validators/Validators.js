@@ -27,8 +27,8 @@ let tweet = new StringValidator({ lengthMin: 1, lengthMax: 140 })
 
 let point = new NumberValidator({ minValue: 1 })
 
-let beforeToday = new DateValidator({ dateMin: MomentHelper.toLocalDate(moment()) })
-let afterToday = new DateValidator({ dateMax: MomentHelper.toLocalDate(moment()) })
+let beforeToday = new DateValidator({ dateMax: MomentHelper.toLocalDate(moment()) })
+let afterToday = new DateValidator({ dateMin: MomentHelper.toLocalDate(moment()) })
 
 class Validators {
 

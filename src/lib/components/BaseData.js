@@ -2,7 +2,7 @@ class BaseData {
 
 	register(obj) {
 		this.obj = obj
-		this.obj.onChange = this.onChange.bind(this)
+		this.declareFunction('onChange')
 	}
 
 	unregister() {
@@ -20,6 +20,10 @@ class BaseData {
         let data = {}
         data[id] = value
         this.setState(data)
+	}
+
+	declareFunction(fun) {
+		this.obj[fun] = this[fun].bind(this)
 	}
 
 }

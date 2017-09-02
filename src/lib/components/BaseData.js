@@ -8,6 +8,10 @@ class BaseData {
 	unregister() {
 	}
 
+	forceUpdate() {
+		this.obj.forceUpdate()
+	}
+
 	setState(arg) {
         this.obj.setState(arg || this)
     }

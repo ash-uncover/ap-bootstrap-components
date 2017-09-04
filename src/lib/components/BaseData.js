@@ -13,17 +13,17 @@ class BaseData {
 	}
 
 	setState(arg) {
-        this.obj.setState(arg || this)
-    }
+		this.obj.setState(arg || this)
+	}
 
-    getState(arg) {
-        return arg ? this.obj.state[arg] : this.obj.state
-    }
+	getState(arg) {
+		return arg ? this.obj.state[arg] : this.obj.state
+	}
 	
 	onChange(id, event, value) {
-        let data = {}
-        data[id] = value
-        this.setState(data)
+		let data = {}
+		data[id] = value
+		this.setState(data)
 	}
 
 	declareFunction(fun) {

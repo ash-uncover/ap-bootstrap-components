@@ -68,6 +68,9 @@ export const StoreTable = StoreTableBase
 import NationalityBase from './data/geo/Nationality'
 export const Nationality = NationalityBase
 
+// Days
+import DayBase from './data/time/Day'
+export const Day = DayBase
 
 
 /* BOOTSTRAP CSS */

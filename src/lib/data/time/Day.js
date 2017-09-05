@@ -17,7 +17,7 @@ export default class Day {
 	static get SUNDAY() { return _SUNDAY }
 
 	static get VALUES() { 
-		return [ MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY ]
+		return [ _MONDAY, _TUESDAY, _WEDNESDAY, _THURSDAY, _FRIDAY, _SATURDAY, _SUNDAY ]
 	}
 
 	static get(id) {

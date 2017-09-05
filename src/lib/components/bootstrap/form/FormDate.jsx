@@ -89,22 +89,6 @@ class FormDate extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 
-	_buildDays() {
-		return DAYS.map(function(v) {
-			return (<option key={v.key} value={v.key}>{v.value}</option>);
-		});
-	}
-	_buildMonths() {
-		return MONTHS.map(function(v) {
-			return (<option key={v.key} value={v.key}>{v.value}</option>);
-		});
-	}
-	_buildYears() {
-		return YEARS.map(function(v) {
-			return (<option key={v.key} value={v.key}>{v.value}</option>);
-		});
-	}
-	
 	render() {
 		this.buildProps('FormDate')
 		return (
@@ -113,17 +97,17 @@ class FormDate extends Base {
 					className='ap-form-date-date'
 					value={this.dateProps.date}
 					onChange={this.onDateChange}
-					values={this._buildDays()} />
+					values={DAYS} />
 				<FormSelect
 					className='ap-form-date-month'
 					value={this.dateProps.month}
 					onChange={this.onMonthChange}
-					values={this._buildMonths()} />
+					values={MONTHS} />
 				<FormSelect
 					className='ap-form-date-year'
 					value={this.dateProps.year}
 					onChange={this.onYearChange}
-					values={this._buildYears()} />
+					values={YEARS} />
 			</div>
 		)
 	}

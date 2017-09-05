@@ -5,6 +5,37 @@
 .ap-form-date {
 	display: flex;
 	justify-content: space-between;
+
+	select {
+		flex-grow: 1;
+		margin: 0 5px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.ap-form-time {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	select {
+		flex-grow: 1;
+		margin: 0 5px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+		&:last-child {
+			margin-left: 10px;
+			margin-right: 0;
+		}
+	}
 }
 
 .ap-form-group {

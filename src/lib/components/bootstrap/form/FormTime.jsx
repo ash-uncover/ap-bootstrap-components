@@ -67,31 +67,22 @@ class FormTime extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 
-	_buildMinutes() {
-		return MINUTES.map(function(v) {
-			return (<option key={v.key} value={v.key}>{v.value}</option>);
-		});
-	}
-	_buildHours() {
-		return HOURS.map(function(v) {
-			return (<option key={v.key} value={v.key}>{v.value}</option>);
-		});
-	}
-	
 	render() {
 		this.buildProps('FormTime')
 		return (
 			<div className={this.className}>
 				<FormSelect
-					className='ap-form-time-minute'
-					value={this.timeProps.minute}
-					onChange={this.onMinuteChange}
-					values={this._buildMinutes()} />
-				<FormSelect
 					className='ap-form-time-hour'
 					value={this.timeProps.hour}
 					onChange={this.onHourChange}
-					values={this._buildHours()} />
+					values={HOURS} />
+				h
+				<FormSelect
+					className='ap-form-time-minute'
+					value={this.timeProps.minute}
+					onChange={this.onMinuteChange}
+					values={MINUTES} />
+				
 			</div>
 		)
 	}

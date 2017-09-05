@@ -22,12 +22,23 @@ class Forms extends React.Component {
 	onDataUpdate() {
 		this.setState({ 
 			data: FormsData,
-			search: ''
+			search: '',
+			year: 2017,
+			month: 1,
+			date: 1,
+			minute: 0,
+			hour: 0
 		})
 	}
 
 	onSearch(value) {
-		this.setState({search: value })
+		this.setState({ search: value })
+	}
+	onDate(value) {
+		this.setState({ date: value })
+	}
+	onTime(value) {
+		this.setState({ time: value })
 	}
 
 	render() {
@@ -167,6 +178,26 @@ class Forms extends React.Component {
 						<SearchBar value={this.state.search} onChange={this.onSearch.bind(this)} />
 						<p>Searching: {'"' + this.state.search + '"'}</p>
 						<Button onClick={this.onSearch.bind(this, '')}>Reset</Button>
+					</Panel.Body>
+				</Panel>
+
+				<h3>Date & Time</h3>
+
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form.Date 
+							year={this.state.year} 
+							month={this.state.month} 
+							day={this.state.date} 
+							onChange={this.onDate.bind(this)} />
+						<Button onClick={this.onSearch.bind(this, [2017,1,1])}>Reset</Button>
+						<br/>
+						<Form.Time 
+							minute={this.state.minute} 
+							hour={this.state.hour} 
+							onChange={this.onTime.bind(this)} />
+						<Button onClick={this.onSearch.bind(this, [0,0])}>Reset</Button>
 					</Panel.Body>
 				</Panel>
 				

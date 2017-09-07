@@ -20,7 +20,7 @@ class BSFormSwitch extends Base {
 			optionnal : {
 				text: {},
 				onChange: {},
-				defaultValue: { store: this.inputProps }
+				value: { store: this.inputProps, rename: 'checked' }
 			}
 		}
 	}
@@ -31,21 +31,25 @@ class BSFormSwitch extends Base {
 	
 	onChange(event) {
 		if(this.props.onChange) {
-			this.props.onChange(event, event.target.value);
+			this.props.onChange(event, event.target.checked);
 		}
 	}
 
 	
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
-	
+
 	render() {
 		this.buildProps('FormSwitch')
 		return (
 			<div className={this.className}>
 				<label>
 					{this.props.text}
-					<input type='checkbox' className='ap-form-switch-checkbox' {...this.inputProps} />
+					<input 
+						type='checkbox' 
+						className='ap-form-switch-checkbox' 
+						onChange={this.onChange}
+						{...this.inputProps} />
 				</label>
 			</div>
 		)

@@ -29,6 +29,9 @@ class FormTime extends Base {
 		this.baseClasses = [ 'form-inline', 'ap-form-time' ]
 		// Properties storage
 		this.timeProps = {}
+		this.valuesProps = {
+			minuteValues: MINUTES
+		}
 		// Properties
 		this.propsInfos = {
 			required : {
@@ -36,6 +39,7 @@ class FormTime extends Base {
 			optionnal : {
 				onChange: {},
 				minute: { defaultValue: 0, store: this.timeProps },
+				minuteValues: { defaultValue: 0, store: this.valuesProps },
 				hour: { defaultValue: 0, store: this.timeProps }
 			}
 		}
@@ -53,14 +57,14 @@ class FormTime extends Base {
 
 	_onMinuteChange(event) {
 		this.onChange(event, [
-			Number(event.target.value),
-			this.timeProps.hour
+			this.timeProps.hour,
+			Number(event.target.value)
 		])
 	}
 	_onHourChange(event) {
 		this.onChange(event, [
-			this.timeProps.minute,
-			Number(event.target.value)
+			Number(event.target.value),
+			this.timeProps.minute
 		])
 	}
 	
@@ -81,7 +85,7 @@ class FormTime extends Base {
 					className='ap-form-time-minute'
 					value={this.timeProps.minute}
 					onChange={this.onMinuteChange}
-					values={MINUTES} />
+					values={this.valuesProps.minuteValues} />
 				
 			</div>
 		)

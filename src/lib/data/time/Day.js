@@ -1,10 +1,10 @@
-let _MONDAY    = { key: 'MONDAY' }
-let _TUESDAY   = { key: 'TUESDAY' }
-let _WEDNESDAY = { key: 'WEDNESDAY' }
-let _THURSDAY  = { key: 'THURSDAY' }
-let _FRIDAY    = { key: 'FRIDAY' }
-let _SATURDAY  = { key: 'SATURDAY' }
-let _SUNDAY    = { key: 'SUNDAY' }
+let _MONDAY    = { key: 'MONDAY', index: 0 }
+let _TUESDAY   = { key: 'TUESDAY', index: 1 }
+let _WEDNESDAY = { key: 'WEDNESDAY', index: 2 }
+let _THURSDAY  = { key: 'THURSDAY', index: 3 }
+let _FRIDAY    = { key: 'FRIDAY', index: 4 }
+let _SATURDAY  = { key: 'SATURDAY', index: 5 }
+let _SUNDAY    = { key: 'SUNDAY', index: 6 }
 
 export default class Day {
 

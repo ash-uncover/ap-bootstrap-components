@@ -2,7 +2,7 @@ import React from 'react'
 import ListsData from 'components/bootstrap/lists/ListsData'
 
 import { Col, Panel, PanelBody, PanelFooter, CodeXml, CodeXmlGroup, Badge } from 'lib/exports'
-import { ListGroup, ListGroupItem } from 'lib/exports'
+import { List, ListGroup, ListGroupItem } from 'lib/exports'
 import { ListGroupLink, ListGroupLinkItem } from 'lib/exports'
 import { ListGroupButton, ListGroupButtonItem } from 'lib/exports'
 import { ListGroupItemHeading, ListGroupItemText } from 'lib/exports'

@@ -4,6 +4,10 @@
 import BaseDataBase from './components/BaseData'
 export const BaseData = BaseDataBase
 
+// Component
+import BaseComponentBase from './components/BaseComponent'
+export const BaseComponent = BaseComponentBase
+
 // app
 import AppRouterBase from './components/app/AppRouter'
 export const AppRouter = AppRouterBase

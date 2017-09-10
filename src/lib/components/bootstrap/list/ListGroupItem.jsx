@@ -16,6 +16,7 @@ class BSListGroupItem extends Base {
 			optionnal : {
 				children: { defaultValue: '' },
 				disabled: { defaultValue: false },
+				active: { defaultValue: false },
 				bsStyle: { defaultValue: 'default' }
 			}
 		}
@@ -29,6 +30,9 @@ class BSListGroupItem extends Base {
 		let classes = super._buildClasses();
 		if (this.props.disabled) {
 			classes.push('disabled')
+		}
+		if (this.props.active) {
+			classes.push('active')
 		}
 		if (this.props.bsStyle) {
 			classes.push('list-group-item-' + this.props.bsStyle)

@@ -12,6 +12,9 @@ class BSButton extends Base {
 		this.baseClasses = [ 'btn', 'ap-button' ]
 		// Sub components properties
 		this.buttonProps = { onClick: this.onClick.bind(this) }
+		this.tooltipProps = {
+			'data-toggle': 'tooltip'
+		}
 		// Component properties
 		this.propsInfos = {
 			required : {
@@ -27,7 +30,9 @@ class BSButton extends Base {
 				type: { defaultValue: 'button', store: this.buttonProps },
                 comp: {},
                 href: {},
-                value: {}
+                value: {},
+                tooltip: { rename: 'title', store: this.tooltipProps },
+                tooltipPlacement: { rename: 'data-placement', defaultValue: 'top', store: this.tooltipProps }
 			}
 		}
 	}
@@ -59,23 +64,26 @@ class BSButton extends Base {
 
 	render() {
 		this.buildProps('Button')
+		if (!this.props.tooltip) {
+			this.tooltipProps = {}
+		}
         if (this.props.comp === 'a') {
             delete this.buttonProps.type
             return (
-                <a className={this.className} href={this.props.href} {...this.buttonProps}>
+                <a className={this.className} href={this.props.href} {...this.buttonProps} {...this.tooltipProps}>
                     {this.props.children}
                 </a>
             )    
         }
         if (this.props.comp === 'input') {
             return (
-                <input className={this.className} value={this.props.value} {...this.buttonProps}>
+                <input className={this.className} value={this.props.value} {...this.buttonProps} {...this.tooltipProps}>
                     {this.props.children}
                 </input>
             )    
         }
 		return (
-            <button className={this.className} {...this.buttonProps}>
+            <button className={this.className} {...this.buttonProps} {...this.tooltipProps}>
                 {this.props.children}
             </button>
         )

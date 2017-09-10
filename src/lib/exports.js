@@ -5,7 +5,7 @@ import BaseDataBase from './components/BaseData'
 export const BaseData = BaseDataBase
 
 // Component
-import BaseComponentBase from './components/BaseComponent'
+import BaseComponentBase from './components/Base'
 export const BaseComponent = BaseComponentBase
 
 // app

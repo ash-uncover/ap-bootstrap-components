@@ -325,9 +325,11 @@ import TextUtilsBase from './utils/TextUtils'
 export const TextUtils = TextUtilsBase
 
 // javascript
+import MimeTypesBase from './utils/javascript/MimeTypes'
+export const MimeTypes = MimeTypesBase
+
 import UtilsBase from './utils/Utils'
 export const Utils = UtilsBase
-
 
 // formatters
 import FormattersBase from './utils/formatters/Formatters'

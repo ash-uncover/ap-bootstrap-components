@@ -325,9 +325,10 @@ import TextUtilsBase from './utils/TextUtils'
 export const TextUtils = TextUtilsBase
 
 // javascript
+import APFilesBase from './utils/javascript/APFiles'
+export const APFiles = APFilesBase
 import MimeTypesBase from './utils/javascript/MimeTypes'
 export const MimeTypes = MimeTypesBase
-
 import UtilsBase from './utils/Utils'
 export const Utils = UtilsBase
 

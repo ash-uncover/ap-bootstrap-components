@@ -48,9 +48,17 @@ export const CodeXmlGroup = CodeXmlGroupBase
 import GoogleAutocompleteBase from './components/custom/googlemap/GoogleAutocomplete'
 export const GoogleAutocomplete = GoogleAutocompleteBase
 
+import GoogleMapBase from './components/custom/googlemap/GoogleMap'
+export const GoogleMap = GoogleMapBase
+
 export const Google = {
-    Autocomplete: GoogleAutocompleteBase
+    Autocomplete: GoogleAutocompleteBase,
+    Map: GoogleMapBase
 }
+
+// Modal
+import ModalBase from './components/custom/modal/Modal'
+export const Modal = ModalBase
 
 // Objinfo
 import ObjInfoBase from './components/custom/objinfo/ObjInfo'

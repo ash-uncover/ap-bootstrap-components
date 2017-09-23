@@ -35,7 +35,6 @@ class GoogleMap extends Base {
 
 	componentDidMount() {
 		this.buildProps('GoogleMap')
-		console.log(this.mapProps)
 		let center = new google.maps.LatLng(
 			this.props.centerLattitude,
 			this.props.centerLongitude
@@ -48,8 +47,6 @@ class GoogleMap extends Base {
 			mapTypeControlOptions: { mapTypeIds: this.mapProps.mapTypeIds || [] },
 			clickableIcons: this.mapProps.clickableIcons || false
 		}
-
-		console.log(mapOptions)
 
 		this.mapHelper = new GoogleMapHelper(this.mapDiv, mapOptions)
 		
@@ -65,9 +62,9 @@ class GoogleMap extends Base {
 		this._buildMarkers()
 		this._buildCircles()
 		
-	}	
+	}   
 	
-	shouldComponentUpdate (nextProps, nextState) {	
+	shouldComponentUpdate (nextProps, nextState) {  
 		this._updateMapListener(nextProps)
 		this.mapHelper.updateMarkers(nextProps.markers)
 		this.mapHelper.updateCircles(nextProps.circles)

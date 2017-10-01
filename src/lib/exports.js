@@ -343,6 +343,8 @@ export const TextUtils = TextUtilsBase
 // javascript
 import APFilesBase from './utils/javascript/APFiles'
 export const APFiles = APFilesBase
+import ArraySetBase from './utils/javascript/ArraySet'
+export const ArraySet = ArraySetBase
 import MimeTypesBase from './utils/javascript/MimeTypes'
 export const MimeTypes = MimeTypesBase
 import UtilsBase from './utils/Utils'

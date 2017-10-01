@@ -18,7 +18,7 @@ class BSFormCheckbox extends Base {
 			},
 			optionnal : {
 				value: { defaultValue: '', store: this.inputProps },
-				text: {},
+				children: {},
 				onChange: {},
 				checked: { defaultValue: false, store: this.inputProps },
 				disabled: { defaultValue: false, store: this.inputProps }
@@ -57,7 +57,7 @@ class BSFormCheckbox extends Base {
 			return (
 				<label className={this.className}>
 					<input {...this.inputProps} />
-					{' ' + (this.props.text || '')}
+					{' ' + (this.props.children || '')}
 				</label>
 			)
 		}
@@ -65,7 +65,7 @@ class BSFormCheckbox extends Base {
 			<div className={this.className}>
 				<label>
 					<input {...this.inputProps} />
-					{' ' + (this.props.text || '')}
+					{' ' + (this.props.children || '')}
 				</label>
 			</div>
 		)

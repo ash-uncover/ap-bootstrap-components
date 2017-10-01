@@ -20,7 +20,7 @@ class BDFormRadio extends Base {
 			},
 			optionnal : {
 				onChange: {},
-				text: {},
+				children: {},
 				checked: { defaultValue: false, store: this.inputProps },
 				disabled: { defaultValue: false, store: this.inputProps }
 			}
@@ -58,7 +58,7 @@ class BDFormRadio extends Base {
 			return (
 				<label className={this.className}>
 					<input {...this.inputProps} />
-					{' ' + (this.props.text || '')}
+					{' ' + (this.props.children || '')}
 				</label>
 			)
 		}
@@ -66,7 +66,7 @@ class BDFormRadio extends Base {
 			<div className={this.className}>
 				<label>
 					<input {...this.inputProps} />
-					{' ' + (this.props.text || '')}
+					{' ' + (this.props.children || '')}
 				</label>
 			</div>
 		)

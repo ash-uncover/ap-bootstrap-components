@@ -67,8 +67,9 @@ class Forms extends React.Component {
 								<Form.Input id='exampleInputFile' type='file' />
 								<p className='help-block'>Example block-level help text here.</p>
 							</Form.Group>
-							<Form.Checkbox />
-							<Form.Checkbox text='Check me out' />
+							<Form.Checkbox>
+								Check me out
+							</Form.Checkbox>
 							<Form.Switch />
 							<Form.Switch text='Switch me out' />
 							<Button bsStyle='default' type='submit'>Submit</Button>
@@ -98,8 +99,9 @@ class Forms extends React.Component {
 									Example block-level help text here.
 								</CodeXml>
 							</CodeXml>
-							<CodeXml markup='FormCheckbox'/>
-							<CodeXml markup='FormCheckbox' att={[{name:'text',value:'Check me out'}]}/>
+							<CodeXml markup='FormCheckbox'>
+								Check me out
+							</CodeXml>
 							<CodeXml markup='FormSwitch' />
 							<CodeXml markup='FormSwitch' att={[{name:'text',value:'Switch me out'}]}/>
 							<CodeXml markup='Button' att={[{name:'bsStyle',value:'default'},{name:'type',value:'submit'}]}>
@@ -129,11 +131,6 @@ class Forms extends React.Component {
 								<CodeXml markup='input' att={[{name:'class',value:'form-control ap-form-input'},{name:'id',value:'exampleInputFile'},{name:'type',value:'file'}]} />
 								<CodeXml markup='p' att={[{name:'class',value:'help-block'}]}>
 									Example block-level help text here.
-								</CodeXml>
-							</CodeXml>
-							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-checkbox'}]}>
-								<CodeXml markup='label'>
-									<CodeXml markup='input' att={[{name:'type',value:'checkbox'},{name:'value',value:'on'}]}/>
 								</CodeXml>
 							</CodeXml>
 							<CodeXml markup='div' att={[{name:'class',value:'checkbox ap-form-checkbox'}]}>
@@ -174,27 +171,62 @@ class Forms extends React.Component {
 					<Panel.Body>
 						<h4>Example</h4>
 						<Form>
-							<Form.Checkbox 
-								text="Option one is this and that&mdash;be sure to include why it's great" />
-							<Form.Checkbox
-								disabled
-								text="Option two is disabled" />
+							<Form.Checkbox>
+								Option one is this and that&mdash;be sure to include why it's great
+							</Form.Checkbox>
+							<Form.Checkbox disabled>
+								Option two is disabled
+							</Form.Checkbox>
 							<br/>
-							<Form.Radio 
-								name='optionsRadios'
-								value='option1' 
-								text="Option one is this and that&mdash;be sure to include why it's great"/>
-							<Form.Radio
-								name='optionsRadios'
-								value='option2' 
-								text="Option two can be something else and selecting it will deselect option one"/>
-							<Form.Radio
-								name='optionsRadios'
-								value='option3'
-								disabled
-								text="Option three is disabled" />
+							<Form.Radio name='optionsRadios'value='option1'>
+								Option one is this and that&mdash;be sure to include why it's great
+							</Form.Radio>
+							<Form.Radio name='optionsRadios' value='option2'>
+								Option two can be something else and selecting it will deselect option one
+							</Form.Radio>
+							<Form.Radio name='optionsRadios' value='option3' disabled>
+								Option three is disabled
+							</Form.Radio>
 						</Form>
 					</Panel.Body>
+					<Panel.Footer>
+						<h5>React code</h5>
+						<CodeXml markup='Form'>
+							<CodeXml markup='FormCheckbox'>
+								Option one is this and that&mdash;be sure to include why it's great
+							</CodeXml>
+							<CodeXml 
+								markup='FormCheckbox'
+								att={[{name:'disabled'}]}>
+								Option two is disabled
+							</CodeXml>
+							<CodeXml markup='br'/>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option1'}
+								]}>
+								Option one is this and that&mdash;be sure to include why it's great
+							</CodeXml>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option2'}
+								]}>
+								Option two can be something else and selecting it will deselect option one
+							</CodeXml>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option3'}
+								]}>
+								Option three is disabled
+							</CodeXml>
+						</CodeXml>
+					</Panel.Footer>
 				</Panel>
 
 				<h4>Inline checkboxes and radios</h4>
@@ -203,16 +235,58 @@ class Forms extends React.Component {
 					<Panel.Body>
 						<h4>Example</h4>
 						<Form>
-							<Form.Checkbox inline text='1' />
-							<Form.Checkbox inline text='2' />
-							<Form.Checkbox inline text='3' />
+							<Form.Checkbox inline>1</Form.Checkbox>
+							<Form.Checkbox inline>2</Form.Checkbox>
+							<Form.Checkbox inline>3</Form.Checkbox>
 							<br/>
 							<br/>
-							<Form.Radio inline name='inlineRadioOptions' value='option1' text='1' />
-							<Form.Radio inline name='inlineRadioOptions' value='option2' text='2' />
-							<Form.Radio inline name='inlineRadioOptions' value='option3' text='3' />
+							<Form.Radio inline name='inlineRadioOptions' value='option1'>1</Form.Radio>
+							<Form.Radio inline name='inlineRadioOptions' value='option2'>2</Form.Radio>
+							<Form.Radio inline name='inlineRadioOptions' value='option3'>3</Form.Radio>
 						</Form>
 					</Panel.Body>
+					<Panel.Footer>
+						<h5>React code</h5>
+						<CodeXml markup='Form'>
+							<CodeXml  markup='FormCheckbox' att={[{name:'inline'}]}>
+								1
+							</CodeXml>
+							<CodeXml  markup='FormCheckbox' att={[{name:'inline'}]}>
+								2
+							</CodeXml>
+							<CodeXml  markup='FormCheckbox' att={[{name:'inline'}]}>
+								3
+							</CodeXml>
+							<CodeXml markup='br'/>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'inline'},
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option1'}
+								]}>
+								1
+							</CodeXml>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'inline'},
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option2'}
+								]}>
+								2
+							</CodeXml>
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'inline'},
+									{name:'name',value:'optionsRadios'},
+									{name:'value',value:'option3'}
+								]}>
+								3
+							</CodeXml>
+						</CodeXml>
+					</Panel.Footer>
 				</Panel>
 
 				<h4>checkboxes and radios without label text</h4>
@@ -225,6 +299,19 @@ class Forms extends React.Component {
 							<Form.Radio name='blankRadio' value='option1' />
 						</Form>
 					</Panel.Body>
+					<Panel.Footer>
+						<h5>React code</h5>
+						<CodeXml markup='Form'>
+							<CodeXml markup='FormCheckbox' />
+							<CodeXml 
+								markup='FormRadio'
+								att={[
+									{name:'name',value:'blankRadios'},
+									{name:'value',value:'option1'}
+								]}>
+							</CodeXml>
+						</CodeXml>
+					</Panel.Footer>
 				</Panel>
 
 				<h2>Form Builders</h2>

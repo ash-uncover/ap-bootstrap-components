@@ -136,6 +136,9 @@ export const FormStatic = FormStaticBase
 import FormSwitchBase from './components/bootstrap/form/FormSwitch'
 export const FormSwitch = FormSwitchBase
 
+import FormTextAreaBase from './components/bootstrap/form/FormTextArea'
+export const FormTextArea = FormTextAreaBase
+
 import FormTimeBase from './components/bootstrap/form/FormTime'
 export const FormTime = FormTimeBase
 
@@ -150,6 +153,7 @@ FormBase.Radio = FormRadioBase
 FormBase.Select = FormSelectBase
 FormBase.Static = FormStaticBase
 FormBase.Switch = FormSwitchBase
+FormBase.TextArea = FormTextArea
 FormBase.Time = FormTimeBase
 export const Form = FormBase
 

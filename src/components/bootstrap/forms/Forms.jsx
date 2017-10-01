@@ -161,6 +161,27 @@ class Forms extends React.Component {
 
 				<h3>Textarea</h3>
 
+				<p>Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form>
+							<Form.TextArea rows={3} />
+						</Form>
+					</Panel.Body>
+					<Panel.Footer>
+						<h5>React code</h5>
+						<CodeXml markup='Form'>
+							<CodeXml 
+								markup='FormTextArea'
+								att={[{name:'rows',value:'{3}'}]}>
+							</CodeXml>
+						</CodeXml>
+					</Panel.Footer>
+				</Panel>
+
+
 				<h3>Checkboxes and radios</h3>
 
 				<p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>

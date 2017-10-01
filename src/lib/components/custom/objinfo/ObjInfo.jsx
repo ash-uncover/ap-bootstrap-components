@@ -3,7 +3,7 @@ import Base from 'lib/components/Base'
 
 import { Row, Col, Utils } from 'lib/exports'
 
-import './ObjInfo.css'
+import './ObjInfo.scss'
 
 class ObjInfo extends Base {
 
@@ -41,7 +41,7 @@ class ObjInfo extends Base {
 	render() {
 		this.buildProps('ObjInfo')
 		return(
-			<div className='container'>
+			<div className='container objinfo'>
 				{this.buildInfos()}
 			</div>
 		)

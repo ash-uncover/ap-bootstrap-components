@@ -1,25 +1,26 @@
 import React from 'react'
 import Base from 'lib/components/Base'
 
-class BSFormCheckbox extends Base {
+class BDFormRadio extends Base {
 
 	constructor(props) {
 		super(props)
 		// Base classes
-		this.baseClasses = [ 'ap-form-checkbox' ]
+		this.baseClasses = [ 'ap-form-radio' ]
 		// Sub component props
 		this.inputProps = {
-			type: 'checkbox',
+			type: 'radio',
 			onChange: this.onChange.bind(this)
 		}
 		// Component props
 		this.propsInfos = {
 			required : {
+				name: { store: this.inputProps },
+				value: { store: this.inputProps }
 			},
 			optionnal : {
-				value: { defaultValue: '', store: this.inputProps },
-				text: {},
 				onChange: {},
+				text: {},
 				checked: { defaultValue: false, store: this.inputProps },
 				disabled: { defaultValue: false, store: this.inputProps }
 			}
@@ -39,20 +40,20 @@ class BSFormCheckbox extends Base {
 	
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
-	
+
 	_buildClasses() {
 		let classes = this.baseClasses.slice()
 		if (this.props.disabled) classes.push('disabled')
-		if (this.props.inline) {
-			classes.push('checkbox-inline')
+			if (this.props.inline) {
+			classes.push('radio-inline')
 		} else {
-			classes.push('checkbox')
+			classes.push('radio')
 		}
 		return classes
 	}
 
 	render() {
-		this.buildProps('FormCheckbox')
+		this.buildProps('FormRadio')
 		if (this.props.inline) {
 			return (
 				<label className={this.className}>
@@ -72,4 +73,4 @@ class BSFormCheckbox extends Base {
 	}
 }
 
-export default BSFormCheckbox
+export default BDFormRadio

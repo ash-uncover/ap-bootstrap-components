@@ -158,6 +158,77 @@ class Forms extends React.Component {
 					</Panel.Footer>
 				</Panel>
 
+				<h2>Supported controls</h2>
+
+				<h3>Inputs</h3>
+
+				<h3>Textarea</h3>
+
+				<h3>Checkboxes and radios</h3>
+
+				<p>Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+				<p>Disabled checkboxes and radios are supported, but to provide a "not-allowed" cursor on hover of the parent <code>{'<label>'}</code>, you'll need to add the <code>disabled</code> attribute.</p>
+
+				<h4>Default (stacked)</h4>
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form>
+							<Form.Checkbox 
+								text="Option one is this and that&mdash;be sure to include why it's great" />
+							<Form.Checkbox
+								disabled
+								text="Option two is disabled" />
+							<br/>
+							<Form.Radio 
+								name='optionsRadios'
+								value='option1' 
+								text="Option one is this and that&mdash;be sure to include why it's great"/>
+							<Form.Radio
+								name='optionsRadios'
+								value='option2' 
+								text="Option two can be something else and selecting it will deselect option one"/>
+							<Form.Radio
+								name='optionsRadios'
+								value='option3'
+								disabled
+								text="Option three is disabled" />
+						</Form>
+					</Panel.Body>
+				</Panel>
+
+				<h4>Inline checkboxes and radios</h4>
+				<p>Use the <code>inline</code> attribute on a series of <code>FormCheckbox</code> or <code>FormRadio</code> for controls that appear on the same line.</p>
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form>
+							<Form.Checkbox inline text='1' />
+							<Form.Checkbox inline text='2' />
+							<Form.Checkbox inline text='3' />
+							<br/>
+							<br/>
+							<Form.Radio inline name='inlineRadioOptions' value='option1' text='1' />
+							<Form.Radio inline name='inlineRadioOptions' value='option2' text='2' />
+							<Form.Radio inline name='inlineRadioOptions' value='option3' text='3' />
+						</Form>
+					</Panel.Body>
+				</Panel>
+
+				<h4>checkboxes and radios without label text</h4>
+				<p>Should you have no <code>text</code> attribute, the input is positioned as you'd expect. <b>Currently only works on non-inline checkboxes and radios</b>. Remember to still provide some form of label for assistive technologies (for instance, using aria-label).</p>
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body>
+						<h4>Example</h4>
+						<Form>
+							<Form.Checkbox />
+							<Form.Radio name='blankRadio' value='option1' />
+						</Form>
+					</Panel.Body>
+				</Panel>
+
+				<h2>Form Builders</h2>
+
 				<h3>FormGroupBuilder</h3>
 				<Panel className='ap-rb-forms-examples'>
 					<Panel.Body>

@@ -31,6 +31,11 @@ export const BusyBubbles = BusyBubblesBase
 import BusyCirclesBase from './components/custom/busy/BusyCircles'
 export const BusyCircles = BusyCirclesBase
 
+// Calendar
+
+import CalendarBase from './components/custom/calendar/Calendar'
+export const Calendar = CalendarBase
+
 // Code
 import CodeJsonBase from './components/custom/code/CodeJson'
 export const CodeJson = CodeJsonBase

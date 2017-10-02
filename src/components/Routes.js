@@ -16,6 +16,7 @@ import Tables from 'components/bootstrap/tables/Tables'
 
 import Custom from 'components/custom/Custom'
 import Busy from 'components/custom/busy/Busy'
+import Calendars from 'components/custom/calendar/Calendars'
 import ObjInfos from 'components/custom/objinfos/ObjInfos'
 import Rater from 'components/custom/rater/Rater'
 import GoogleAutocompletes from 'components/custom/googlemap/GoogleAutocompletes'
@@ -49,6 +50,7 @@ let routes = [
 				path: 'custom', component: Custom, 
 				routes: [
 					{ path: 'busy', component: Busy },
+					{ path: 'calendars', component: Calendars },
 					{ path: 'objinfos', component: ObjInfos },
 					{ path: 'rater', component: Rater },
 					{ path: 'googleautocomplete', component: GoogleAutocompletes }

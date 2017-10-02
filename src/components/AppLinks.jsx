@@ -39,6 +39,7 @@ class AppLinks extends React.Component {
 				<h4>Miscelanous</h4>
 				<ul>
 					<li><Button comp='a' href='/custom/busy' bsStyle='link' bsSize='sm'>Busy indicators</Button></li>
+					<li><Button comp='a' href='/custom/calendars' bsStyle='link' bsSize='sm'>Calendars</Button></li>
 					<li><Button comp='a' href='/custom/rater' bsStyle='link' bsSize='sm'>Raters</Button></li>
 					<li><Button comp='a' href='/custom/objinfos' bsStyle='link' bsSize='sm'>Objects Infos</Button></li>
 				</ul>

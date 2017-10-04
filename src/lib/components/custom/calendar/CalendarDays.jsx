@@ -22,24 +22,16 @@ class CalendarDays extends Base {
 	render() {
 		return (
 			<div className='ap-calendar-days'>
-				<table className='ap-calendar-header'>
-					<tbody>
-						<tr>
-							<td>
-								<SelectorYear
-									moment={this.state.moment}
-									onChange={this.props.onYearChanged} 
-									onYearMode={this.props.onYearMode} />
-							</td>
-							<td>
-								<SelectorMonth
-									moment={this.state.moment}
-									onChange={this.props.onMonthChanged} 
-									onMonthMode={this.props.onMonthMode} />
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<div className='ap-calendar-header'>
+					<SelectorYear
+						moment={this.state.moment}
+						onChange={this.props.onYearChanged} 
+						onYearMode={this.props.onYearMode} />
+					<SelectorMonth
+						moment={this.state.moment}
+						onChange={this.props.onMonthChanged} 
+						onMonthMode={this.props.onMonthMode} />
+				</div>
 				<CalendarDaysMonth
 					moment={this.state.moment}
 					selected={this.props.selected}

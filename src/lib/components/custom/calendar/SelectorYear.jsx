@@ -39,7 +39,7 @@ class SelectorYear extends Base {
 				<Button className='glyph-button' bsSize='xs' onClick={this._onPreviousYear.bind(this)}>
 					<Glyphicon glyph='chevron-left'/>
 				</Button>
-				<Button onClick={this.props.onYearMode}>{' ' + this.state.moment.year() + ' '}</Button>				
+				<Button className='selector-action' onClick={this.props.onYearMode}>{' ' + this.state.moment.year() + ' '}</Button>				
 				<Button className='glyph-button' bsSize='xs' onClick={this._onNextYear.bind(this)}>
 					<Glyphicon glyph='chevron-right'/>
 				</Button>

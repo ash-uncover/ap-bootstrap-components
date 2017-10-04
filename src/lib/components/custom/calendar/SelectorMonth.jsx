@@ -43,7 +43,7 @@ class SelectorMonth extends Base {
 				<Button className='glyph-button' bsSize='xs' onClick={this._onPreviousMonth.bind(this)}>
 					<Glyphicon glyph='chevron-left'/>
 				</Button>
-				<Button onClick={this.props.onMonthMode}>{month}</Button>
+				<Button className='selector-action' onClick={this.props.onMonthMode}>{month}</Button>
 				<Button className='glyph-button' bsSize='xs' onClick={this._onNextMonth.bind(this)}>
 					<Glyphicon glyph='chevron-right'/>
 				</Button>

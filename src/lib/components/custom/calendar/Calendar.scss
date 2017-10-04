@@ -7,16 +7,16 @@
  *                                          CALENDAR HEADER
  */
 	.ap-calendar-header {
-		table-layout: fixed;
-		width: 100%;
-		margin-bottom: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
 
 		button {
 			border: 0;
 		}
 
-		td {
-			vertical-align: middle;
+		.selector-action {
+			min-width: 100px;
 		}
 	}
 

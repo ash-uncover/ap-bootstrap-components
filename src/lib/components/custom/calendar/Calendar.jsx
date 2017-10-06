@@ -76,7 +76,7 @@ class Calendar extends Base {
 			moment: this.state.moment.year(year) 
 		})
 		if (this.props.onYearChange) {
-			this.props.onYearChange(year)
+			this.props.onYearChange([ year, this.state.moment.month() + 1, 1 ])
 		}
 	}
 	onMonthChanged(month) {
@@ -85,7 +85,7 @@ class Calendar extends Base {
 			moment: this.state.moment.month(month) 
 		})
 		if (this.props.onMonthChange) {
-			this.props.onMonthChange(month)
+			this.props.onMonthChange([ this.state.moment.year(), month + 1, 1])
 		}
 	}
 

@@ -64,7 +64,7 @@ class Validators {
 		return socialNumberShort
 	}
 
-	static get IDCardNumber() {
+	static get IdCardNumber() {
 		return idNumber
 	}
 

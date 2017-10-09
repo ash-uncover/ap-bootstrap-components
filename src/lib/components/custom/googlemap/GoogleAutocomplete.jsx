@@ -46,6 +46,12 @@ class GoogleAutocomplete extends Base {
     componentDidMount() {
         this.autocomplete = new google.maps.places.Autocomplete(this.input)
         this.autocomplete.addListener('place_changed', this._autocompleteChange.bind(this))
+
+        document.addEventListener("scroll", this.onScroll);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener("scroll", this.onScroll);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -58,6 +64,10 @@ class GoogleAutocomplete extends Base {
             this.input.value = ''
             this.setState({ location: null })
         }
+    }
+
+    onScroll() {
+        document.activeElement.blur();
     }
 
     _autocompleteChange() {

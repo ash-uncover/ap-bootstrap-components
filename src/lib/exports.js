@@ -335,6 +335,11 @@ import RestServiceBase from './services/rest/RestService'
 export const RestService = RestServiceBase
 
 
+// google map
+import GoogleMapServiceBase from './services/google/GoogleMapService'
+export const GoogleMapService = GoogleMapServiceBase
+
+
 /* UTILS */
 
 // date

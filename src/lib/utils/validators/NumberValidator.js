@@ -10,6 +10,9 @@ export default class NumberValidator extends ValidatorBase {
 
 	getState(value) {
 		let v = Number(value)
+		if (isNaN(v)) {
+			return ValidatorBase.STATES.ERROR
+		}
 		if (this.minValue) {
 			let min = Number(this.minValue)
 			if (v < min) {

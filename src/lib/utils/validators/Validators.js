@@ -21,11 +21,10 @@ let phone = new CustomValidator({ lengthMax: 10, regSuccess: new RegExp("^0[1-9]
 let socialNumber = new CustomValidator({ lengthMax: 13, regSuccess: new RegExp("^[1-2][0-9]{12}$") })
 let socialNumberShort = new CustomValidator({ lengthMax: 7, regSuccess: new RegExp("^[1-2][0-9]{6}$") })
 let postalCode = new CustomValidator({ lengthMax: 5, regSuccess: new RegExp("^[0-9]{5}$") })
+let positiveInteger = new NumberValidator({ minValue: 1 })
 let idNumber = new CustomValidator({ lengthMax: 12, regSuccess: new RegExp("^[0-9]{12}$") })
 let siretNumber = new CustomValidator({ lengthMax: 14, regSuccess: new RegExp("^[0-9]{14}$") })
 let tweet = new StringValidator({ lengthMin: 1, lengthMax: 140 })
-
-let point = new NumberValidator({ minValue: 1 })
 
 let beforeToday = new DateValidator({ dateMax: MomentHelper.toLocalDate(moment()) })
 let afterToday = new DateValidator({ dateMin: MomentHelper.toLocalDate(moment()) })
@@ -69,7 +68,7 @@ class Validators {
 	}
 
 	static get PositiveInteger() {
-		return point
+		return positiveInteger
 	}
 
 	static get PostalCode() {

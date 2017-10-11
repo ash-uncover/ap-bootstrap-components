@@ -31,7 +31,7 @@ class GoogleAutocomplete extends Base {
                 onChange: {},
                 disabled: { defaultValue: false },
                 placeholder: {},
-                location: {}
+                location: {},
             }
         }
         if (props.location)
@@ -44,7 +44,7 @@ class GoogleAutocomplete extends Base {
     
 
     componentDidMount() {
-        this.autocomplete = new google.maps.places.Autocomplete(this.input)
+        this.autocomplete = new google.maps.places.Autocomplete(this.input, this.props.options)
         this.autocomplete.addListener('place_changed', this._autocompleteChange.bind(this))
 
         document.addEventListener("scroll", this.onScroll);

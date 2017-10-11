@@ -32,6 +32,7 @@ class GoogleAutocomplete extends Base {
                 disabled: { defaultValue: false },
                 placeholder: {},
                 location: {},
+                options: { defaultValue: {} }
             }
         }
         if (props.location)

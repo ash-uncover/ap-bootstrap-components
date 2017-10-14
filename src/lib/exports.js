@@ -135,6 +135,9 @@ export const FormRadio = FormRadioBase
 import FormSelectBase from './components/bootstrap/form/FormSelect'
 export const FormSelect = FormSelectBase
 
+import FormSelectMultiBase from './components/bootstrap/form/FormSelectMulti'
+export const FormSelectMulti = FormSelectMultiBase
+
 import FormStaticBase from './components/bootstrap/form/FormStatic'
 export const FormStatic = FormStaticBase
 
@@ -156,6 +159,7 @@ FormBase.Input = FormInputBase
 FormBase.Label = FormLabelBase
 FormBase.Radio = FormRadioBase
 FormBase.Select = FormSelectBase
+FormBase.SelectMulti = FormSelectMultiBase
 FormBase.Static = FormStaticBase
 FormBase.Switch = FormSwitchBase
 FormBase.TextArea = FormTextArea

@@ -21,6 +21,7 @@ class BDFormRadio extends Base {
 			optionnal : {
 				onChange: {},
 				children: {},
+				inline: {},
 				checked: { defaultValue: false, store: this.inputProps },
 				disabled: { defaultValue: false, store: this.inputProps }
 			}

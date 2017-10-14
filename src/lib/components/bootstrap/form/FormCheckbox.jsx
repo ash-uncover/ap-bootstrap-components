@@ -20,6 +20,7 @@ class BSFormCheckbox extends Base {
 				value: { defaultValue: '', store: this.inputProps },
 				children: {},
 				onChange: {},
+				inline: {},
 				checked: { defaultValue: false, store: this.inputProps },
 				disabled: { defaultValue: false, store: this.inputProps }
 			}

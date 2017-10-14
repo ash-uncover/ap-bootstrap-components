@@ -23,6 +23,7 @@ class Forms extends React.Component {
 		this.setState({ 
 			data: FormsData,
 			search: '',
+			selectMulti: ['v2', 'v4'],
 			year: 2017,
 			month: 1,
 			date: 1,
@@ -33,6 +34,10 @@ class Forms extends React.Component {
 
 	onSearch(value) {
 		this.setState({ search: value })
+	}
+	onSelectMulti(event, value) {
+		console.log(value)
+		this.setState({ selectMulti: value })
 	}
 	onDate(value) {
 		this.setState({ date: value })
@@ -368,7 +373,7 @@ class Forms extends React.Component {
 						<Form.Date 
 							year={this.state.year} 
 							month={this.state.month} 
-							day={this.state.date} 
+							date={this.state.date} 
 							onChange={this.onDate.bind(this)} />
 						<Button onClick={this.onSearch.bind(this, [2017,1,1])}>Reset</Button>
 						<br/>
@@ -377,6 +382,26 @@ class Forms extends React.Component {
 							hour={this.state.hour} 
 							onChange={this.onTime.bind(this)} />
 						<Button onClick={this.onSearch.bind(this, [0,0])}>Reset</Button>
+					</Panel.Body>
+				</Panel>
+
+				<h3>Multi Select</h3>
+
+				<Panel className='ap-rb-forms-examples'>
+					<Panel.Body> 
+						<h4>Example</h4>
+						<Form.SelectMulti 
+							value={this.state.selectMulti} 
+							values={[
+								{ key: 'v1', value: 'value 1' },
+								{ key: 'v2', value: 'value 2' },
+								{ key: 'v3', value: 'value 3' },
+								{ key: 'v4', value: 'value 4' },
+								{ key: 'v5', value: 'value 5' },
+								{ key: 'v6', value: 'value 6' }
+							]}
+							onChange={this.onSelectMulti.bind(this)} />
+						<Button onClick={this.onSelectMulti.bind(this, null, ['v2', 'v4'])}>Reset</Button>
 					</Panel.Body>
 				</Panel>
 				

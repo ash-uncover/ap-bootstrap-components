@@ -1,11 +1,30 @@
-.ap-rater-star {
-    display: inline-block;
+.ap-rater {
+	display: inline-block;
 
-    .ap-rater-star-full {
-        color: gold;
-    }
+	&.ap-rater-change:hover {
 
-    .ap-rater-star-empty {
-        color: lavender;
-    }
+		.ap-rater-star {
+			color: gold;
+			&:before {
+				content: '\E006'
+			}
+		}
+
+		.ap-rater-star:hover ~ .ap-rater-star {
+			color: lavender;
+			&:before {
+				content: '\E007'
+			}
+		}
+
+	}
+
+
+	.ap-rater-star-full {
+		color: gold;
+	}
+
+	.ap-rater-star-empty {
+		color: lavender;
+	}
 }

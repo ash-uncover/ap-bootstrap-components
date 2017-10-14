@@ -21,8 +21,23 @@ class BSFormStatic extends Base {
 	// Rendering functions //
 	// --------------------------------------------------------------------------------
 	
+	buildFormValue (value, index) {
+		return (
+			<li key={index}>
+				{value}
+			</li>
+		)
+	}
+
 	render() {
 		this.buildProps('FormStatic')
+		if (Array.isArray(this.props.children) && this.props.children.length > 1) {
+			return (
+				<ul className={this.className}>
+					{this.props.children.map(this.buildFormValue)}
+				</ul>
+			)
+		} 
 		return (
 			<p className={this.className}>
 				{this.props.children}

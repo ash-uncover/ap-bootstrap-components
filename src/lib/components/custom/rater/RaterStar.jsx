@@ -59,7 +59,7 @@ class RaterStar extends Base {
                 result.push(
                     <Button
                         className='ap-rater-button'
-                        key={'full-' + i} 
+                        key={i} 
                         bsSize='xs'
                         onClick={this.onChange.bind(this, i)} >
                         <Glyphicon {...this.fullStarProps} />
@@ -79,7 +79,7 @@ class RaterStar extends Base {
                 result.push(
                     <Button
                         className='ap-rater-button'
-                        key={'empty-' + i} 
+                        key={this.props.value + i} 
                         bsSize='xs'
                         onClick={this.onChange.bind(this, this.props.value + i)} >
                         <Glyphicon {...this.emptyStarProps} />

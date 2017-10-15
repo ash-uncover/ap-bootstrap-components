@@ -12,6 +12,10 @@ class RaterStar extends Base {
         this.baseClasses = [ 'ap-rater' ]
         // Sub components properties
         this.raterProps = {}
+        this.banCircleProps = { 
+            className: 'ap-rater-ban',
+            glyph: 'ban-circle' 
+        }
         this.fullStarProps = { 
             className: 'ap-rater-star ap-rater-star-full', 
             glyph: 'star' 
@@ -37,7 +41,7 @@ class RaterStar extends Base {
     // --------------------------------------------------------------------------------
 
     onChange(value, event) {
-        this.props.onChange && this.props.onChange(event, value + 1)
+        this.props.onChange && this.props.onChange(event, value)
     }
 
 
@@ -52,6 +56,20 @@ class RaterStar extends Base {
         return Math.round(value)
     }
 
+    _buildReset() {
+        if (this.props.onChange) {
+            return (
+                <Button
+                    className='ap-rater-reset-button'
+                    bsSize='xs'
+                    onClick={this.onChange.bind(this, 0)} >
+                    <Glyphicon {...this.banCircleProps} />
+                </Button>
+            )
+        }
+        return null
+    }
+
     _buildFullStars(nb) {
         let result = []
         for (let i = 0 ; i < nb ; i ++) {
@@ -61,7 +79,7 @@ class RaterStar extends Base {
                         className='ap-rater-button'
                         key={i} 
                         bsSize='xs'
-                        onClick={this.onChange.bind(this, i)} >
+                        onClick={this.onChange.bind(this, i + 1)} >
                         <Glyphicon {...this.fullStarProps} />
                     </Button>
                 )
@@ -81,7 +99,7 @@ class RaterStar extends Base {
                         className='ap-rater-button'
                         key={this.props.value + i} 
                         bsSize='xs'
-                        onClick={this.onChange.bind(this, this.props.value + i)} >
+                        onClick={this.onChange.bind(this, this.props.value + i + 1)} >
                         <Glyphicon {...this.emptyStarProps} />
                     </Button>
                 )
@@ -103,6 +121,7 @@ class RaterStar extends Base {
         let value = this._resolveValue()
         return (
             <div className={this.className}>
+                {this._buildReset()}
                 {this._buildFullStars(value)}
                 {this._buildEmptyStars((this.props.starMax || 0) - value)}
             </div>

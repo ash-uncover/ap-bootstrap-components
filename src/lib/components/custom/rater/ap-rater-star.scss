@@ -27,6 +27,15 @@
 
 	}
 
+	.ap-rater-ban {
+		margin-right: 5px;
+		color: grey;
+		font-size: 10pt;
+
+		&:hover {
+			color: #a21f08;	
+		}
+	}
 
 	.ap-rater-star-full {
 		color: gold;

@@ -11,12 +11,13 @@ class BSFormSubmit extends Base {
 		this.baseClasses = [ 'ap-form-submit' ]
 		// Sub components properties
 		this.buttonProps = { 
-			type: 'submit'
+			type: 'submit',
+			onClick: this.onClick.bind(this)
 		}
 		// Component properties
 		this.propsInfos = {
 			required : {
-				onSubmit: { rename: 'onClick', store: this.buttonProps },
+				onSubmit: {},
 			},
 			optionnal : {
 				disabled: { defaultValue: false, store: this.buttonProps }
@@ -24,6 +25,13 @@ class BSFormSubmit extends Base {
 		}
 	}
 
+	// View callbacks //
+	// --------------------------------------------------------------------------------
+
+	onClick(event) {
+		event.preventDefault()
+		this.props.onSubmit && this.props.onSubmit()
+	}
 	
 	// Rendering functions //
 	// --------------------------------------------------------------------------------

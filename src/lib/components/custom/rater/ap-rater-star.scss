@@ -1,6 +1,14 @@
 .ap-rater {
 	display: inline-block;
 
+	&.ap-rater-change {
+		.ap-button {
+			background: none;
+			padding: 0;
+			margin: 0;
+		}
+	}
+
 	&.ap-rater-change:hover {
 
 		.ap-rater-star {
@@ -10,7 +18,7 @@
 			}
 		}
 
-		.ap-rater-star:hover ~ .ap-rater-star {
+		.ap-button:hover ~ .ap-button>.ap-rater-star {
 			color: lavender;
 			&:before {
 				content: '\E007'

@@ -37,7 +37,7 @@ class CalendarYears extends Base {
 
 	render() { 
 		return (
-			<div>
+			<div className='ap-calendar-years'>
 				{this._buildYears()}
 			</div>
 		)

@@ -23,23 +23,27 @@ class Calendar extends Base {
 
 	constructor(props) {
 		super(props)
+		this.state = {}
 		this.componentWillReceiveProps(props, true)
+	}
+
+	componentDidMount() {
+		this.state.height = this.calendar.offsetHeight
 	}
 
 	componentWillReceiveProps(props, first) {
 		let m = props.moment ? MomentHelper.fromLocalDate(props.moment) : moment()
 		let s = props.selected ? MomentHelper.fromLocalDate(props.selected) : moment()
-		this.state = {
-			moment: m.startOf('month'),
-			selected: s,
-			state: STATES.SELECT_DAY,
-			specialsSuccess: this._buildSpecials(props.specialsSuccess),
-			specialsInfo: this._buildSpecials(props.specialsInfo),
-			specialsPrimary: this._buildSpecials(props.specialsPrimary),
-			specialsWarning: this._buildSpecials(props.specialsWarning),
-			specialsDanger: this._buildSpecials(props.specialsDanger)
-		}
-		if (!first) this.setState(this.state)
+		this.state.moment = m.startOf('month')
+		this.state.selected = s
+		this.state.state = STATES.SELECT_DAY
+		this.state.specialsSuccess = this._buildSpecials(props.specialsSuccess)
+		this.state.specialsInfo = this._buildSpecials(props.specialsInfo)
+		this.state.specialsPrimary = this._buildSpecials(props.specialsPrimary)
+		this.state.specialsWarning = this._buildSpecials(props.specialsWarning)
+		this.state.specialsDanger = this._buildSpecials(props.specialsDanger)
+
+		if (!first) this.forceUpdate()
 	}
 
 	_buildSpecials(specials) {
@@ -97,9 +101,19 @@ class Calendar extends Base {
 	}
 
 	render() { 
-		switch (this.state.state) {
-		case STATES.SELECT_DAY: return (
-			<div className='ap-calendar'>
+		return (
+			<div 
+				className='ap-calendar' 
+				style={{ maxHeight: this.state.height, minHeight: this.state.height }}
+				ref={ (c) => this.calendar = c }>
+				{this.renderContent()}
+			</div>
+		)
+    }
+
+    renderContent() { 
+    	switch (this.state.state) {
+			case STATES.SELECT_DAY: return (
 				<CalendarDays 
 					bsSize={this.props.bsSize || 'xsmall'}
 					moment={this.state.moment}
@@ -114,26 +128,23 @@ class Calendar extends Base {
 					onMonthChanged={this.onMonthChanged.bind(this)}
 					onMonthMode={this.setStateSelectMonth.bind(this)} 
 					onDaySelect={this.onDaySelect.bind(this)}/>
-			</div>
-		)
-		case STATES.SELECT_MONTH: return ( 
-			<div className='ap-calendar'>
+			)
+			case STATES.SELECT_MONTH: return ( 
 				<CalendarMonths
 					bsSize={this.props.bsSize || 'xsmall'}
 					moment={this.state.moment} 
 					selected={this.state.selected} 
 					onMonthSelect={this.onMonthChanged.bind(this)} />
-			</div>)
-		case STATES.SELECT_YEAR: return (
-			<div className='ap-calendar'>
+			)
+			case STATES.SELECT_YEAR: return (
 				<CalendarYears
 					bsSize={this.props.bsSize || 'xsmall'}
 					moment={this.state.moment} 
 					selected={this.state.selected} 
 					onYearSelect={this.onYearChanged.bind(this)} />
-			</div>)
-		}
-    }
+			)
+	    }
+	}
 }
 
 export default Calendar;

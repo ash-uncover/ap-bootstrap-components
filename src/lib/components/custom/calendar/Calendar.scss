@@ -2,6 +2,7 @@
  *                                        CALENDAR NAMESPACE
  */
 .ap-calendar {
+	overflow-y: auto;
 
 /* ----------------------------------------------------------
  *                                          CALENDAR HEADER
@@ -24,6 +25,9 @@
  *                                    CALENDAR-YEARS DISPLAY
  */
 	.ap-calendar-years {
+		.ap-button {
+			margin-bottom: 5px;
+		}
 
 	}
 

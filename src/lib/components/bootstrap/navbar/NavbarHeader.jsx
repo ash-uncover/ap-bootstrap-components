@@ -12,10 +12,12 @@ class BSNavbarHeader extends Base {
 		// Base classes
 		this.baseClasses = [ 'navbar-header', 'ap-navbar-header' ]
 		// Sub component properties
+		this.collapseProps = {}
 		this.brandProps = {}
 		// Component properties
 		this.propsInfos = {
 			required : {
+				target: { rename: 'data-target', store: this.collapseProps },
 				brandText: { rename: 'text', store: this.brandProps },
 				brandLink: { rename: 'link', store: this.brandProps },
 			},
@@ -30,6 +32,11 @@ class BSNavbarHeader extends Base {
 		this.buildProps('NavbarHeader')
 		return (
 			<div className={this.className}>
+				<button type="button" className="navbar-toggle" data-toggle="collapse" {...this.collapseProps}>
+					<span className="icon-bar"></span>
+					<span className="icon-bar"></span>
+					<span className="icon-bar"></span> 
+				</button>
 				<NavbarBrand {...this.brandProps} />
 			</div>
 		)

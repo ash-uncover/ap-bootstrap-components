@@ -8,12 +8,14 @@ class BSNavbarGroup extends Base {
 	constructor(props) {
 		super(props)
 		this.baseClasses = [ 'nav', 'navbar-nav', 'ap-navbar-group' ]
+		this.groupProps = {}
 		// Component properties
 		this.propsInfos = {
 			required : {
 			},
 			optionnal : {
 				children: {},
+				id: { store : this.groupProps },
 				left: { defaultValue: false },
 				right: { defaultValue: false },
 			}
@@ -30,7 +32,7 @@ class BSNavbarGroup extends Base {
 	render() {
 		this.buildProps('NavbarGroup')
 		return (
-			<ul className={this.className}>
+			<ul className={this.className} {...this.groupProps}>
 				{this.props.children}
 			</ul>
 		)

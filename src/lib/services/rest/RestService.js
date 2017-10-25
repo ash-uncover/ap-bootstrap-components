@@ -7,20 +7,58 @@ function log(msg) {
 	}
 }
 
-let proto = window.location.protocol
-let protocol = (proto === 'file:' ? 'http:' : proto) + '//'
-let serverName = window.location.hostname
-let baseUrl = protocol + serverName
-
 let _CONFIG = {
-	BASE_URL : baseUrl + ':8090/rest',
+	PROTOCOL: (window.location.protocol === 'file:' ? 'http:' : window.location.protocol) + '//',
+	HOSTNAME: window.location.hostname,
+	PORT: '8090',
+	BASE_URL: '/rest',
+	SERVICE_URL: null,
 	HEADER_TOKEN : 'Authorization'
 }
 
-export default class RestService {
+function updateServiceUrl() {
+	_CONFIG.SERVICE_URL = _CONFIG.PROTOCOL + _CONFIG.HOSTNAME + ':' + _CONFIG.PORT + _CONFIG.BASE_URL
+}
 
-	static _request(reqParam) {
-		reqParam.url = _CONFIG.BASE_URL + reqParam.url
+class RestService {
+
+	constructor() {
+		updateServiceUrl()
+	}
+
+	set protocol(protocol) {
+		_CONFIG.PROTOCOL = protocol
+		updateServiceUrl()
+	}
+	set hostname(hostname) {
+		_CONFIG.HOSTNAME = hostname
+		updateServiceUrl()
+	}
+	set port(port) {
+		_CONFIG.PORT = port
+		updateServiceUrl()
+	}
+	set baseUrl(baseUrl) {
+		_CONFIG.BASE_URL = baseUrl
+		updateServiceUrl()
+	}
+
+	get serviceUrl() {
+		return _CONFIG.SERVICE_URL
+	}
+
+	buildUrlParam(data) {
+		let params = Object.keys(data || {}).map(function(key) {
+		    return encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+		}).join('&')
+		return params ? '?' + params : ''
+	}
+
+	request(reqParam) {
+		reqParam.url = this.serviceUrl + reqParam.url
+		if (reqParam.query) {
+			reqParam.url += this.buildUrlParam(reqParam.query)
+		}
 		reqParam.method = reqParam.method || 'GET'
 		reqParam.data = reqParam.data  || {}
 		return new Promise(function (resolve, reject) {
@@ -76,8 +114,8 @@ export default class RestService {
 		})
 	};
 
-	static _sendData(reqParam) {
-		reqParam.url = _CONFIG.BASE_URL + reqParam.url
+	sendData(reqParam) {
+		reqParam.url = this.serviceUrl + reqParam.url
 		reqParam.method = 'POST'
 		return new Promise(function (resolve, reject) {
 			var xhr = new XMLHttpRequest()
@@ -113,3 +151,5 @@ export default class RestService {
 		})
 	}
 }
+let RestServiceObj = new RestService()
+export default RestServiceObj

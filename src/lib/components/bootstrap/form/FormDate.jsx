@@ -17,7 +17,7 @@ for (let i = 1; i < 32; i++) {
 }
 let MONTHS = moment.months().map(function(month, i) {
 	return {
-		key: i + 1,
+		key: i,
 		value: TextUtils.capitalize(month)
 	}
 })

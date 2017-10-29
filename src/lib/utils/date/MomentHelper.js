@@ -49,7 +49,7 @@ export default class MomentHelper {
 
 	static toLocalDate (moment) {
 		let array = moment.toArray();
-		return [ array[0], array[1] + 1, array[2] ];
+		return [ array[0], array[1], array[2] ];
 	}
 
 	static fromLocalTime (time) {
@@ -58,11 +58,11 @@ export default class MomentHelper {
 
 	static toLocalDateTime (moment) {
 		let array = moment.toArray();
-		return [ array[0], array[1] + 1, array[2], array[3], array[4] ];
+		return [ array[0], array[1], array[2], array[3], array[4] ];
 	}
 
 	static getLocaleDateArray (date) {
-		return [date[0], date[1] - 1, date[2]];
+		return [date[0], date[1], date[2]];
 	}
 
 	static toHumanDate (m) {

@@ -36,7 +36,6 @@ class Forms extends React.Component {
 		this.setState({ search: value })
 	}
 	onSelectMulti(event, value) {
-		console.log(value)
 		this.setState({ selectMulti: value })
 	}
 	onDate(value) {

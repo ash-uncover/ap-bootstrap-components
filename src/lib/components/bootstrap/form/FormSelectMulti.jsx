@@ -87,7 +87,6 @@ class BSFormSelectMulti extends Base {
 	}
 
 	render() {
-		console.log(this.props)
 		this.buildProps('FormSelectMulti')
 		return (
 			<div className={this.className}>

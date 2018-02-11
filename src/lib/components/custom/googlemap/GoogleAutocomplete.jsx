@@ -90,7 +90,7 @@ class GoogleAutocomplete extends Base {
             this.props.onChange({
                 lattitude: place.geometry.location.lat(),
                 longitude: place.geometry.location.lng(),
-                address: place.street_number + ' ' + place.route,
+                address: (place.street_number || place.route) ? place.street_number + ' ' + place.route : '',
                 postalCode: place.postal_code,
                 city: place.locality,
                 country: place.country

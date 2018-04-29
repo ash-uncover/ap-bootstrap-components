@@ -20,6 +20,7 @@ import Calendars from 'components/custom/calendar/Calendars'
 import ObjInfos from 'components/custom/objinfos/ObjInfos'
 import Rater from 'components/custom/rater/Rater'
 import GoogleAutocompletes from 'components/custom/googlemap/GoogleAutocompletes'
+import GoogleMaps from 'components/custom/googlemap/GoogleMaps'
 
 import Complex from 'components/complex/Complex'
 import Auths from 'components/complex/auth/Auths'
@@ -53,7 +54,8 @@ let routes = [
 					{ path: 'calendars', component: Calendars },
 					{ path: 'objinfos', component: ObjInfos },
 					{ path: 'rater', component: Rater },
-					{ path: 'googleautocomplete', component: GoogleAutocompletes }
+					{ path: 'googleautocomplete', component: GoogleAutocompletes },
+					{ path: 'googlemap', component: GoogleMaps }
 				]
 			},
 			{

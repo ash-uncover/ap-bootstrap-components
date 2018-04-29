@@ -46,6 +46,7 @@ class AppLinks extends React.Component {
 				<h4>Google components</h4>
 				<ul>
 					<li><Button comp='a' href='/custom/googleautocomplete' bsStyle='link' bsSize='sm'>Google autocomplete</Button></li>
+					<li><Button comp='a' href='/custom/googlemap' bsStyle='link' bsSize='sm'>Google map</Button></li>
 				</ul>
 
 				<h3>Complex</h3>

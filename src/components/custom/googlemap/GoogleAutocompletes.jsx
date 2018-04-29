@@ -3,7 +3,7 @@ import GoogleAutocompletesData from 'components/custom/googlemap/GoogleAutocompl
 
 import { Panel, CodeXml, CodeJson, Table, Button, Google } from 'lib/exports'
 
-import './GoogleAutocompletes.scss'
+import './Google.scss'
 
 class GoogleAutocompletes extends React.Component {
 

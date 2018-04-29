@@ -371,7 +371,3 @@ export const Utils = UtilsBase
 // formatters
 import FormattersBase from './utils/formatters/Formatters'
 export const Formatters = FormattersBase
-
-// validators
-import ValidatorsBase from './utils/validators/Validators'
-export const Validators = ValidatorsBase
